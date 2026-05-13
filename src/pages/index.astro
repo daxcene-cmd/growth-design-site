@@ -1,0 +1,77 @@
+---
+import '../styles/global.css';
+
+const sectionModules = import.meta.glob('../content/article/sections/*.mdx', {
+  eager: true,
+});
+
+const sections = Object.values(sectionModules)
+  .map((module) => {
+    const typedModule = module as {
+      frontmatter: {
+        id: string;
+        title: string;
+        order: number;
+      };
+      default: unknown;
+    };
+
+    return {
+      id: typedModule.frontmatter.id,
+      title: typedModule.frontmatter.title,
+      order: typedModule.frontmatter.order,
+      Content: typedModule.default,
+    };
+  })
+  .sort((a, b) => a.order - b.order);
+---
+
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>增长运营产品设计思路</title>
+    <meta
+      name="description"
+      content="一套面向增长运营产品的设计方法论长文。"
+    />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-hero" aria-labelledby="page-title">
+        <p class="eyebrow">Growth Operation Design</p>
+        <h1 id="page-title">增长运营产品设计思路</h1>
+        <p class="lead">
+          一套面向增长运营产品的设计方法论长文，帮助团队新人、设计师、产品和运营同学理解增长设计如何承接业务目标、用户动机与玩法表达。
+        </p>
+      </header>
+
+      <div class="article-grid">
+        <aside class="toc" aria-label="文章目录">
+          <p class="toc-title">目录</p>
+          <nav>
+            {
+              sections.map((section) => (
+                <a href={`#${section.id}`}>{section.title}</a>
+              ))
+            }
+          </nav>
+        </aside>
+
+        <main class="article-content">
+          {
+            sections.map((section) => {
+              const Content = section.Content;
+
+              return (
+                <section class="article-section" id={section.id}>
+                  <Content />
+                </section>
+              );
+            })
+          }
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

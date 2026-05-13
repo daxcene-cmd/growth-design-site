@@ -1,0 +1,117 @@
+<svg width="1200" height="620" viewBox="0 0 1200 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text { font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; }
+    .title { font-size: 32px; font-weight: 700; fill: #111827; }
+    .subtitle { font-size: 17px; fill: #5B6472; }
+    .step { font-size: 18px; font-weight: 700; fill: #111827; }
+    .heading { font-size: 26px; font-weight: 800; fill: #111827; }
+    .label { font-size: 18px; font-weight: 700; fill: #111827; }
+    .small { font-size: 15px; fill: #4B5563; }
+    .chipText { font-size: 17px; font-weight: 700; fill: white; }
+    .chipTextDark { font-size: 17px; font-weight: 700; fill: #111827; }
+    .note { font-size: 16px; font-weight: 700; fill: #374151; }
+    .doodle { stroke: #111827; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+  </style>
+
+  <rect width="1200" height="620" fill="#FFFFFF"/>
+
+  <text x="80" y="58" class="title">玩法包装设计流程</text>
+  <text x="80" y="90" class="subtitle">从玩法内核出发，先明确目标，再发散概念，最后收敛成可落地的包装方案。</text>
+
+  <!-- Step 1 -->
+  <g>
+    <rect x="80" y="122" width="285" height="420" rx="8" fill="#EAF8EC"/>
+    <rect x="110" y="152" width="92" height="8" rx="4" fill="#19B765"/>
+    <text x="110" y="196" class="step">Step 1</text>
+    <text x="110" y="229" class="heading">确定目标</text>
+
+    <rect x="110" y="260" width="225" height="48" rx="4" fill="#17B96B"/>
+    <text x="132" y="291" class="chipText">隐喻玩法内核</text>
+
+    <rect x="110" y="322" width="225" height="48" rx="4" fill="#17B96B"/>
+    <text x="129" y="353" class="chipText">具备平台特色</text>
+
+    <rect x="110" y="398" width="225" height="86" rx="6" fill="#FFFFFF" stroke="#B8DFC6"/>
+    <text x="128" y="429" class="note">输入</text>
+    <text x="128" y="459" class="small">奖励范围 × 机制范围</text>
+
+    <!-- doodle: target -->
+    <circle cx="298" cy="178" r="25" class="doodle"/>
+    <circle cx="298" cy="178" r="12" class="doodle"/>
+    <path d="M298 153V139M298 217V203M273 178H259M337 178H323" class="doodle"/>
+    <path d="M312 164L329 147M329 147L329 159M329 147L317 147" class="doodle"/>
+
+    <!-- doodle: hand/check -->
+    <path d="M100 372C91 373 86 379 86 386C86 394 92 400 101 399" class="doodle"/>
+    <path d="M101 399L116 393L130 371" class="doodle"/>
+    <path d="M116 393L124 411L143 411" class="doodle"/>
+  </g>
+
+  <!-- Step 2 -->
+  <g>
+    <rect x="458" y="122" width="285" height="420" rx="8" fill="#FFF4D9"/>
+    <rect x="488" y="152" width="92" height="8" rx="4" fill="#F6B51D"/>
+    <text x="488" y="196" class="step">Step 2</text>
+    <text x="488" y="229" class="heading">脑暴概念</text>
+
+    <text x="488" y="268" class="label">先拆内核</text>
+    <rect x="488" y="288" width="100" height="48" rx="4" fill="#FFC426"/>
+    <text x="506" y="319" class="chipTextDark">奖励特征</text>
+    <rect x="613" y="288" width="100" height="48" rx="4" fill="#FFC426"/>
+    <text x="631" y="319" class="chipTextDark">机制动作</text>
+    <rect x="488" y="350" width="100" height="48" rx="4" fill="#FFC426"/>
+    <text x="506" y="381" class="chipTextDark">反馈节奏</text>
+
+    <text x="488" y="432" class="label">再找来源</text>
+    <rect x="488" y="452" width="100" height="48" rx="4" fill="#FFC426"/>
+    <text x="506" y="483" class="chipTextDark">现实世界</text>
+    <rect x="613" y="452" width="100" height="48" rx="4" fill="#FFC426"/>
+    <text x="631" y="483" class="chipTextDark">成熟玩法</text>
+    <rect x="488" y="514" width="225" height="0" fill="#FFC426"/>
+
+    <!-- doodle: sparkle -->
+    <path d="M690 155V138M690 201V184M667 178H650M730 178H713" class="doodle"/>
+    <path d="M674 162L662 150M717 193L706 183M716 162L728 150M674 194L662 206" class="doodle"/>
+    <path d="M676 405C690 392 704 391 719 405" class="doodle"/>
+    <path d="M697 388C692 400 692 410 697 422" class="doodle"/>
+  </g>
+
+  <!-- Step 3 -->
+  <g>
+    <rect x="836" y="122" width="285" height="420" rx="8" fill="#ECF7FF"/>
+    <rect x="866" y="152" width="92" height="8" rx="4" fill="#1697E8"/>
+    <text x="866" y="196" class="step">Step 3</text>
+    <text x="866" y="229" class="heading">收敛方案</text>
+
+    <text x="866" y="268" class="label">筛选维度</text>
+    <rect x="866" y="288" width="90" height="48" rx="4" fill="#1898EA"/>
+    <text x="893" y="319" class="chipText">易懂</text>
+    <rect x="981" y="288" width="90" height="48" rx="4" fill="#1898EA"/>
+    <text x="1008" y="319" class="chipText">自然</text>
+
+    <rect x="866" y="350" width="90" height="48" rx="4" fill="#1898EA"/>
+    <text x="883" y="381" class="chipText">平台特色</text>
+    <rect x="981" y="350" width="90" height="48" rx="4" fill="#1898EA"/>
+    <text x="1008" y="381" class="chipText">成本</text>
+
+    <rect x="866" y="412" width="90" height="48" rx="4" fill="#1898EA"/>
+    <text x="893" y="443" class="chipText">延展</text>
+    <rect x="981" y="412" width="90" height="48" rx="4" fill="#1898EA"/>
+    <text x="1008" y="443" class="chipText">风险</text>
+
+    <rect x="866" y="486" width="205" height="44" rx="22" fill="#FFFFFF" stroke="#B9DDF4"/>
+    <text x="905" y="514" class="note">输出：玩法包装方案</text>
+
+    <!-- doodle: lightbulb -->
+    <path d="M1032 148C1052 148 1066 162 1066 181C1066 192 1060 202 1050 207V220H1016V207C1006 202 1000 192 1000 181C1000 162 1013 148 1032 148Z" class="doodle"/>
+    <path d="M1020 233H1046M1023 246H1043M1019 221H1047" class="doodle"/>
+    <path d="M1032 132V115M984 181H968M1096 181H1080M997 143L985 131M1068 143L1080 131" class="doodle"/>
+
+    <!-- doodle: sprout -->
+    <path d="M900 462C900 440 910 431 928 428" class="doodle"/>
+    <path d="M899 461C891 447 879 442 864 445" class="doodle"/>
+    <path d="M900 462V481" class="doodle"/>
+  </g>
+
+  <text x="80" y="582" class="subtitle">流程：玩法内核输入 → 明确包装目标 → 发散包装概念 → 收敛成最终方案</text>
+</svg>

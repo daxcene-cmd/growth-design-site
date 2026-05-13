@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">玩法架构四步法：餐餐摇现金案例</title>
+  <desc id="desc">以餐餐摇现金为案例，用线框模块展示玩法架构四步法。</desc>
+  <defs>
+    <filter id="softShadow" x="-8%" y="-8%" width="116%" height="124%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <style>
+      .bg { fill: #fbfcfe; }
+      .canvas { fill: #ffffff; stroke: #d7dce3; stroke-width: 3; filter: url(#softShadow); }
+      .title { font: 700 44px "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #111827; }
+      .subtitle { font: 400 21px "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #64748b; }
+      .step { font: 700 18px "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #475569; }
+      .heading { font: 700 27px "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #111827; }
+      .desc { font: 400 16px "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #475569; }
+      .moduleTitle { font: 700 18px "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #111827; }
+      .moduleText { font: 400 16px "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #334155; }
+      .panelGreen { fill: #e4f8e9; }
+      .panelBlue { fill: #dff0ff; }
+      .panelPurple { fill: #f0e5ff; }
+      .panelYellow { fill: #fff2d8; }
+      .accentGreen { fill: #79c99c; }
+      .accentBlue { fill: #8fcfff; }
+      .accentPurple { fill: #c38cff; }
+      .accentYellow { fill: #ffc864; }
+      .wire { fill: rgba(255,255,255,0.46); stroke: #111827; stroke-width: 2.4; }
+      .wireSoft { fill: rgba(255,255,255,0.34); stroke: #475569; stroke-width: 2; stroke-dasharray: 6 6; }
+      .wireLight { fill: rgba(255,255,255,0.48); stroke: #64748b; stroke-width: 2; }
+      .groupLabel { font: 700 15px "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #475569; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1600" height="900"/>
+  <rect class="canvas" x="70" y="70" width="1460" height="760" rx="30"/>
+
+  <text class="title" x="130" y="146">玩法架构四步法</text>
+  <text class="subtitle" x="130" y="184">用「餐餐摇现金」示例，把每一步产出画成可识别的玩法模块。</text>
+
+  <g transform="translate(130 245)">
+    <!-- Step 1 -->
+    <g>
+      <rect class="panelGreen" x="0" y="0" width="280" height="480" rx="22"/>
+      <rect class="accentGreen" x="24" y="28" width="112" height="14" rx="7"/>
+      <text class="step" x="24" y="78">Step 1</text>
+      <text class="heading" x="24" y="118">确定玩法主对象</text>
+      <text class="desc" x="24" y="152">用户把玩法理解成什么？</text>
+
+      <rect class="wire" x="46" y="230" width="188" height="150" rx="18"/>
+      <text class="moduleTitle" x="106" y="292">摇钱树</text>
+      <text class="moduleText" x="80" y="330">玩法主对象</text>
+    </g>
+
+    <!-- Step 2 -->
+    <g transform="translate(370 0)">
+      <rect class="panelBlue" x="0" y="0" width="280" height="480" rx="22"/>
+      <rect class="accentBlue" x="24" y="28" width="112" height="14" rx="7"/>
+      <text class="step" x="24" y="78">Step 2</text>
+      <text class="heading" x="24" y="118">拆核心模块</text>
+      <text class="desc" x="24" y="152">玩法由哪些模块支撑？</text>
+
+      <rect class="wire" x="34" y="198" width="96" height="72" rx="12"/>
+      <text class="moduleTitle" x="54" y="229">奖励</text>
+      <text class="moduleText" x="50" y="254">现金红包</text>
+
+      <rect class="wire" x="150" y="198" width="96" height="72" rx="12"/>
+      <text class="moduleTitle" x="170" y="229">行动</text>
+      <text class="moduleText" x="174" y="254">摇一摇</text>
+
+      <rect class="wire" x="34" y="294" width="96" height="72" rx="12"/>
+      <text class="moduleTitle" x="54" y="325">进度</text>
+      <text class="moduleText" x="47" y="350">摇摇人数</text>
+
+      <rect class="wire" x="150" y="294" width="96" height="72" rx="12"/>
+      <text class="moduleTitle" x="170" y="325">牵引</text>
+      <text class="moduleText" x="160" y="350">场次倒计时</text>
+
+      <rect class="wireLight" x="86" y="390" width="108" height="56" rx="12"/>
+      <text class="moduleTitle" x="120" y="423">辅助</text>
+    </g>
+
+    <!-- Step 3 -->
+    <g transform="translate(740 0)">
+      <rect class="panelPurple" x="0" y="0" width="280" height="480" rx="22"/>
+      <rect class="accentPurple" x="24" y="28" width="112" height="14" rx="7"/>
+      <text class="step" x="24" y="78">Step 3</text>
+      <text class="heading" x="24" y="118">判断模块主次</text>
+      <text class="desc" x="24" y="152">哪些模块决定玩法成立？</text>
+
+      <text class="groupLabel" x="34" y="196">核心模块</text>
+      <rect class="wire" x="34" y="212" width="212" height="64" rx="14"/>
+      <text class="moduleTitle" x="61" y="252">摇钱树 + 摇一摇</text>
+
+      <text class="groupLabel" x="34" y="314">支撑模块</text>
+      <rect class="wireLight" x="34" y="330" width="96" height="58" rx="12"/>
+      <text class="moduleTitle" x="58" y="365">红包</text>
+      <rect class="wireLight" x="150" y="330" width="96" height="58" rx="12"/>
+      <text class="moduleTitle" x="174" y="365">进度</text>
+
+      <text class="groupLabel" x="34" y="426">辅助模块</text>
+      <rect class="wireSoft" x="112" y="404" width="134" height="52" rx="12"/>
+      <text class="moduleText" x="139" y="437">攻略 / 弹幕</text>
+    </g>
+
+    <!-- Step 4 -->
+    <g transform="translate(1110 0)">
+      <rect class="panelYellow" x="0" y="0" width="280" height="480" rx="22"/>
+      <rect class="accentYellow" x="24" y="28" width="112" height="14" rx="7"/>
+      <text class="step" x="24" y="78">Step 4</text>
+      <text class="heading" x="24" y="118">用目标行为校验</text>
+      <text class="desc" x="24" y="152">模块是否推动目标行为？</text>
+
+      <text class="groupLabel" x="34" y="208">目标行为</text>
+      <rect class="wire" x="34" y="224" width="212" height="86" rx="16"/>
+      <text class="moduleTitle" x="58" y="262">饭点进入玩法</text>
+      <text class="moduleTitle" x="70" y="292">点击摇一摇</text>
+
+      <text class="groupLabel" x="34" y="352">校验结果</text>
+      <rect class="wireLight" x="34" y="368" width="96" height="58" rx="12"/>
+      <text class="moduleTitle" x="58" y="403">保留</text>
+      <rect class="wireSoft" x="150" y="368" width="96" height="58" rx="12"/>
+      <text class="moduleTitle" x="174" y="403">弱化</text>
+    </g>
+  </g>
+</svg>

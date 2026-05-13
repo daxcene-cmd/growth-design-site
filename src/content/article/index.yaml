@@ -1,0 +1,29 @@
+title: 增长运营产品设计思路
+description: 一套面向增长运营产品的设计方法论长文。
+language: zh-CN
+source: ../../../../增长运营产品设计思路_优化重写版.md
+sections:
+  - id: intro
+    title: 开篇
+    file: sections/00-intro.mdx
+  - id: definition
+    title: 定义
+    file: sections/01-definition.mdx
+  - id: design-framework
+    title: 设计思路总览
+    file: sections/02-design-framework.mdx
+  - id: strategy
+    title: 01 战略层
+    file: sections/03-strategy.mdx
+  - id: scope
+    title: 02 范围层
+    file: sections/04-scope.mdx
+  - id: structure
+    title: 03 结构层
+    file: sections/05-structure.mdx
+  - id: framework
+    title: 04 框架层
+    file: sections/06-framework.mdx
+  - id: presentation
+    title: 05 表现层
+    file: sections/07-presentation.mdx
