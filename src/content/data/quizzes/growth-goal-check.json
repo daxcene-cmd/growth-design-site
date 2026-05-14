@@ -3,8 +3,13 @@
   "title": "增长目标判断练习",
   "resultLabels": {
     "excellent": "增长目标判断很稳，四要素已经掌握。",
-    "good": "基本掌握，继续校准预算、用户、行为和指标这些细节。",
+    "good": "基本掌握，继续精进。",
     "retry": "建议回看增长目标四要素后再练一次。"
+  },
+  "resultImages": {
+    "excellent": "/growth-design-site/images/flower.webp",
+    "good": "/growth-design-site/images/flower.webp",
+    "retry": "/growth-design-site/images/flower.webp"
   },
   "questions": [
     {
