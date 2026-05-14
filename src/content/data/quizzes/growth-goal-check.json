@@ -1,0 +1,91 @@
+{
+  "id": "growth-goal-check",
+  "title": "增长目标判断练习",
+  "resultLabels": {
+    "excellent": "增长目标判断很稳，四要素已经掌握。",
+    "good": "基本掌握，继续校准预算、用户、行为和指标这些细节。",
+    "retry": "建议回看增长目标四要素后再练一次。"
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "type": "judgement",
+      "question": "下面这个增长目标是否清晰？",
+      "caseText": "用现金激励，让新用户在激活后的 30 日内累计 3 天打开 App，衡量指标为 30 日留存。",
+      "correctAnswerText": "不清晰",
+      "explanation": "预算不清晰。1 元/人和 5 元/人会对应完全不同的设计策略。",
+      "options": [
+        {
+          "id": "clear",
+          "text": "清晰",
+          "correct": false
+        },
+        {
+          "id": "unclear",
+          "text": "不清晰",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "type": "judgement",
+      "question": "下面这个增长目标是否清晰？",
+      "caseText": "用 50 万，让更多用户在周一至周五打开 App，衡量指标为 DAU。",
+      "correctAnswerText": "不清晰",
+      "explanation": "目标用户和人均预算不清晰。总预算需要折算到单个用户视角，目标用户也需要更聚焦。",
+      "options": [
+        {
+          "id": "clear",
+          "text": "清晰",
+          "correct": false
+        },
+        {
+          "id": "unclear",
+          "text": "不清晰",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "type": "judgement",
+      "question": "下面这个增长目标是否清晰？",
+      "caseText": "用 1 元/人，提升签到新用户的参与深度。",
+      "correctAnswerText": "不清晰",
+      "explanation": "目标行为不具体，也缺少衡量指标。参与深度需要被翻译成可观察、可验证的行为。",
+      "options": [
+        {
+          "id": "clear",
+          "text": "清晰",
+          "correct": false
+        },
+        {
+          "id": "unclear",
+          "text": "不清晰",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "type": "judgement",
+      "question": "下面这个增长目标是否清晰？",
+      "caseText": "用 1 元/人，让签到低活用户次日继续访问频道，衡量指标为次日留存率。",
+      "correctAnswerText": "清晰",
+      "explanation": "它包含人均预算、目标用户、目标行为和衡量指标，判断依据比较完整。",
+      "options": [
+        {
+          "id": "clear",
+          "text": "清晰",
+          "correct": true
+        },
+        {
+          "id": "unclear",
+          "text": "不清晰",
+          "correct": false
+        }
+      ]
+    }
+  ]
+}

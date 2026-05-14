@@ -13,7 +13,7 @@ const sections = Object.values(sectionModules)
         title: string;
         order: number;
       };
-      default: unknown;
+      default: any;
     };
 
     return {
@@ -24,6 +24,10 @@ const sections = Object.values(sectionModules)
     };
   })
   .sort((a, b) => a.order - b.order);
+
+const introSection = sections.find((section) => section.id === 'intro');
+const articleSections = sections.filter((section) => section.id !== 'intro');
+const IntroContent = introSection?.Content;
 ---
 
 <html lang="zh-CN">
@@ -37,13 +41,22 @@ const sections = Object.values(sectionModules)
     />
   </head>
   <body>
+    <div class="site-titlebar" aria-hidden="true">
+      <span class="site-titlebar-text">增长运营产品设计思路</span>
+    </div>
+
     <div class="page-shell">
       <header class="site-hero" aria-labelledby="page-title">
-        <p class="eyebrow">Growth Operation Design</p>
-        <h1 id="page-title">增长运营产品设计思路</h1>
-        <p class="lead">
-          一套面向增长运营产品的设计方法论长文，帮助团队新人、设计师、产品和运营同学理解增长设计如何承接业务目标、用户动机与玩法表达。
-        </p>
+        <div class="hero-inner">
+          <div class="hero-text">
+            <p class="eyebrow">Growth Operation Design</p>
+            <h1 id="page-title">增长运营产品设计思路</h1>
+            {IntroContent ? <div class="hero-intro"><IntroContent /></div> : null}
+          </div>
+          <div class="hero-image" aria-hidden="true">
+            <img src="/growth-design-site/images/toppic.webp" alt="" />
+          </div>
+        </div>
       </header>
 
       <div class="article-grid">
@@ -51,7 +64,7 @@ const sections = Object.values(sectionModules)
           <p class="toc-title">目录</p>
           <nav>
             {
-              sections.map((section) => (
+              articleSections.map((section) => (
                 <a href={`#${section.id}`}>{section.title}</a>
               ))
             }
@@ -60,7 +73,7 @@ const sections = Object.values(sectionModules)
 
         <main class="article-content">
           {
-            sections.map((section) => {
+            articleSections.map((section) => {
               const Content = section.Content;
 
               return (
@@ -74,4 +87,20 @@ const sections = Object.values(sectionModules)
       </div>
     </div>
   </body>
+
+  <script>
+    const hero = document.querySelector('.site-hero') as HTMLElement;
+    const titlebar = document.querySelector('.site-titlebar') as HTMLElement;
+
+    if (hero && titlebar) {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          titlebar.setAttribute('aria-hidden', entry.isIntersecting ? 'true' : 'false');
+          titlebar.classList.toggle('is-visible', !entry.isIntersecting);
+        },
+        { threshold: 0 }
+      );
+      observer.observe(hero);
+    }
+  </script>
 </html>

@@ -29,7 +29,7 @@ export default function TabsBlock({ data }: TabsBlockProps) {
   return (
     <section className="interactive-block tabs-block" aria-labelledby={`${data.id}-title`}>
       <div className="interactive-header">
-        <p className="interactive-kicker">Tab 模块</p>
+        <p className="interactive-kicker">概念拆解</p>
         <h4 id={`${data.id}-title`}>{data.title}</h4>
       </div>
 

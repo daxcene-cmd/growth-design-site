@@ -1,0 +1,52 @@
+{
+  "id": "project-assets",
+  "images": [
+    {
+      "id": "ant-forest",
+      "title": "蚂蚁森林",
+      "src": "/growth-design-site/images/ant-forest.png"
+    },
+    {
+      "id": "taojinbi",
+      "title": "淘金币",
+      "src": "/growth-design-site/images/taojinbi.png"
+    },
+    {
+      "id": "jiwufu",
+      "title": "集五福",
+      "src": "/growth-design-site/images/jiwufu.png"
+    },
+    {
+      "id": "kan-yidao",
+      "title": "砍一刀",
+      "src": "/growth-design-site/images/kan-yidao.png"
+    },
+    {
+      "id": "playbook-four-steps",
+      "title": "玩法架构四步法",
+      "src": "/growth-design-site/images/playbook-four-steps.png"
+    }
+  ],
+  "diagrams": [
+    {
+      "id": "playbook-four-steps",
+      "title": "玩法架构四步法",
+      "src": "/growth-design-site/diagrams/playbook-four-steps.svg"
+    },
+    {
+      "id": "playbook-packaging-flow",
+      "title": "玩法包装设计流程",
+      "src": "/growth-design-site/diagrams/playbook-packaging-flow.svg"
+    },
+    {
+      "id": "motivation-judgement-map",
+      "title": "用户动机判断维度",
+      "src": "/growth-design-site/diagrams/motivation-judgement-map.svg"
+    },
+    {
+      "id": "cash-meal-playbook",
+      "title": "餐餐摇现金玩法架构图",
+      "src": "/growth-design-site/diagrams/cash-meal-playbook.svg"
+    }
+  ]
+}
