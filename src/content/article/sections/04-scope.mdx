@@ -5,6 +5,8 @@ order: 4
 source: 增长运营产品设计思路_优化重写版.md
 ---
 import CalloutBlock from "../../../components/content/CalloutBlock";
+import TabsBlock from "../../../components/interactive/TabsBlock";
+import mechanismTypes from "../../data/tabs/mechanism-types.json";
 
 ### 02 范围层
 
@@ -52,13 +54,9 @@ import CalloutBlock from "../../../components/content/CalloutBlock";
 
 #### 第二步：确定玩法机制范围
 
-如果说奖励回答了“为什么行动”，那么机制就规定了“怎么行动才能拿到奖励”。选择机制时不要盲目叠加，而应根据目标行为的门槛难度和发生频次，匹配最合适的牵引手段。常见的机制按参与深度可以分为三类：
+如果说奖励回答了”为什么行动”，那么机制就规定了”怎么行动才能拿到奖励”。选择机制时不要盲目叠加，而应根据目标行为的门槛难度和发生频次，匹配最合适的牵引手段。常见的机制按参与深度可以分为三类：
 
-| 机制类型 | 用户逻辑 | 典型形式 |
-| --- | --- | --- |
-| 任务型机制 | 做什么得什么，路径最短。 | 签到、3 单挑战、邀请好友 |
-| 游戏化机制 | 借用游戏元素放大期待感、进度感和获得感。 | 抽奖、收集兑换、累积兑换、排行榜、PK |
-| 游戏机制 | 具备完整的游戏心流。目标动作成为获取游戏资源的前置任务。 | 合成、模拟经营 |
+<TabsBlock client:load data={mechanismTypes} />
 
 在初步选定机制后，务必从以下三个维度对方案进行校验，确保机制是为业务服务的：
 牵引有效性： 机制是否真的引导用户完成了目标行为？警惕用户沉迷“玩游戏”，却没产生实际的业务转化
