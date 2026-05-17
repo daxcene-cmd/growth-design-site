@@ -1,0 +1,24 @@
+---
+interface Case {
+  image: string;
+  label: string;
+  alt: string;
+}
+
+interface Props {
+  cases: Case[];
+}
+
+const { cases } = Astro.props;
+---
+
+<div class="case-gallery">
+  {cases.map((c) => (
+    <div class="case-gallery-item">
+      <div class="case-gallery-image-wrap">
+        <img src={c.image} alt={c.alt} loading="lazy" />
+      </div>
+      <span class="case-gallery-label">{c.label}</span>
+    </div>
+  ))}
+</div>

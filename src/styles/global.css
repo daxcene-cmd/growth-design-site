@@ -323,6 +323,91 @@ body {
   margin: 8px 0 0;
 }
 
+/* Value exchange diagram */
+
+.vex-diagram {
+  margin: 20px 0 28px;
+}
+
+.vex-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  font-family: var(--font-sans);
+}
+
+.vex-arc {
+  stroke: var(--color-muted);
+  stroke-width: 1.2;
+  stroke-dasharray: 5 3;
+}
+
+.vex-node-rect {
+  fill: var(--color-surface);
+  stroke: var(--color-border);
+  stroke-width: 1.2;
+}
+
+.vex-node-text {
+  font-size: 16px;
+  font-weight: 700;
+  fill: var(--color-text);
+}
+
+.vex-pill {
+  fill: var(--color-surface);
+  stroke: var(--color-border);
+  stroke-width: 1.2;
+}
+
+.vex-pill-text {
+  font-size: 12px;
+  fill: var(--color-muted);
+}
+
+/* Case gallery — image + label grid */
+
+.case-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin: 20px 0 28px;
+}
+
+.case-gallery-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.case-gallery-image-wrap {
+  border: 1px solid rgb(216 210 196 / 50%);
+  border-radius: 8px;
+  background: var(--color-table);
+  overflow: hidden;
+  width: 100%;
+}
+
+.case-gallery-image-wrap img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.case-gallery-label {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--color-muted);
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .case-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 /* Motivation cards — 3-column static card grid */
 
 .motivation-cards {

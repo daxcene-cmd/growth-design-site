@@ -1,0 +1,46 @@
+---
+---
+<div class="vex-diagram" role="img" aria-label="价值交换模型：业务输出预算给增长运营产品，增长运营产品返回指标；增长运营产品输出奖励给用户，用户返回行为">
+  <svg class="vex-svg" viewBox="0 0 720 178" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <marker id="arr-down" markerWidth="8" markerHeight="8" refX="4" refY="6" orient="0">
+        <polyline points="1,2 4,6 7,2" fill="none" stroke="#667085" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </marker>
+      <marker id="arr-up" markerWidth="8" markerHeight="8" refX="4" refY="2" orient="0">
+        <polyline points="1,6 4,2 7,6" fill="none" stroke="#667085" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </marker>
+    </defs>
+
+    <!-- 节点 -->
+    <rect x="24" y="52" width="148" height="72" rx="10" ry="10" class="vex-node-rect"/>
+    <text x="98" y="88" text-anchor="middle" dominant-baseline="middle" class="vex-node-text">业务</text>
+    <rect x="286" y="52" width="148" height="72" rx="10" ry="10" class="vex-node-rect"/>
+    <text x="360" y="88" text-anchor="middle" dominant-baseline="middle" class="vex-node-text">增长运营产品</text>
+    <rect x="548" y="52" width="148" height="72" rx="10" ry="10" class="vex-node-rect"/>
+    <text x="622" y="88" text-anchor="middle" dominant-baseline="middle" class="vex-node-text">用户</text>
+
+    <!-- 预算：业务 → 增长运营产品 -->
+    <path d="M 112 52 A 116 36 0 0 1 344 52" class="vex-arc"/>
+    <line x1="344" y1="46" x2="344" y2="52" stroke="#667085" stroke-width="1.2" marker-end="url(#arr-down)"/>
+    <rect x="206" y="9" width="44" height="22" rx="11" ry="11" class="vex-pill"/>
+    <text x="228" y="20" text-anchor="middle" dominant-baseline="middle" class="vex-pill-text">预算</text>
+
+    <!-- 指标：增长运营产品 → 业务 -->
+    <path d="M 344 124 A 116 36 0 0 1 112 124" class="vex-arc"/>
+    <line x1="112" y1="130" x2="112" y2="124" stroke="#667085" stroke-width="1.2" marker-end="url(#arr-up)"/>
+    <rect x="206" y="149" width="44" height="22" rx="11" ry="11" class="vex-pill"/>
+    <text x="228" y="160" text-anchor="middle" dominant-baseline="middle" class="vex-pill-text">指标</text>
+
+    <!-- 奖励：增长运营产品 → 用户 -->
+    <path d="M 376 52 A 116 36 0 0 1 608 52" class="vex-arc"/>
+    <line x1="608" y1="46" x2="608" y2="52" stroke="#667085" stroke-width="1.2" marker-end="url(#arr-down)"/>
+    <rect x="470" y="9" width="44" height="22" rx="11" ry="11" class="vex-pill"/>
+    <text x="492" y="20" text-anchor="middle" dominant-baseline="middle" class="vex-pill-text">奖励</text>
+
+    <!-- 行为：用户 → 增长运营产品 -->
+    <path d="M 608 124 A 116 36 0 0 1 376 124" class="vex-arc"/>
+    <line x1="376" y1="130" x2="376" y2="124" stroke="#667085" stroke-width="1.2" marker-end="url(#arr-up)"/>
+    <rect x="470" y="149" width="44" height="22" rx="11" ry="11" class="vex-pill"/>
+    <text x="492" y="160" text-anchor="middle" dominant-baseline="middle" class="vex-pill-text">行为</text>
+  </svg>
+</div>

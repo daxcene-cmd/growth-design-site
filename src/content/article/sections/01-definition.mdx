@@ -4,20 +4,25 @@ title: "定义"
 order: 1
 source: 增长运营产品设计思路_优化重写版.md
 ---
+import CaseGallery from "../../../components/content/CaseGallery.astro";
+import ValueExchangeDiagram from "../../../components/content/ValueExchangeDiagram.astro";
+
 ## 定义
 
 **增长运营产品是什么**
 
 增长运营产品是通过激励和玩法设计，**激发用户动机，牵引用户完成特定行为**，并最终达成增长目标的产品。典型案例包括蚂蚁森林、淘金币、集五福、砍一刀等。以蚂蚁森林为例，它用“免费种树做公益”的玩法，驱动用户完成到店付款、刷码乘车等平台核心行为，从而提升活跃并培养平台功能心智。
 
+<CaseGallery cases={[
+  { image: "/growth-design-site/images/ant-forest.png", label: "蚂蚁森林", alt: "蚂蚁森林" },
+  { image: "/growth-design-site/images/taojinbi.png", label: "淘金币", alt: "淘金币" },
+  { image: "/growth-design-site/images/jiwufu.png", label: "集五福", alt: "集五福" },
+  { image: "/growth-design-site/images/kan-yidao.png", label: "砍一刀", alt: "砍一刀" },
+]} />
+
 从本质上看，增长运营产品是一个**价值交换模型**。设计的作用，是让这场交换成立：用户觉得值得，业务能够衡量，平台可以持续，并且不破坏信任。
 
-| 关系 | 交换内容 |
-| --- | --- |
-| 业务 → 增长运营产品 | 预算 |
-| 增长运营产品 → 用户 | 奖励 |
-| 用户 → 增长运营产品 | 行为 |
-| 增长运营产品 → 业务 | 指标 |
+<ValueExchangeDiagram />
 
 **增长运营产品与体验型产品有什么不同**
 
