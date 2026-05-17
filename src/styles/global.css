@@ -365,6 +365,53 @@ body {
   fill: var(--color-muted);
 }
 
+/* Design framework diagram */
+
+.dfd-wrap {
+  margin: 20px 0 28px;
+}
+
+.dfd-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  font-family: var(--font-sans);
+}
+
+.dfd-layer-fill {
+  fill: var(--color-surface);
+}
+
+.dfd-layer-border {
+  stroke: var(--color-border);
+  stroke-width: 1.2;
+}
+
+.dfd-layer-label {
+  font-size: 14px;
+  font-weight: 700;
+  fill: var(--color-text);
+}
+
+
+.dfd-mod-title {
+  font-size: 14px;
+  font-weight: 700;
+  fill: var(--color-text);
+}
+
+.dfd-mod-sub {
+  font-size: 12px;
+  font-weight: 400;
+  fill: var(--color-muted);
+}
+
+.dfd-divider {
+  stroke: var(--color-border);
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+}
+
 /* Case gallery — image + label grid */
 
 .case-gallery {

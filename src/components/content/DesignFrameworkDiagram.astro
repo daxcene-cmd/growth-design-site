@@ -1,0 +1,97 @@
+---
+import data from "../../content/data/design-framework.json";
+
+interface Props {
+  highlight?: string;
+}
+const { highlight } = Astro.props;
+
+const skew = 40;
+const layers = highlight
+  ? data.layers.filter((l) => l.id === highlight)
+  : data.layers;
+
+// viewBox：全览或单层
+const allY = layers.map((l) => l.y_top);
+const allYBot = layers.map((l) => l.y_bot);
+const vTop = Math.min(...allY) - 10;
+const vBot = Math.max(...allYBot) + 10;
+const viewBox = `-20 ${vTop} 740 ${vBot - vTop}`;
+
+// 平行四边形布局常量
+const X_LEFT_TOP = 140;   // 顶边左端
+const X_RIGHT_TOP = 660;  // 顶边右端
+const LABEL_X = 56;       // 层级标签 x
+
+// 计算垂直中心处的内容区左右边界（修正 skew 偏移）
+function contentBounds(layer: typeof data.layers[0]) {
+  const cy = (layer.y_top + layer.y_bot) / 2;
+  const h = layer.y_bot - layer.y_top;
+  const offset = skew * ((cy - layer.y_top) / h);
+  return { left: X_LEFT_TOP - offset, right: X_RIGHT_TOP - offset };
+}
+
+function dividerX(layer: typeof data.layers[0]) {
+  const { left, right } = contentBounds(layer);
+  return (left + right) / 2;
+}
+
+function moduleX(layer: typeof data.layers[0], idx: number) {
+  const { left, right } = contentBounds(layer);
+  if (layer.modules.length === 1) return (left + right) / 2;
+  const mid = (left + right) / 2;
+  return idx === 0 ? (left + mid) / 2 : (mid + right) / 2;
+}
+---
+
+<div class="dfd-wrap" role="img" aria-label="增长运营产品五层设计框架">
+  <svg class="dfd-svg" viewBox={viewBox} fill="none" xmlns="http://www.w3.org/2000/svg">
+    {layers.map((layer) => {
+      const cy = (layer.y_top + layer.y_bot) / 2;
+      const pts = [
+        `${X_LEFT_TOP},${layer.y_top}`,
+        `${X_RIGHT_TOP},${layer.y_top}`,
+        `${X_RIGHT_TOP - skew},${layer.y_bot}`,
+        `${X_LEFT_TOP - skew},${layer.y_bot}`,
+      ].join(' ');
+
+      const hasDivider = layer.modules.length > 1;
+      const dx = dividerX(layer);
+      // divider line: top at dx, bot at dx - skew (parallel to sides)
+      const divTop = { x: dx, y: layer.y_top + 2 };
+      const divBot = { x: dx - skew, y: layer.y_bot - 2 };
+
+      const titleY = cy - 12;
+      const subY = cy + 12;
+
+      return (
+        <g>
+          <polygon points={pts} class="dfd-layer-fill dfd-layer-border"/>
+          {hasDivider && (
+            <line
+              x1={divTop.x} y1={divTop.y}
+              x2={divBot.x} y2={divBot.y}
+              class="dfd-divider"
+            />
+          )}
+          <text x={LABEL_X} y={cy} text-anchor="middle" dominant-baseline="middle" class="dfd-layer-label">
+            {layer.label}
+          </text>
+          {layer.modules.map((mod, i) => {
+            const mx = moduleX(layer, i);
+            return (
+              <g>
+                <text x={mx} y={titleY} text-anchor="middle" dominant-baseline="middle" class="dfd-mod-title">
+                  {mod.title}
+                </text>
+                <text x={mx} y={subY} text-anchor="middle" dominant-baseline="middle" class="dfd-mod-sub">
+                  {mod.sub}
+                </text>
+              </g>
+            );
+          })}
+        </g>
+      );
+    })}
+  </svg>
+</div>

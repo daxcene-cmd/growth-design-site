@@ -1,0 +1,76 @@
+{
+  "layers": [
+    {
+      "id": "presentation",
+      "label": "表现层",
+      "y_top": 36,
+      "y_bot": 112,
+      "modules": [
+        {
+          "title": "感知设计",
+          "sub": "场景的情感化 · 行为引导 · 行为反馈"
+        }
+      ]
+    },
+    {
+      "id": "framework",
+      "label": "框架层",
+      "y_top": 126,
+      "y_bot": 202,
+      "modules": [
+        {
+          "title": "主页框架",
+          "sub": "页面布局 · 页面层级"
+        }
+      ]
+    },
+    {
+      "id": "structure",
+      "label": "结构层",
+      "y_top": 216,
+      "y_bot": 292,
+      "modules": [
+        {
+          "title": "系统架构",
+          "sub": "资源获得与消耗"
+        },
+        {
+          "title": "玩法流程",
+          "sub": "核心流程 · 新手流程"
+        }
+      ]
+    },
+    {
+      "id": "scope",
+      "label": "范围层",
+      "y_top": 306,
+      "y_bot": 382,
+      "modules": [
+        {
+          "title": "玩法内核",
+          "sub": "玩法奖励 · 玩法机制"
+        },
+        {
+          "title": "玩法包装",
+          "sub": "演绎玩法内核 · 植入产品特色"
+        }
+      ]
+    },
+    {
+      "id": "strategy",
+      "label": "战略层",
+      "y_top": 396,
+      "y_bot": 472,
+      "modules": [
+        {
+          "title": "增长目标",
+          "sub": "目标用户 · 目标行为 · 激励预算"
+        },
+        {
+          "title": "用户动机",
+          "sub": "驱动力选择"
+        }
+      ]
+    }
+  ]
+}
