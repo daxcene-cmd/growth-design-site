@@ -16,13 +16,29 @@ type CardsContent = {
   forms: CardForm[];
 };
 
+type JudgementRow = {
+  scene: string;
+  motivations: string[];
+  note: string;
+};
+
+type JudgementGroup = {
+  dimension: string;
+  rows: JudgementRow[];
+};
+
+type JudgementContent = {
+  type: 'judgement';
+  groups: JudgementGroup[];
+};
+
 type TabItem = {
   id: string;
   index: string;
   title: string;
   descriptionShort?: string;
   description?: string;
-  content: CardsContent | TableContent;
+  content: CardsContent | TableContent | JudgementContent;
 };
 
 type TabsData = {
@@ -50,6 +66,35 @@ function CardsPanel({ forms, description }: { forms: CardForm[]; description?: s
         ))}
       </ul>
     </>
+  );
+}
+
+function JudgementPanel({ groups }: { groups: JudgementGroup[] }) {
+  return (
+    <div className="judgement-groups">
+      {groups.map((group) => (
+        <div key={group.dimension} className="judgement-group">
+          {group.dimension && (
+            <p className="judgement-dimension-label">{group.dimension}</p>
+          )}
+          <div className="judgement-rows">
+            {group.rows.map((row) => (
+              <div key={row.scene} className="judgement-row">
+                <span className="judgement-scene">{row.scene}</span>
+                <div className="judgement-content">
+                  <div className="judgement-motivations">
+                    {row.motivations.map((m) => (
+                      <span key={m} className="judgement-chip">{m}</span>
+                    ))}
+                  </div>
+                  <p className="judgement-note">{row.note}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
   );
 }
 
@@ -89,7 +134,7 @@ export default function TabsBlock({ data }: TabsBlockProps) {
   const panelRadius = '0 0 10px 10px';
 
   return (
-    <section className="interactive-block tabs-block" aria-labelledby={`${data.id}-title`}>
+    <section className="interactive-block tabs-block" data-tabs-id={data.id} aria-labelledby={`${data.id}-title`}>
       <div className="folder-tab-nav" role="tablist" aria-label={data.title}>
         {data.tabs.map((tab) => {
           const isActive = tab.id === activeTab.id;
@@ -131,6 +176,9 @@ export default function TabsBlock({ data }: TabsBlockProps) {
             columns={activeTab.content.columns}
             rows={activeTab.content.rows}
           />
+        )}
+        {activeTab.content.type === 'judgement' && (
+          <JudgementPanel groups={activeTab.content.groups} />
         )}
       </div>
     </section>

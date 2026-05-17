@@ -1,0 +1,116 @@
+{
+  "id": "motivation-judgement",
+  "title": "用户动机判断",
+  "tabs": [
+    {
+      "id": "goal-traits",
+      "index": "01",
+      "title": "目标特征",
+      "content": {
+        "type": "judgement",
+        "groups": [
+          {
+            "dimension": "目标行为成本",
+            "rows": [
+              {
+                "scene": "高门槛动作",
+                "motivations": ["获得收益（高收益）", "史诗意义与使命感"],
+                "note": "用足够回报或长期价值感支撑用户付出"
+              },
+              {
+                "scene": "低门槛动作",
+                "motivations": ["获得收益（轻量收益）"],
+                "note": "用轻量奖励促成尝试"
+              }
+            ]
+          },
+          {
+            "dimension": "目标周期",
+            "rows": [
+              {
+                "scene": "短期爆发",
+                "motivations": ["获得收益", "稀缺性与渴望", "不确定与好奇心"],
+                "note": "用收益和稀缺推动即时行动，或叠加奖励期待提升参与兴趣"
+              },
+              {
+                "scene": "长期日常",
+                "motivations": ["发展与成就", "所有权与占有欲"],
+                "note": "用成长感支撑持续参与，或用资产沉淀形成粘性"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "user-traits",
+      "index": "02",
+      "title": "用户特征",
+      "content": {
+        "type": "judgement",
+        "groups": [
+          {
+            "dimension": "生命周期",
+            "rows": [
+              {
+                "scene": "新客",
+                "motivations": ["获得收益"],
+                "note": "用明确回报完成破冰"
+              },
+              {
+                "scene": "流失客",
+                "motivations": ["所有权与占有欲", "损失与逃避"],
+                "note": "用已有资产或进度制造回访理由"
+              }
+            ]
+          },
+          {
+            "dimension": "用户偏好",
+            "rows": [
+              {
+                "scene": "高价值用户",
+                "motivations": ["所有权与占有欲", "稀缺性与渴望"],
+                "note": "用专属感和稀缺感提升吸引力"
+              },
+              {
+                "scene": "年轻圈层",
+                "motivations": ["创意授权与反馈"],
+                "note": "用表达、共创和个性化吸引参与"
+              },
+              {
+                "scene": "下沉市场",
+                "motivations": ["获得收益"],
+                "note": "对实际好处更敏感"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "resources",
+      "index": "03",
+      "title": "可用资源",
+      "content": {
+        "type": "judgement",
+        "groups": [
+          {
+            "dimension": "预算规模",
+            "rows": [
+              {
+                "scene": "预算充足",
+                "motivations": ["获得收益（高价值）"],
+                "note": "用高价值奖励直接驱动"
+              },
+              {
+                "scene": "预算吃紧",
+                "motivations": ["获得收益", "不确定与好奇心"],
+                "note": "用小额奖励叠加惊喜感放大吸引力"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

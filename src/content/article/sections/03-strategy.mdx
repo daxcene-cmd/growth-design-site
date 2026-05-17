@@ -5,7 +5,9 @@ order: 3
 source: 增长运营产品设计思路_优化重写版.md
 ---
 import CalloutBlock from "../../../components/content/CalloutBlock";
+import TabsBlock from "../../../components/interactive/TabsBlock";
 import QuizBlock from "../../../components/interactive/QuizBlock";
+import motivationJudgement from "../../data/tabs/motivation-judgement.json";
 import growthGoalCheck from "../../data/quizzes/growth-goal-check.json";
 import motivationCheck from "../../data/quizzes/motivation-check.json";
 
@@ -57,22 +59,7 @@ import motivationCheck from "../../data/quizzes/motivation-check.json";
 
 **图示模块二：用户动机判断**
 
-| 判断维度 | 典型场景 | 常见动机选择 | 说明 |
-| --- | --- | --- | --- |
-| 目标行为 | 高门槛动作 | 获得收益（高收益） | 用足够回报支撑用户付出 |
-| 目标行为 | 高门槛动作 | 史诗意义与使命感 | 用长期价值感支撑参与 |
-| 目标行为 | 低门槛动作 | 获得收益（轻量收益） | 用轻量奖励促成尝试 |
-| 目标周期 | 短期爆发 | 获得收益 + 稀缺性与渴望 | 用收益和稀缺推动即时行动 |
-| 目标周期 | 短期爆发 | 获得收益 + 不确定与好奇心 | 用奖励期待提升参与兴趣 |
-| 目标周期 | 长期日常 | 发展与成就 | 用成长感支撑持续参与 |
-| 目标周期 | 长期日常 | 所有权与占有欲 | 用资产沉淀形成粘性 |
-| 预算规模 | 预算充足 | 获得收益（高价值） | 用高价值奖励直接驱动 |
-| 预算规模 | 预算吃紧 | 获得收益 + 不确定与好奇心 | 用小额奖励叠加惊喜感放大吸引力 |
-| 生命周期 | 新客 | 获得收益 | 用明确回报完成破冰 |
-| 生命周期 | 流失客 | 所有权与占有欲 + 损失与逃避 | 用已有资产或进度制造回访理由 |
-| 用户价值 | 高价值用户 | 所有权与占有欲 + 稀缺性与渴望 | 用专属感和稀缺感提升吸引力 |
-| 用户偏好 | 年轻圈层 | 创意授权与反馈 | 用表达、共创和个性化吸引参与 |
-| 用户偏好 | 下沉市场 | 获得收益 | 对实际好处更敏感 |
+<TabsBlock client:load data={motivationJudgement} />
 
 在实际设计中，一个增长玩法通常不是只依赖单一动机，而是由一个主动机 + 一到两个辅助动机共同构成。主动机负责驱动用户采取行动，辅助动机负责增强玩法的持续性、趣味性和传播性。
 
