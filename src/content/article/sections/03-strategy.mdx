@@ -5,9 +5,11 @@ order: 3
 source: 增长运营产品设计思路_优化重写版.md
 ---
 import CalloutBlock from "../../../components/content/CalloutBlock";
+import MotivationCardsBlock from "../../../components/content/MotivationCardsBlock.astro";
 import TabsBlock from "../../../components/interactive/TabsBlock";
 import QuizBlock from "../../../components/interactive/QuizBlock";
 import motivationJudgement from "../../data/tabs/motivation-judgement.json";
+import motivationTypes from "../../data/motivation-types.json";
 import growthGoalCheck from "../../data/quizzes/growth-goal-check.json";
 import motivationCheck from "../../data/quizzes/motivation-check.json";
 
@@ -43,17 +45,7 @@ import motivationCheck from "../../data/quizzes/motivation-check.json";
 
 除此之外，还有一类更适合作为辅助的动机放大器。它本身通常不能独立驱动用户行动，而是依附在某个主动机之上，放大用户的行动意愿。例如「损失与逃避」通常需要和「获得收益」配合使用，用户不是单纯害怕损失，而是因为已经看到了潜在收益，才会更不愿意错过。典型案例是拼多多的“砍一刀”。
 
-| 类型 | 简介 | 动机 | 说明 |
-| --- | --- | --- | --- |
-| 外在动机 | 物质回报驱动 | 获得收益 | 获得实际好处与物质回报 |
-| 内在动机 | 心理满足驱动 | 史诗意义与使命感 | 让人觉得自己参与了更伟大的目标 |
-| 内在动机 | 心理满足驱动 | 发展与成就 | 透过挑战与进步，激发持续投入 |
-| 内在动机 | 心理满足驱动 | 创意授权与反馈 | 让人发挥创造力天性，并及时看到结果 |
-| 内在动机 | 心理满足驱动 | 所有权与占有欲 | 拥有虚拟资产，建立认同与粘性 |
-| 内在动机 | 心理满足驱动 | 社交影响力与同理心 | 与朋友比较、协作、获得他人肯定 |
-| 动机放大器 | 可以与任意的动机组合，强化动机 | 稀缺性与渴望 | 限时限量刺激即时行动 |
-| 动机放大器 | 可以与任意的动机组合，强化动机 | 损失与逃避 | 害怕错过、进度归零促使紧迫驱动 |
-| 动机放大器 | 可以与任意的动机组合，强化动机 | 不确定与好奇心 | 惊喜机制与变化感，创造期待 |
+<MotivationCardsBlock groups={motivationTypes.groups} />
 
 明确动机类型后，还需要判断哪一种动机更适合当前增长目标。动机选择不能只看创意是否有趣，而要回到目标行为、目标周期、预算规模和目标用户本身：用户完成这个行为的门槛有多高，业务希望短期爆发还是长期留存，激励资源是否充足，以及目标用户的特征。
 
