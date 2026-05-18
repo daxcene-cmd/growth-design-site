@@ -30,6 +30,7 @@ type JudgementGroup = {
 type JudgementContent = {
   type: 'judgement';
   groups: JudgementGroup[];
+  stacked?: boolean;
 };
 
 type TabItem = {
@@ -49,6 +50,7 @@ type TabsData = {
 
 type TabsBlockProps = {
   data: TabsData;
+  layout?: 'horizontal' | 'vertical';
 };
 
 function CardsPanel({ forms, description }: { forms: CardForm[]; description?: string }) {
@@ -69,7 +71,7 @@ function CardsPanel({ forms, description }: { forms: CardForm[]; description?: s
   );
 }
 
-function JudgementPanel({ groups }: { groups: JudgementGroup[] }) {
+function JudgementPanel({ groups, stacked }: { groups: JudgementGroup[]; stacked?: boolean }) {
   return (
     <div className="judgement-groups">
       {groups.map((group) => (
@@ -79,17 +81,28 @@ function JudgementPanel({ groups }: { groups: JudgementGroup[] }) {
           )}
           <div className="judgement-rows">
             {group.rows.map((row) => (
-              <div key={row.scene} className="judgement-row">
-                <span className="judgement-scene">{row.scene}</span>
-                <div className="judgement-content">
+              stacked ? (
+                <div key={row.scene} className="judgement-row judgement-row--stacked">
+                  {row.scene && <span className="judgement-scene">{row.scene}</span>}
                   <div className="judgement-motivations">
                     {row.motivations.map((m) => (
                       <span key={m} className="judgement-chip">{m}</span>
                     ))}
                   </div>
-                  <p className="judgement-note">{row.note}</p>
                 </div>
-              </div>
+              ) : (
+                <div key={row.scene} className="judgement-row">
+                  <span className="judgement-scene">{row.scene}</span>
+                  <div className="judgement-content">
+                    <div className="judgement-motivations">
+                      {row.motivations.map((m) => (
+                        <span key={m} className="judgement-chip">{m}</span>
+                      ))}
+                    </div>
+                    <p className="judgement-note">{row.note}</p>
+                  </div>
+                </div>
+              )
             ))}
           </div>
         </div>
@@ -123,15 +136,64 @@ function TablePanel({ columns, rows }: { columns: string[]; rows: string[][] }) 
   );
 }
 
-export default function TabsBlock({ data }: TabsBlockProps) {
+export default function TabsBlock({ data, layout = 'horizontal' }: TabsBlockProps) {
   const [activeId, setActiveId] = useState(data.tabs[0]?.id);
   const activeTab = data.tabs.find((tab) => tab.id === activeId) ?? data.tabs[0];
 
   if (!activeTab) return null;
 
-  const activeIndex = data.tabs.findIndex((tab) => tab.id === activeTab.id);
+  const panel = (
+    <div
+      id={`${data.id}-${activeTab.id}-panel`}
+      role="tabpanel"
+      aria-labelledby={`${data.id}-${activeTab.id}-tab`}
+      className={layout === 'vertical' ? 'vertical-tab-panel' : 'folder-tab-panel'}
+      style={layout === 'horizontal' ? { borderRadius: '0 0 10px 10px' } : undefined}
+    >
+      {activeTab.content.type === 'cards' && (
+        <CardsPanel forms={activeTab.content.forms} description={activeTab.description} />
+      )}
+      {activeTab.content.type === 'table' && (
+        <TablePanel columns={activeTab.content.columns} rows={activeTab.content.rows} />
+      )}
+      {activeTab.content.type === 'judgement' && (
+        <JudgementPanel groups={activeTab.content.groups} stacked={activeTab.content.stacked} />
+      )}
+    </div>
+  );
 
-  const panelRadius = '0 0 10px 10px';
+  if (layout === 'vertical') {
+    return (
+      <section className="interactive-block tabs-block tabs-block--vertical" data-tabs-id={data.id} aria-labelledby={`${data.id}-title`}>
+        <div className="vertical-tab-nav" role="tablist" aria-label={data.title}>
+          {data.tabs.map((tab) => {
+            const isActive = tab.id === activeTab.id;
+            return (
+              <button
+                key={tab.id}
+                id={`${data.id}-${tab.id}-tab`}
+                role="tab"
+                type="button"
+                aria-selected={isActive}
+                aria-controls={`${data.id}-${tab.id}-panel`}
+                className={`vertical-tab${isActive ? ' is-active' : ''}`}
+                onClick={() => setActiveId(tab.id)}
+              >
+                <span className="vertical-tab-header">
+                  <span className="vertical-tab-index">{tab.index}</span>
+                  <span className="vertical-tab-title">{tab.title}</span>
+                </span>
+                {tab.descriptionShort && (
+                  <span className="vertical-tab-desc">{tab.descriptionShort}</span>
+                )}
+              </button>
+            );
+          })}
+        </div>
+        {panel}
+      </section>
+    );
+  }
 
   return (
     <section className="interactive-block tabs-block" data-tabs-id={data.id} aria-labelledby={`${data.id}-title`}>
@@ -160,27 +222,7 @@ export default function TabsBlock({ data }: TabsBlockProps) {
           );
         })}
       </div>
-
-      <div
-        id={`${data.id}-${activeTab.id}-panel`}
-        role="tabpanel"
-        aria-labelledby={`${data.id}-${activeTab.id}-tab`}
-        className="folder-tab-panel"
-        style={{ borderRadius: panelRadius }}
-      >
-        {activeTab.content.type === 'cards' && (
-          <CardsPanel forms={activeTab.content.forms} description={activeTab.description} />
-        )}
-        {activeTab.content.type === 'table' && (
-          <TablePanel
-            columns={activeTab.content.columns}
-            rows={activeTab.content.rows}
-          />
-        )}
-        {activeTab.content.type === 'judgement' && (
-          <JudgementPanel groups={activeTab.content.groups} />
-        )}
-      </div>
+      {panel}
     </section>
   );
 }

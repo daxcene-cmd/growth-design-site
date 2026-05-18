@@ -1,0 +1,133 @@
+{
+  "id": "reward-types",
+  "title": "动机与奖励类型",
+  "tabs": [
+    {
+      "id": "gain",
+      "index": "01",
+      "title": "获得收益",
+      "descriptionShort": "物质回报驱动",
+      "content": {
+        "type": "judgement",
+        "stacked": true,
+        "groups": [
+          {
+            "dimension": "硬通货",
+            "rows": [
+              { "scene": "", "motivations": ["现金", "代金券", "无门槛券", "充值卡"], "note": "" }
+            ]
+          },
+          {
+            "dimension": "公认硬货",
+            "rows": [
+              { "scene": "低价值", "motivations": ["大米", "鸡蛋", "水果", "纸巾"], "note": "" },
+              { "scene": "高价值", "motivations": ["iPhone", "黄金", "茅台"], "note": "" }
+            ]
+          },
+          {
+            "dimension": "平台权益",
+            "rows": [
+              { "scene": "", "motivations": ["排队加速", "优先试用", "免费 1 对 1 直送"], "note": "" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "mission",
+      "index": "02",
+      "title": "史诗意义与使命感",
+      "descriptionShort": "参与更伟大的目标",
+      "content": {
+        "type": "judgement",
+        "stacked": true,
+        "groups": [
+          {
+            "dimension": "公益成果",
+            "rows": [
+              { "scene": "", "motivations": ["种树", "捐赠", "助农", "碳减排"], "note": "" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "achievement",
+      "index": "03",
+      "title": "发展与成就",
+      "descriptionShort": "挑战与进步感",
+      "content": {
+        "type": "judgement",
+        "stacked": true,
+        "groups": [
+          {
+            "dimension": "能力突破",
+            "rows": [
+              { "scene": "", "motivations": ["成就勋章", "专属称号", "等级权益"], "note": "" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "creativity",
+      "index": "04",
+      "title": "创意授权与反馈",
+      "descriptionShort": "个性化表达",
+      "content": {
+        "type": "judgement",
+        "stacked": true,
+        "groups": [
+          {
+            "dimension": "个性化资产",
+            "rows": [
+              { "scene": "", "motivations": ["自定义装扮", "专属皮肤", "作品反馈"], "note": "" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ownership",
+      "index": "05",
+      "title": "所有权与占有欲",
+      "descriptionShort": "虚拟资产沉淀",
+      "content": {
+        "type": "judgement",
+        "stacked": true,
+        "groups": [
+          {
+            "dimension": "虚拟资产",
+            "rows": [
+              { "scene": "", "motivations": ["宠物", "金币", "积分"], "note": "" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "social",
+      "index": "06",
+      "title": "社交影响力与同理心",
+      "descriptionShort": "社交认同与关系",
+      "content": {
+        "type": "judgement",
+        "stacked": true,
+        "groups": [
+          {
+            "dimension": "身份彰显",
+            "rows": [
+              { "scene": "", "motivations": ["专属标识", "达人认证", "进场特效"], "note": "" }
+            ]
+          },
+          {
+            "dimension": "利他互助",
+            "rows": [
+              { "scene": "", "motivations": ["仅限赠人的礼物", "好友红包", "互助机会"], "note": "" }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

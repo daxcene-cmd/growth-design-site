@@ -1,0 +1,31 @@
+{
+  "groups": [
+    {
+      "id": "perception",
+      "icon": "eye",
+      "title": "价值感知",
+      "subtitle": "",
+      "items": [
+        { "name": "能否一眼看懂奖励价值？", "desc": "越是公认的硬通货，认知门槛越低" }
+      ]
+    },
+    {
+      "id": "cost",
+      "icon": "balance",
+      "title": "成本控制",
+      "subtitle": "",
+      "items": [
+        { "name": "人均激励成本是否在预算内？", "desc": "这套奖励在整个活动周期内能否持续发得起？" }
+      ]
+    },
+    {
+      "id": "business",
+      "icon": "return",
+      "title": "业务反哺",
+      "subtitle": "",
+      "items": [
+        { "name": "奖励能否将用户导回核心业务？", "desc": "最理想的奖励是能促进主营业务转化的权益，例如电商业务发放代金券" }
+      ]
+    }
+  ]
+}

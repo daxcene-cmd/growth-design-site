@@ -19,6 +19,7 @@ type QuizQuestion = {
   description?: string;
   caseText?: string;
   caseImage?: QuizCaseImage;
+  caseImages?: QuizCaseImage[];
   correctAnswerText?: string;
   explanation?: string;
   options: QuizOption[];
@@ -318,7 +319,15 @@ export default function QuizBlock({ data }: QuizBlockProps) {
           <div className="quiz-case-text">{currentQuestion.caseText}</div>
         ) : null}
 
-        {currentQuestion.caseImage ? (
+        {currentQuestion.caseImages ? (
+          <div className="quiz-case-images">
+            {currentQuestion.caseImages.map((img) => (
+              <figure key={img.src} className="quiz-case-image">
+                <img src={img.src} alt={img.alt} />
+              </figure>
+            ))}
+          </div>
+        ) : currentQuestion.caseImage ? (
           <figure className="quiz-case-image">
             <img src={currentQuestion.caseImage.src} alt={currentQuestion.caseImage.alt} />
           </figure>
