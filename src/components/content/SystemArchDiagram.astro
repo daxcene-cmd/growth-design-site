@@ -1,0 +1,106 @@
+---
+---
+<!--
+  系统架构图：行为输入端 → 资产蓄水池 → 价值出口端
+  viewBox: 800 × 320
+  布局：
+    左列（输入端）x=0~200，三行 y=60/120/180
+    中心节点 x=290~430，y=90~150（金币池）
+    右上路 → 提现系统 x=490~590 → 真实收益 x=640~780，y=90~130
+    右下路 → 消耗系统 x=490~590 → 业务反哺 x=640~780，y=160~200
+    下方回收节点 x=290~510，y=240~280
+-->
+<div class="sysarch-diagram" role="img" aria-label="系统架构图：签到领金币经典玩法，行为输入端汇入金币池，金币池向右分出提现与消耗两路，向下连接沉淀回收机制">
+  <svg class="sysarch-svg" viewBox="0 0 800 310" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <marker id="sa-arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+        <polyline points="1,1 7,4 1,7" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </marker>
+    </defs>
+
+    <!-- ── 整体底色框 ── -->
+    <rect x="0" y="0" width="800" height="310" rx="12" class="sa-bg"/>
+
+    <!-- ── 三列标题背景块 ── -->
+    <rect x="8" y="8" width="180" height="44" rx="8" class="sa-col-bg"/>
+    <rect x="268" y="8" width="168" height="44" rx="8" class="sa-col-bg"/>
+    <rect x="572" y="8" width="176" height="44" rx="8" class="sa-col-bg"/>
+
+    <!-- ── 列标题文字 ── -->
+    <text x="98" y="27" text-anchor="middle" class="sa-col-title">行为输入端</text>
+    <text x="98" y="43" text-anchor="middle" class="sa-col-sub">引诱用户投入</text>
+    <text x="352" y="27" text-anchor="middle" class="sa-col-title">资产蓄水池</text>
+    <text x="352" y="43" text-anchor="middle" class="sa-col-sub">形成资产沉淀</text>
+    <text x="660" y="27" text-anchor="middle" class="sa-col-title">价值出口端</text>
+    <text x="660" y="43" text-anchor="middle" class="sa-col-sub">提供最终爽感</text>
+
+    <!-- ── 左侧三个输入节点 ── -->
+    <!-- 常规 -->
+    <rect x="8" y="64" width="160" height="44" rx="8" class="sa-node sa-node--input"/>
+    <text x="88" y="82" text-anchor="middle" class="sa-node-label sa-node-label--sub">常规</text>
+    <text x="88" y="98" text-anchor="middle" class="sa-node-label">每日基础签到</text>
+    <!-- 杠杆 -->
+    <rect x="8" y="126" width="160" height="44" rx="8" class="sa-node sa-node--input sa-node--accent"/>
+    <text x="88" y="144" text-anchor="middle" class="sa-node-label sa-node-label--sub">杠杆</text>
+    <text x="88" y="160" text-anchor="middle" class="sa-node-label">连续签到翻倍</text>
+    <!-- 辅助 -->
+    <rect x="8" y="188" width="160" height="56" rx="8" class="sa-node sa-node--input"/>
+    <text x="88" y="206" text-anchor="middle" class="sa-node-label sa-node-label--sub">辅助</text>
+    <text x="88" y="222" text-anchor="middle" class="sa-node-label">看视频 / 做任务</text>
+    <text x="88" y="237" text-anchor="middle" class="sa-node-label sa-node-label--hint">补足金币缺口</text>
+
+    <!-- ── 输入 → 汇聚线 ── -->
+    <line x1="168" y1="86" x2="232" y2="86" class="sa-line"/>
+    <line x1="232" y1="86" x2="232" y2="148" class="sa-line"/>
+    <line x1="168" y1="148" x2="232" y2="148" class="sa-line"/>
+    <line x1="168" y1="216" x2="232" y2="216" class="sa-line"/>
+    <line x1="232" y1="216" x2="232" y2="148" class="sa-line"/>
+    <!-- 汇聚点 → 金币池 -->
+    <line x1="232" y1="148" x2="274" y2="148" class="sa-line" marker-end="url(#sa-arr)"/>
+    <text x="252" y="142" text-anchor="middle" class="sa-edge-label">产出</text>
+
+    <!-- ── 中心节点：金币池 ── -->
+    <rect x="276" y="122" width="152" height="52" rx="10" class="sa-node sa-node--core"/>
+    <text x="352" y="143" text-anchor="middle" class="sa-node-label sa-node-label--core-sub">核心资产</text>
+    <text x="352" y="161" text-anchor="middle" class="sa-node-label sa-node-label--core">金币池</text>
+
+    <!-- ── 金币池 → 右侧两路 ── -->
+    <line x1="428" y1="148" x2="466" y2="148" class="sa-line"/>
+    <!-- 上路 -->
+    <line x1="466" y1="148" x2="466" y2="116" class="sa-line"/>
+    <line x1="466" y1="116" x2="490" y2="116" class="sa-line" marker-end="url(#sa-arr)"/>
+    <text x="476" y="110" text-anchor="middle" class="sa-edge-label">提现</text>
+    <!-- 下路 -->
+    <line x1="466" y1="148" x2="466" y2="182" class="sa-line"/>
+    <line x1="466" y1="182" x2="490" y2="182" class="sa-line" marker-end="url(#sa-arr)"/>
+    <text x="476" y="176" text-anchor="middle" class="sa-edge-label">消耗</text>
+
+    <!-- 提现系统节点 -->
+    <rect x="492" y="94" width="108" height="44" rx="8" class="sa-node sa-node--system"/>
+    <text x="546" y="120" text-anchor="middle" class="sa-node-label">提现系统</text>
+    <!-- 提现系统 → 真实收益 -->
+    <line x1="600" y1="116" x2="624" y2="116" class="sa-line" marker-end="url(#sa-arr)"/>
+    <!-- 真实收益节点 -->
+    <rect x="626" y="94" width="162" height="44" rx="8" class="sa-node sa-node--output"/>
+    <text x="707" y="113" text-anchor="middle" class="sa-node-label sa-node-label--sub">真实收益</text>
+    <text x="707" y="129" text-anchor="middle" class="sa-node-label">微信零钱</text>
+
+    <!-- 消耗系统节点 -->
+    <rect x="492" y="160" width="108" height="44" rx="8" class="sa-node sa-node--system"/>
+    <text x="546" y="186" text-anchor="middle" class="sa-node-label">消耗系统</text>
+    <!-- 消耗系统 → 业务反哺 -->
+    <line x1="600" y1="182" x2="624" y2="182" class="sa-line" marker-end="url(#sa-arr)"/>
+    <!-- 业务反哺节点 -->
+    <rect x="626" y="160" width="162" height="44" rx="8" class="sa-node sa-node--output"/>
+    <text x="707" y="179" text-anchor="middle" class="sa-node-label sa-node-label--sub">业务反哺</text>
+    <text x="707" y="195" text-anchor="middle" class="sa-node-label">换券 / 抽奖</text>
+
+    <!-- ── 金币池 → 沉淀回收机制 ── -->
+    <line x1="352" y1="174" x2="352" y2="244" class="sa-line" marker-end="url(#sa-arr)"/>
+
+    <!-- 沉淀与回收机制节点 -->
+    <rect x="216" y="246" width="272" height="52" rx="10" class="sa-node sa-node--recycle"/>
+    <text x="352" y="266" text-anchor="middle" class="sa-node-label sa-node-label--recycle">沉淀与回收机制</text>
+    <text x="352" y="284" text-anchor="middle" class="sa-node-label sa-node-label--hint">如：月底金币清零，强化回访动机</text>
+  </svg>
+</div>

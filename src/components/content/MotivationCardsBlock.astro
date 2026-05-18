@@ -31,7 +31,10 @@ const icons: Record<string, string> = {
 <div class="motivation-cards">
   {groups.map((group) => (
     <div class="motivation-card">
-      <div class="motivation-card-icon" set:html={icons[group.id] ?? ''} />
+      {icons[group.id]
+        ? <div class="motivation-card-icon" set:html={icons[group.id]} />
+        : <div class="motivation-card-icon motivation-card-icon--text">{group.icon}</div>
+      }
       <h5 class="motivation-card-title">{group.title}</h5>
       {group.subtitle && <p class="motivation-card-subtitle">{group.subtitle}</p>}
       <hr class="motivation-card-divider" />

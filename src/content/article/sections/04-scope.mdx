@@ -12,6 +12,8 @@ import QuizBlock from "../../../components/interactive/QuizBlock";
 import mechanismTypes from "../../data/tabs/mechanism-types.json";
 import rewardTypes from "../../data/tabs/reward-types.json";
 import rewardCheck from "../../../data/reward-check.json";
+import mechanismCheck from "../../../data/mechanism-check.json";
+import packagingSteps from "../../../data/packaging-steps.json";
 import rewardQuiz from "../../data/quizzes/reward-check.json";
 
 ### 02 范围层
@@ -50,9 +52,8 @@ import rewardQuiz from "../../data/quizzes/reward-check.json";
 <TabsBlock client:load data={mechanismTypes} />
 
 在初步选定机制后，务必从以下三个维度对方案进行校验，确保机制是为业务服务的：
-牵引有效性： 机制是否真的引导用户完成了目标行为？警惕用户沉迷“玩游戏”，却没产生实际的业务转化
-认知门槛： 玩法规则是否足够直白易懂？
-疲劳度控制： 针对长周期的机制，是否设置了合理的阶段性目标或随机反馈，避免用户因机械操作产生厌倦？
+
+<MotivationCardsBlock groups={mechanismCheck.groups} />
 
 #### 第三步：组合并校验方案
 
@@ -76,11 +77,7 @@ import rewardQuiz from "../../data/quizzes/reward-check.json";
 同样是“摇手机抽奖”，包装成摇骰子、摇签筒还是摇钱树，带给用户的氛围感完全不同。好的包装能极大降低理解门槛，并巧妙地沉淀产品心智。
 顺着双钻模型的思路，玩法包装按以下三步推进：
 
-| 步骤 | 重点 | 输出 |
-| --- | --- | --- |
-| 第一步：拆解玩法内核，植入产品特色 | 分析奖励特征、机制动作及反馈方式；寻找品牌 IP、核心业务场景等具有辨识度的差异化基因 | 包装命题 |
-| 第二步：发散脑暴，构建概念 | 从现实世界（生活常识）、成熟玩法（市场验证）和业务场景（自身优势）三个维度发散 | 候选概念清单 |
-| 第三步：收敛方案 | 结合认知门槛、关联性、贴合度和延展性四个维度判断 | 核心概念定稿 |
+<MotivationCardsBlock groups={packagingSteps.groups} />
 
 玩法包装的价值在于，通过引入用户熟知的心智模型（如：种树、开盲盒），将复杂的业务逻辑转化为直觉化的操作。
 在实际推导中，直觉化应当永远优于新奇感——如果一个包装概念需要额外的规则解释，则视为无效包装。同时，包装的功能性应当优于装饰性，所有的视觉意向都应服务于奖励期待、动作引导和反馈。

@@ -365,6 +365,120 @@ body {
   fill: var(--color-muted);
 }
 
+/* System architecture diagram */
+
+.sysarch-diagram {
+  margin: 20px 0 28px;
+}
+
+.sysarch-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  font-family: var(--font-sans);
+  color: var(--color-muted);
+}
+
+.sa-bg {
+  fill: var(--color-surface);
+  stroke: var(--color-border);
+  stroke-width: 1;
+}
+
+.sa-col-bg {
+  fill: var(--color-bg);
+  stroke: var(--color-border);
+  stroke-width: 1;
+}
+
+.sa-col-title {
+  font-size: 13px;
+  font-weight: 700;
+  fill: var(--color-text);
+}
+
+.sa-col-sub {
+  font-size: 11px;
+  fill: var(--color-muted);
+}
+
+.sa-node {
+  stroke-width: 1.2;
+}
+
+.sa-node--input {
+  fill: var(--color-surface);
+  stroke: var(--color-border);
+}
+
+.sa-node--accent {
+  stroke: var(--color-accent);
+}
+
+.sa-node--core {
+  fill: var(--color-accent);
+  stroke: var(--color-accent);
+}
+
+.sa-node--system {
+  fill: var(--color-surface);
+  stroke: var(--color-border);
+}
+
+.sa-node--output {
+  fill: var(--color-bg);
+  stroke: var(--color-border);
+  stroke-dasharray: 4 3;
+}
+
+.sa-node--recycle {
+  fill: var(--color-surface);
+  stroke: var(--color-border);
+  stroke-dasharray: 4 3;
+}
+
+.sa-node-label {
+  font-size: 13px;
+  fill: var(--color-text);
+}
+
+.sa-node-label--sub {
+  font-size: 11px;
+  fill: var(--color-muted);
+}
+
+.sa-node-label--hint {
+  font-size: 11px;
+  fill: var(--color-muted);
+}
+
+.sa-node-label--core {
+  font-size: 15px;
+  font-weight: 700;
+  fill: #fff;
+}
+
+.sa-node-label--core-sub {
+  font-size: 11px;
+  fill: rgba(255,255,255,0.75);
+}
+
+.sa-node-label--recycle {
+  font-size: 13px;
+  font-weight: 600;
+  fill: var(--color-text);
+}
+
+.sa-line {
+  stroke: var(--color-muted);
+  stroke-width: 1.2;
+}
+
+.sa-edge-label {
+  font-size: 11px;
+  fill: var(--color-muted);
+}
+
 /* Double diamond diagram */
 
 .dd-wrap {
@@ -490,6 +604,13 @@ body {
   line-height: 1;
   margin-bottom: 14px;
   color: var(--color-text);
+}
+
+.motivation-card-icon--text {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--color-accent);
 }
 
 .motivation-card-title {
