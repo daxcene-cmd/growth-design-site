@@ -365,6 +365,18 @@ body {
   fill: var(--color-muted);
 }
 
+/* Double diamond diagram */
+
+.dd-wrap {
+  margin: 20px 0 28px;
+}
+
+.dd-diagram-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 /* Design framework diagram */
 
 .dfd-wrap {
