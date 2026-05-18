@@ -367,116 +367,131 @@ body {
 
 /* System architecture diagram */
 
-.sysarch-diagram {
+.sysarch-wrap {
   margin: 20px 0 28px;
 }
 
-.sysarch-svg {
-  display: block;
+.sysarch-canvas {
+  position: relative;
   width: 100%;
-  height: auto;
+  height: 350px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--color-surface);
   font-family: var(--font-sans);
+}
+
+.sysarch-header-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: var(--color-table);
+  border-bottom: 1px solid var(--color-border);
+  z-index: 0;
+}
+
+.sysarch-lane-divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  border-left: 1px dashed var(--color-border);
+  z-index: 1;
+}
+
+.sysarch-col-header {
+  position: absolute;
+  top: 0;
+  height: 70px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.sysarch-col-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.sysarch-col-sub {
+  font-size: 12px;
+  color: var(--color-muted);
+  margin-top: 3px;
+}
+
+.sysarch-svg-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sysarch-edge-label {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  color: var(--color-muted);
+  z-index: 2;
+}
+
+.sysarch-node-wrap {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.sysarch-node {
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+.sysarch-node--core {
+  border: 1.5px solid var(--color-accent);
+  background: var(--color-accent-soft);
+}
+
+.sysarch-node--recycle {
+  border-style: dashed;
+  background: var(--color-surface);
+}
+
+.sysarch-node-tag {
+  font-size: 11px;
   color: var(--color-muted);
 }
 
-.sa-bg {
-  fill: var(--color-surface);
-  stroke: var(--color-border);
-  stroke-width: 1;
+.sysarch-node--core .sysarch-node-tag {
+  color: var(--color-accent);
 }
 
-.sa-col-bg {
-  fill: var(--color-bg);
-  stroke: var(--color-border);
-  stroke-width: 1;
-}
-
-.sa-col-title {
-  font-size: 13px;
-  font-weight: 700;
-  fill: var(--color-text);
-}
-
-.sa-col-sub {
-  font-size: 11px;
-  fill: var(--color-muted);
-}
-
-.sa-node {
-  stroke-width: 1.2;
-}
-
-.sa-node--input {
-  fill: var(--color-surface);
-  stroke: var(--color-border);
-}
-
-.sa-node--accent {
-  stroke: var(--color-accent);
-}
-
-.sa-node--core {
-  fill: var(--color-accent);
-  stroke: var(--color-accent);
-}
-
-.sa-node--system {
-  fill: var(--color-surface);
-  stroke: var(--color-border);
-}
-
-.sa-node--output {
-  fill: var(--color-bg);
-  stroke: var(--color-border);
-  stroke-dasharray: 4 3;
-}
-
-.sa-node--recycle {
-  fill: var(--color-surface);
-  stroke: var(--color-border);
-  stroke-dasharray: 4 3;
-}
-
-.sa-node-label {
-  font-size: 13px;
-  fill: var(--color-text);
-}
-
-.sa-node-label--sub {
-  font-size: 11px;
-  fill: var(--color-muted);
-}
-
-.sa-node-label--hint {
-  font-size: 11px;
-  fill: var(--color-muted);
-}
-
-.sa-node-label--core {
-  font-size: 15px;
-  font-weight: 700;
-  fill: #fff;
-}
-
-.sa-node-label--core-sub {
-  font-size: 11px;
-  fill: rgba(255,255,255,0.75);
-}
-
-.sa-node-label--recycle {
-  font-size: 13px;
+.sysarch-node-title {
+  font-size: 14px;
   font-weight: 600;
-  fill: var(--color-text);
+  color: var(--color-text);
 }
 
-.sa-line {
-  stroke: var(--color-muted);
-  stroke-width: 1.2;
-}
-
-.sa-edge-label {
-  font-size: 11px;
-  fill: var(--color-muted);
+.sysarch-node--core .sysarch-node-title {
+  color: var(--color-accent);
+  font-weight: 700;
 }
 
 /* Double diamond diagram */

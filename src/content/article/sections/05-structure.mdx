@@ -6,6 +6,8 @@ source: 增长运营产品设计思路_优化重写版.md
 ---
 import DesignFrameworkDiagram from "../../../components/content/DesignFrameworkDiagram.astro";
 import SystemArchDiagram from "../../../components/content/SystemArchDiagram.astro";
+import MotivationCardsBlock from "../../../components/content/MotivationCardsBlock.astro";
+import flowSteps from "../../../data/flow-steps.json";
 
 ### 03 结构层
 
@@ -40,11 +42,7 @@ import SystemArchDiagram from "../../../components/content/SystemArchDiagram.ast
 
 在实际设计时，我最常用的思路是：先铺最短路径，再排查转化卡点，最后优化并补全流程。具体按照以下三步推演：
 
-| 步骤 | 核心动作 | 设计目标 |
-| --- | --- | --- |
-| 第一步：铺设最短路径 | 暂不考虑分支，先画出最顺利的一条主线 | 确保用户在一切顺利的情况下，能用最少的操作步数完成目标行为 |
-| 第二步：排查转化卡点 | 沿着主干走一遍，排查卡壳的地方 | 找出阻碍用户转化的“卡点” |
-| 第三步：优化并补全流程 | 针对查出的卡点给出解法，补全分支逻辑 | 确保全流程运转顺畅 |
+<MotivationCardsBlock groups={flowSteps.groups} />
 
 在第二步排查卡点时，可以借助两个理论模型，分别从“单次行为”和“持续行为”去校验流程是否顺畅：
 
