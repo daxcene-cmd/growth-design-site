@@ -522,6 +522,10 @@ body {
   mix-blend-mode: multiply;
 }
 
+.fogg-svg--fogg {
+  width: 75%;
+}
+
 .fogg-image-group {
   display: flex;
   flex-direction: column;

@@ -5,7 +5,7 @@
   <!-- 左栏：模型图示 -->
   <div class="fogg-left">
     <div class="fogg-image-group">
-    <svg class="fogg-svg" viewBox="0 0 220 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg class="fogg-svg fogg-svg--fogg" viewBox="0 0 220 210" fill="none" xmlns="http://www.w3.org/2000/svg">
       <!-- 坐标轴 -->
       <line x1="36" y1="174" x2="204" y2="174" stroke="var(--color-text)" stroke-width="1.6" stroke-linecap="round"/>
       <line x1="36" y1="174" x2="36" y2="10" stroke="var(--color-text)" stroke-width="1.6" stroke-linecap="round"/>
@@ -14,16 +14,22 @@
       <polyline points="31,15 36,10 41,15" fill="none" stroke="var(--color-text)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
       <!-- 轴标签 -->
       <text x="120" y="194" text-anchor="middle" class="fogg-axis-label">Ability 能力</text>
-      <text x="12" y="96" text-anchor="middle" class="fogg-axis-label" transform="rotate(-90, 12, 96)">Motivation 动机</text>
+      <text x="22" y="96" text-anchor="middle" class="fogg-axis-label" transform="rotate(-90, 22, 96)">Motivation 动机</text>
       <!-- + 符号 -->
       <text x="198" y="192" text-anchor="middle" class="fogg-plus">+</text>
       <text x="22" y="22" text-anchor="middle" class="fogg-plus">+</text>
       <!-- 行动线：双曲线，从左上到右下 -->
-      <path d="M 44 22 C 44 80 60 140 200 168" stroke="var(--color-accent)" stroke-width="2.2" stroke-linecap="round" fill="none"/>
-      <!-- 行动线标注 -->
-      <text x="148" y="108" class="fogg-zone-label fogg-zone-label--on">行动线</text>
+      <defs>
+        <path id="fogg-curve" d="M 44 22 C 44 80 60 140 185 168"/>
+        <path id="fogg-curve-label" d="M 54 14 C 54 72 70 132 210 160"/>
+      </defs>
+      <use href="#fogg-curve" stroke="var(--color-accent)" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+      <!-- 行动线标注：沿偏移路径排列 -->
+      <text class="fogg-zone-label fogg-zone-label--on">
+        <textPath href="#fogg-curve-label" startOffset="50%" text-anchor="middle">行动线</textPath>
+      </text>
     </svg>
-    <p class="fogg-desc">行为 = 动机 × 能力 × 触发<br/>三者同时到位，行为才会发生。</p>
+      <p class="fogg-desc">行为 = 动机 × 能力 × 触发<br/>三者同时到位，行为才会发生。</p>
     </div>
   </div>
 
