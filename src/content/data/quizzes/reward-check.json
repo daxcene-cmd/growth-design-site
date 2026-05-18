@@ -14,9 +14,9 @@
   "questions": [
     {
       "id": "q1",
-      "question": "年中集卡活动在首页侧边栏入口投放了10元红包和iPhone两种奖励方案，哪个的点击率更高？",
+      "question": "集卡活动在首页侧边栏投放了10元红包和iPhone两种奖励方案，哪个的点击率更高？",
       "correctAnswerText": "10元红包",
-      "explanation": "猜测相较于iPhone，大盘用户觉得10元红包的获得可能性更大。",
+      "explanation": "10元红包的点击率高0.53pp（1.0%→1.53%），猜测相较于iPhone，大盘用户觉得10元红包的获得可能性更大。",
       "caseImages": [
         { "src": "/growth-design-site/images/quiz-red-packet.webp", "alt": "10元红包方案" },
         { "src": "/growth-design-site/images/quiz-iphone.webp", "alt": "iPhone方案" }
@@ -29,15 +29,15 @@
     {
       "id": "q2",
       "question": "签到频道尝试过两种玩法，瓜分现金和礼盒抽奖励，它们的玩法机制相同仅奖品不同，哪个活动的参与率更高？",
-      "correctAnswerText": "礼盒抽奖",
-      "explanation": "签到频道中大部分是薅羊毛用户，对它们来说硬通货现金更有吸引力。",
+      "correctAnswerText": "瓜分现金",
+      "explanation": "瓜分现金的参与率高22pp（67%→89%）。签到频道中大部分是薅羊毛用户，对它们来说硬通货现金更有吸引力。",
       "caseImages": [
         { "src": "/growth-design-site/images/quiz-cash.png", "alt": "瓜分现金活动" },
         { "src": "/growth-design-site/images/quiz-giftbox.png", "alt": "礼盒抽奖活动" }
       ],
       "options": [
-        { "id": "a", "text": "瓜分现金", "correct": false },
-        { "id": "b", "text": "礼盒抽奖", "correct": true }
+        { "id": "a", "text": "瓜分现金", "correct": true },
+        { "id": "b", "text": "礼盒抽奖", "correct": false }
       ]
     }
   ]
