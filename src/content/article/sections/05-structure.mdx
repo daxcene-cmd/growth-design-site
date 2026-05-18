@@ -7,6 +7,8 @@ source: 增长运营产品设计思路_优化重写版.md
 import DesignFrameworkDiagram from "../../../components/content/DesignFrameworkDiagram.astro";
 import SystemArchDiagram from "../../../components/content/SystemArchDiagram.astro";
 import MotivationCardsBlock from "../../../components/content/MotivationCardsBlock.astro";
+import FoggModelBlock from "../../../components/content/FoggModelBlock.astro";
+import HookModelBlock from "../../../components/content/HookModelBlock.astro";
 import flowSteps from "../../../data/flow-steps.json";
 
 ### 03 结构层
@@ -48,20 +50,11 @@ import flowSteps from "../../../data/flow-steps.json";
 
 1. 排查“单次行为”卡点——福格模型
 
-| 维度 | 思考 | 设计逻辑 |
-| --- | --- | --- |
-| 动机 | 奖励是否前置并足以驱动行为？ | 奖励前置且放大吸引力 |
-| 能力 | 用户是否能够无障碍完成/更轻松地完成？ | 将高门槛任务拆解，确保用户在当前环境下有能力执行 |
-| 触发 | 触发时机及方案是否合理 | 确保触发信号在动机最高、能力最匹配的时机出现，且不被其他信息干扰 |
+<FoggModelBlock />
 
 2. 排查“持续行为”卡点——上瘾模型
 
-| 维度 | 思考 | 设计逻辑 |
-| --- | --- | --- |
-| 触发 | 下次回访的理由是否到位？ | 在流程中植入下一次行为的诱因 |
-| 行动 | 同单次行为的思考 | 同单次行为的设计逻辑 |
-| 多变奖赏 | 反馈的价值是否具有差异化和惊喜感？ | 加入随机性或阶梯奖励，避免用户对固定反馈产生行为疲劳 |
-| 投入 | 用户是否积累了资产？是否可感知？ | 强化资产累积的逻辑关联，利用损失与逃避确保用户感知到中断成本 |
+<HookModelBlock />
 
 
 **新手流程**

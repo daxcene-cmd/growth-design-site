@@ -1,0 +1,58 @@
+---
+---
+<div class="fogg-block">
+
+  <!-- 左栏：模型图示 -->
+  <div class="fogg-left">
+    <div class="fogg-image-group">
+    <svg class="fogg-svg" viewBox="0 0 220 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- 坐标轴 -->
+      <line x1="36" y1="174" x2="204" y2="174" stroke="var(--color-text)" stroke-width="1.6" stroke-linecap="round"/>
+      <line x1="36" y1="174" x2="36" y2="10" stroke="var(--color-text)" stroke-width="1.6" stroke-linecap="round"/>
+      <!-- 箭头 -->
+      <polyline points="199,169 204,174 199,179" fill="none" stroke="var(--color-text)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <polyline points="31,15 36,10 41,15" fill="none" stroke="var(--color-text)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- 轴标签 -->
+      <text x="120" y="194" text-anchor="middle" class="fogg-axis-label">Ability 能力</text>
+      <text x="12" y="96" text-anchor="middle" class="fogg-axis-label" transform="rotate(-90, 12, 96)">Motivation 动机</text>
+      <!-- + 符号 -->
+      <text x="198" y="192" text-anchor="middle" class="fogg-plus">+</text>
+      <text x="22" y="22" text-anchor="middle" class="fogg-plus">+</text>
+      <!-- 行动线：双曲线，从左上到右下 -->
+      <path d="M 44 22 C 44 80 60 140 200 168" stroke="var(--color-accent)" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+      <!-- 行动线标注 -->
+      <text x="148" y="108" class="fogg-zone-label fogg-zone-label--on">行动线</text>
+    </svg>
+    <p class="fogg-desc">行为 = 动机 × 能力 × 触发<br/>三者同时到位，行为才会发生。</p>
+    </div>
+  </div>
+
+  <!-- 分隔线 -->
+  <div class="fogg-divider"></div>
+
+  <!-- 右栏：三维度应用 -->
+  <div class="fogg-right">
+    <div class="fogg-item">
+      <div class="fogg-item-name">动机</div>
+      <div class="fogg-item-body">
+        <div class="fogg-item-think">奖励是否前置并足以驱动行为？</div>
+        <div class="fogg-item-logic">奖励前置且放大吸引力</div>
+      </div>
+    </div>
+    <div class="fogg-item">
+      <div class="fogg-item-name">能力</div>
+      <div class="fogg-item-body">
+        <div class="fogg-item-think">用户是否能够无障碍完成 / 更轻松地完成？</div>
+        <div class="fogg-item-logic">将高门槛任务拆解，确保用户在当前环境下有能力执行</div>
+      </div>
+    </div>
+    <div class="fogg-item">
+      <div class="fogg-item-name">触发</div>
+      <div class="fogg-item-body">
+        <div class="fogg-item-think">触发时机及方案是否合理？</div>
+        <div class="fogg-item-logic">确保触发信号在动机最高、能力最匹配的时机出现，且不被其他信息干扰</div>
+      </div>
+    </div>
+  </div>
+
+</div>

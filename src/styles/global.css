@@ -494,6 +494,157 @@ body {
   font-weight: 700;
 }
 
+/* Fogg model block */
+
+.fogg-block {
+  display: flex;
+  gap: 0;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px 0 28px;
+}
+
+.fogg-left {
+  flex: 0 0 38%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #fff;
+}
+
+.fogg-svg {
+  display: block;
+  width: 65%;
+  height: auto;
+  mix-blend-mode: multiply;
+}
+
+.fogg-image-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  gap: 16px;
+}
+
+.fogg-axis-label {
+  font-size: 11px;
+  fill: var(--color-muted);
+  font-family: var(--font-sans);
+}
+
+.fogg-zone-label {
+  font-size: 11px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+}
+
+.fogg-zone-label--on {
+  fill: var(--color-accent);
+}
+
+.fogg-zone-label--off {
+  fill: var(--color-muted);
+}
+
+.fogg-trigger-label {
+  font-size: 10px;
+  fill: var(--color-accent);
+  font-family: var(--font-sans);
+}
+
+.fogg-plus {
+  font-size: 14px;
+  font-weight: 700;
+  fill: var(--color-accent);
+  font-family: var(--font-sans);
+}
+
+.hook-node-label {
+  font-size: 11px;
+  font-weight: 700;
+  fill: var(--color-accent);
+  font-family: var(--font-sans);
+}
+
+.hook-node-label--muted {
+  fill: var(--color-text);
+  font-weight: 600;
+}
+
+.hook-quadrant-label {
+  font-size: 11px;
+  font-weight: 700;
+  fill: var(--color-text);
+  font-family: var(--font-sans);
+}
+
+.hook-model-img {
+  border-radius: 8px;
+}
+
+.fogg-desc {
+  font-size: 14px !important;
+  color: var(--color-muted);
+  text-align: center;
+  line-height: 1.4;
+  margin: 0 !important;
+}
+
+.fogg-divider {
+  width: 1px;
+  background: var(--color-border);
+  flex-shrink: 0;
+}
+
+.fogg-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.fogg-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  gap: 16px;
+}
+
+.fogg-item + .fogg-item {
+  border-top: 1px solid var(--color-border);
+}
+
+.fogg-item-name {
+  flex: 0 0 40px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text);
+  padding-top: 1px;
+}
+
+.fogg-item-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fogg-item-think {
+  font-size: 13px;
+  color: var(--color-muted);
+  line-height: 1.55;
+}
+
+.fogg-item-logic {
+  font-size: 13px;
+  color: var(--color-text);
+  line-height: 1.55;
+}
+
 /* Double diamond diagram */
 
 .dd-wrap {
