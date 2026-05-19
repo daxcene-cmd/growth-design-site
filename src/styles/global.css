@@ -661,7 +661,7 @@ body {
 }
 
 .psd-left {
-  flex: 0 0 42%;
+  flex: 0 0 72%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -676,87 +676,6 @@ body {
   font-family: var(--font-sans);
 }
 
-.psd-col-label {
-  font-size: 11px;
-  font-weight: 600;
-  fill: var(--color-muted);
-}
-
-.psd-node {
-  fill: var(--color-table);
-  stroke: var(--color-border);
-  stroke-width: 1;
-}
-
-.psd-node-text {
-  font-size: 11px;
-  fill: var(--color-text);
-}
-
-.psd-arrow-line {
-  stroke: var(--color-muted);
-  stroke-width: 1.2;
-}
-
-.psd-arrow-right {
-  stroke-width: 1.5;
-}
-
-.psd-frame-outer {
-  fill: var(--color-table);
-  stroke: var(--color-border);
-  stroke-width: 1.5;
-}
-
-.psd-frame-section {
-  stroke-width: 1;
-}
-
-.psd-frame-attract {
-  fill: var(--color-surface);
-  stroke: var(--color-border);
-}
-
-.psd-frame-understand {
-  fill: #e8e4dc;
-  stroke: var(--color-border);
-}
-
-.psd-frame-action {
-  fill: var(--color-surface);
-  stroke: var(--color-border);
-}
-
-.psd-frame-other {
-  fill: var(--color-border);
-  stroke: none;
-}
-
-.psd-frame-label {
-  font-size: 11px;
-  fill: var(--color-text);
-}
-
-.psd-frame-label--lg {
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.psd-frame-label--hint {
-  font-size: 10px;
-  fill: var(--color-muted);
-}
-
-.psd-frame-divider {
-  stroke: var(--color-border);
-  stroke-width: 1;
-}
-
-.psd-mark-line {
-  stroke: var(--color-muted);
-  stroke-width: 1;
-  stroke-dasharray: 3 2;
-}
 
 .psd-divider {
   width: 1px;

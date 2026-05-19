@@ -10,6 +10,8 @@ import MotivationCardsBlock from "../../../components/content/MotivationCardsBlo
 import FoggModelBlock from "../../../components/content/FoggModelBlock.astro";
 import HookModelBlock from "../../../components/content/HookModelBlock.astro";
 import flowSteps from "../../../data/flow-steps.json";
+import QuizBlock from "../../../components/interactive/QuizBlock";
+import hookModelCheck from "../../data/quizzes/hook-model-check.json";
 
 ### 03 结构层
 
@@ -56,6 +58,9 @@ import flowSteps from "../../../data/flow-steps.json";
 
 <HookModelBlock />
 
+以下几道题来自真实的线上测试，来验证下你对流程的设计判断是否准确。
+
+<QuizBlock client:load data={hookModelCheck} />
 
 **新手流程**
 
