@@ -649,6 +649,165 @@ body {
   line-height: 1.55;
 }
 
+/* Page structure diagram */
+
+.psd-block {
+  display: flex;
+  gap: 0;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px 0 28px;
+}
+
+.psd-left {
+  flex: 0 0 42%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: var(--color-surface);
+}
+
+.psd-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  font-family: var(--font-sans);
+}
+
+.psd-col-label {
+  font-size: 11px;
+  font-weight: 600;
+  fill: var(--color-muted);
+}
+
+.psd-node {
+  fill: var(--color-table);
+  stroke: var(--color-border);
+  stroke-width: 1;
+}
+
+.psd-node-text {
+  font-size: 11px;
+  fill: var(--color-text);
+}
+
+.psd-arrow-line {
+  stroke: var(--color-muted);
+  stroke-width: 1.2;
+}
+
+.psd-arrow-right {
+  stroke-width: 1.5;
+}
+
+.psd-frame-outer {
+  fill: var(--color-table);
+  stroke: var(--color-border);
+  stroke-width: 1.5;
+}
+
+.psd-frame-section {
+  stroke-width: 1;
+}
+
+.psd-frame-attract {
+  fill: var(--color-surface);
+  stroke: var(--color-border);
+}
+
+.psd-frame-understand {
+  fill: #e8e4dc;
+  stroke: var(--color-border);
+}
+
+.psd-frame-action {
+  fill: var(--color-surface);
+  stroke: var(--color-border);
+}
+
+.psd-frame-other {
+  fill: var(--color-border);
+  stroke: none;
+}
+
+.psd-frame-label {
+  font-size: 11px;
+  fill: var(--color-text);
+}
+
+.psd-frame-label--lg {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.psd-frame-label--hint {
+  font-size: 10px;
+  fill: var(--color-muted);
+}
+
+.psd-frame-divider {
+  stroke: var(--color-border);
+  stroke-width: 1;
+}
+
+.psd-mark-line {
+  stroke: var(--color-muted);
+  stroke-width: 1;
+  stroke-dasharray: 3 2;
+}
+
+.psd-divider {
+  width: 1px;
+  background: var(--color-border);
+  flex-shrink: 0;
+}
+
+.psd-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.psd-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  gap: 16px;
+}
+
+.psd-item + .psd-item {
+  border-top: 1px solid var(--color-border);
+}
+
+.psd-item-name {
+  flex: 0 0 40px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.psd-item-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.psd-item-question {
+  font-size: 13px;
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
+.psd-item-content {
+  font-size: 13px;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
 /* Double diamond diagram */
 
 .dd-wrap {
@@ -924,7 +1083,7 @@ body {
 
 .tabs-block--vertical {
   display: grid;
-  grid-template-columns: minmax(180px, 240px) minmax(0, 1fr);
+  grid-template-columns: minmax(140px, 180px) minmax(0, 1fr);
   gap: 0;
   padding: 0;
   border: none;
@@ -935,21 +1094,19 @@ body {
 .vertical-tab-nav {
   display: flex;
   flex-direction: column;
-  gap: 0;
-  border: 1px solid var(--color-border);
-  border-right: none;
-  border-radius: 10px 0 0 10px;
-  overflow: hidden;
+  gap: 6px;
+  border: none;
+  background: transparent;
 }
 
 .vertical-tab {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  padding: 14px 16px 15px;
-  border: none;
-  border-bottom: 1px solid var(--color-border);
-  border-radius: 0;
+  padding: 14px 10px 15px;
+  border: 1px solid var(--color-border);
+  border-right: none;
+  border-radius: 10px 0 0 10px;
   background: var(--color-table);
   color: var(--color-muted);
   cursor: pointer;
@@ -957,10 +1114,13 @@ body {
   letter-spacing: 0;
   text-align: left;
   transition: background 0.15s ease, color 0.15s ease;
+  position: relative;
+  margin-right: -1px;
 }
 
 .vertical-tab:last-child {
-  border-bottom: none;
+  border-bottom: 1px solid var(--color-border);
+  border-right: none;
 }
 
 .vertical-tab:hover:not(.is-active) {
@@ -978,6 +1138,9 @@ body {
 .vertical-tab.is-active {
   background: var(--color-surface);
   color: var(--color-text);
+  border-color: var(--color-border);
+  z-index: 2;
+  padding-right: 12px;
 }
 
 
@@ -1019,6 +1182,8 @@ body {
   border-radius: 0 10px 10px 0;
   background: var(--color-surface);
   padding: 16px;
+  position: relative;
+  z-index: 1;
 }
 
 .judgement-row--stacked {
@@ -1038,6 +1203,14 @@ body {
   font-size: 14px;
   font-weight: 700;
   color: var(--color-text);
+  width: 94px;
+  padding: 12px;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.tabs-block[data-tabs-id="reward-types"] .vertical-tab-panel {
+  padding: 16px 12px;
 }
 
 .tabs-block[data-tabs-id="reward-types"] .judgement-scene {

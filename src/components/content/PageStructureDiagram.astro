@@ -1,0 +1,103 @@
+---
+---
+<div class="psd-block">
+
+  <!-- 左栏：SVG 图示 -->
+  <div class="psd-left">
+    <svg class="psd-svg" viewBox="0 0 320 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="psd-arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+          <polygon points="0 0, 8 3, 0 6" fill="var(--color-muted)"/>
+        </marker>
+        <marker id="psd-arr-right" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+          <polygon points="0 0, 10 4, 0 8" fill="var(--color-muted)"/>
+        </marker>
+      </defs>
+
+      <!-- ── 左侧：用户认知路径 ── -->
+      <text x="52" y="18" text-anchor="middle" class="psd-col-label">用户认知</text>
+
+      <!-- 认知节点 -->
+      <rect x="4" y="28" width="96" height="32" rx="6" class="psd-node"/>
+      <text x="52" y="49" text-anchor="middle" class="psd-node-text">这是个什么活动</text>
+
+      <line x1="52" y1="60" x2="52" y2="76" class="psd-arrow-line" marker-end="url(#psd-arr)"/>
+
+      <rect x="4" y="78" width="96" height="32" rx="6" class="psd-node"/>
+      <text x="52" y="99" text-anchor="middle" class="psd-node-text">我可以得到什么</text>
+
+      <line x1="52" y1="110" x2="52" y2="140" class="psd-arrow-line" marker-end="url(#psd-arr)"/>
+
+      <rect x="4" y="142" width="96" height="32" rx="6" class="psd-node"/>
+      <text x="52" y="163" text-anchor="middle" class="psd-node-text">如何得到</text>
+
+      <line x1="52" y1="174" x2="52" y2="204" class="psd-arrow-line" marker-end="url(#psd-arr)"/>
+
+      <rect x="4" y="206" width="96" height="32" rx="6" class="psd-node"/>
+      <text x="52" y="227" text-anchor="middle" class="psd-node-text">马上行动</text>
+
+      <!-- ── 中間箭頭 ── -->
+      <line x1="108" y1="150" x2="134" y2="150" class="psd-arrow-line psd-arrow-right" marker-end="url(#psd-arr-right)"/>
+
+      <!-- ── 右侧：页面结构线框 ── -->
+      <text x="228" y="18" text-anchor="middle" class="psd-col-label">页面结构</text>
+
+      <!-- 外框手机形状 -->
+      <rect x="148" y="28" width="160" height="244" rx="10" class="psd-frame-outer"/>
+
+      <!-- 吸引区：主标题 + 主利益点 -->
+      <rect x="158" y="38" width="140" height="70" rx="6" class="psd-frame-section psd-frame-attract"/>
+      <text x="228" y="68" text-anchor="middle" class="psd-frame-label">主标题</text>
+      <line x1="168" y1="76" x2="288" y2="76" class="psd-frame-divider"/>
+      <text x="228" y="98" text-anchor="middle" class="psd-frame-label">主利益点</text>
+
+      <!-- 理解区：主玩法 -->
+      <rect x="158" y="116" width="140" height="96" rx="6" class="psd-frame-section psd-frame-understand"/>
+      <text x="228" y="168" text-anchor="middle" class="psd-frame-label psd-frame-label--lg">主玩法</text>
+
+      <!-- 行动区：主行动点 -->
+      <rect x="158" y="220" width="140" height="34" rx="6" class="psd-frame-section psd-frame-action"/>
+      <text x="228" y="242" text-anchor="middle" class="psd-frame-label">主行动点</text>
+
+      <!-- 其他区 -->
+      <rect x="158" y="258" width="140" height="8" rx="3" class="psd-frame-section psd-frame-other"/>
+      <text x="228" y="280" text-anchor="middle" class="psd-frame-label psd-frame-label--hint">其他</text>
+
+      <!-- 右侧标注线 -->
+      <line x1="300" y1="73" x2="314" y2="73" class="psd-mark-line"/>
+      <line x1="314" y1="73" x2="314" y2="164" class="psd-mark-line"/>
+      <line x1="314" y1="164" x2="300" y2="164" class="psd-mark-line"/>
+      <line x1="300" y1="237" x2="314" y2="237" class="psd-mark-line"/>
+
+    </svg>
+  </div>
+
+  <!-- 分隔线 -->
+  <div class="psd-divider"></div>
+
+  <!-- 右栏：三行内容 -->
+  <div class="psd-right">
+    <div class="psd-item">
+      <div class="psd-item-name">吸引</div>
+      <div class="psd-item-body">
+        <div class="psd-item-question">我能得到什么？</div>
+        <div class="psd-item-content">核心利益点</div>
+      </div>
+    </div>
+    <div class="psd-item">
+      <div class="psd-item-name">理解</div>
+      <div class="psd-item-body">
+        <div class="psd-item-question">我怎么得到？</div>
+        <div class="psd-item-content">玩法主对象、任务进度、关键规则</div>
+      </div>
+    </div>
+    <div class="psd-item">
+      <div class="psd-item-name">行动</div>
+      <div class="psd-item-body">
+        <div class="psd-item-question">我现在该做什么？</div>
+        <div class="psd-item-content">主行动按钮、下一步指引</div>
+      </div>
+    </div>
+  </div>
+
+</div>
