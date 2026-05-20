@@ -102,6 +102,33 @@ const IntroContent = introSection?.Content;
       );
       observer.observe(hero);
     }
+
+    const sections = document.querySelectorAll('.article-section');
+    const tocLinks = document.querySelectorAll('.toc a');
+
+    const tocObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            tocLinks.forEach((link) => {
+              const isActive = link.getAttribute('href') === `#${id}`;
+              link.classList.toggle('is-active', isActive);
+              if (isActive) {
+                const nav = link.closest('nav');
+                if (nav) {
+                  const linkTop = link.getBoundingClientRect().top - nav.getBoundingClientRect().top + nav.scrollTop;
+                  nav.scrollTo({ top: linkTop, behavior: 'smooth' });
+                }
+              }
+            });
+          }
+        });
+      },
+      { rootMargin: '-80px 0px -60% 0px', threshold: 0 }
+    );
+
+    sections.forEach((section) => tocObserver.observe(section));
   </script>
 
 </html>
