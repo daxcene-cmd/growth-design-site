@@ -32,8 +32,8 @@
       "correctAnswerText": "瓜分现金",
       "explanation": "瓜分现金的参与率高22pp（67%→89%）。签到频道中大部分是薅羊毛用户，对它们来说硬通货现金更有吸引力。",
       "caseImages": [
-        { "src": "/growth-design-site/images/quiz-cash.webp", "alt": "瓜分现金活动" },
-        { "src": "/growth-design-site/images/quiz-giftbox.webp", "alt": "礼盒抽奖活动" }
+        { "src": "/growth-design-site/images/quiz-cash.png", "alt": "瓜分现金活动" },
+        { "src": "/growth-design-site/images/quiz-giftbox.png", "alt": "礼盒抽奖活动" }
       ],
       "options": [
         { "id": "a", "text": "瓜分现金", "correct": true },

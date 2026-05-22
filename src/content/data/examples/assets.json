@@ -4,27 +4,27 @@
     {
       "id": "ant-forest",
       "title": "蚂蚁森林",
-      "src": "/growth-design-site/images/ant-forest.webp"
+      "src": "/growth-design-site/images/ant-forest.png"
     },
     {
       "id": "taojinbi",
       "title": "淘金币",
-      "src": "/growth-design-site/images/taojinbi.webp"
+      "src": "/growth-design-site/images/taojinbi.png"
     },
     {
       "id": "jiwufu",
       "title": "集五福",
-      "src": "/growth-design-site/images/jiwufu.webp"
+      "src": "/growth-design-site/images/jiwufu.png"
     },
     {
       "id": "kan-yidao",
       "title": "砍一刀",
-      "src": "/growth-design-site/images/kan-yidao.webp"
+      "src": "/growth-design-site/images/kan-yidao.png"
     },
     {
       "id": "playbook-four-steps",
       "title": "玩法架构四步法",
-      "src": "/growth-design-site/images/playbook-four-steps.webp"
+      "src": "/growth-design-site/images/playbook-four-steps.png"
     }
   ],
   "diagrams": [
