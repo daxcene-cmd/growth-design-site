@@ -7,9 +7,9 @@
     "retry": "建议回看奖励类型与动机匹配后再练一次。"
   },
   "resultImages": {
-    "excellent": "/growth-design-site/images/flower.webp",
-    "good": "/growth-design-site/images/flower.webp",
-    "retry": "/growth-design-site/images/flower.webp"
+    "excellent": "/growth-design-site/images/01-definition/flower.webp",
+    "good": "/growth-design-site/images/01-definition/flower.webp",
+    "retry": "/growth-design-site/images/01-definition/flower.webp"
   },
   "questions": [
     {
@@ -18,8 +18,8 @@
       "correctAnswerText": "10元红包",
       "explanation": "10元红包的点击率高0.53pp（1.0%→1.53%），猜测相较于iPhone，大盘用户觉得10元红包的获得可能性更大。",
       "caseImages": [
-        { "src": "/growth-design-site/images/quiz-red-packet.webp", "alt": "10元红包方案" },
-        { "src": "/growth-design-site/images/quiz-iphone.webp", "alt": "iPhone方案" }
+        { "src": "/growth-design-site/images/05-structure/quiz-red-packet.webp", "alt": "10元红包方案" },
+        { "src": "/growth-design-site/images/05-structure/quiz-iphone.webp", "alt": "iPhone方案" }
       ],
       "options": [
         { "id": "a", "text": "10元红包", "correct": true },
@@ -32,8 +32,8 @@
       "correctAnswerText": "瓜分现金",
       "explanation": "瓜分现金的参与率高22pp（67%→89%）。签到频道中大部分是薅羊毛用户，对它们来说硬通货现金更有吸引力。",
       "caseImages": [
-        { "src": "/growth-design-site/images/quiz-cash.png", "alt": "瓜分现金活动" },
-        { "src": "/growth-design-site/images/quiz-giftbox.png", "alt": "礼盒抽奖活动" }
+        { "src": "/growth-design-site/images/05-structure/quiz-cash.png", "alt": "瓜分现金活动" },
+        { "src": "/growth-design-site/images/05-structure/quiz-giftbox.png", "alt": "礼盒抽奖活动" }
       ],
       "options": [
         { "id": "a", "text": "瓜分现金", "correct": true },

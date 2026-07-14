@@ -1,0 +1,19 @@
+---
+const cards = [
+  { scene: '场景 1', label: '未开场', highlight: false, image: '/growth-design-site/images/06-framework/scene-1.png' },
+  { scene: '场景 2', label: '已开场\n但大奖未解锁', highlight: true, image: '/growth-design-site/images/06-framework/scene-2.png' },
+  { scene: '场景 3', label: '已开场\n且大奖已解锁', highlight: false, image: '/growth-design-site/images/06-framework/scene-3.png' },
+];
+---
+
+<div class="fw-state-cards fw-state-cards--variant-a">
+  {cards.map(card => (
+    <div class={`fw-state-card${card.highlight ? ' fw-state-card--highlight' : ''}`}>
+      <div class="fw-state-card-text">
+        <span class="fw-state-card-scene">{card.scene}</span>
+        <span class="fw-state-card-label">{card.label}</span>
+      </div>
+      <img class="fw-state-card-img" src={card.image} alt={card.label} />
+    </div>
+  ))}
+</div>

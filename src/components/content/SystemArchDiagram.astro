@@ -1,100 +1,143 @@
 ---
 ---
 <div class="sysarch-wrap">
-  <div class="sysarch-canvas">
+  <div class="sysarch-layout">
 
-    <!-- 表头背景 -->
-    <div class="sysarch-header-bg"></div>
-    <!-- 泳道分割线（贯穿全高含 header） -->
-    <div class="sysarch-lane-divider" style="left: 273px"></div>
-    <div class="sysarch-lane-divider" style="left: 546px"></div>
-
-    <!-- 表头文字 -->
-    <div class="sysarch-col-header" style="left: 136px">
-      <div class="sysarch-col-title">行为输入</div>
-      <div class="sysarch-col-sub">引诱用户投入</div>
-    </div>
-    <div class="sysarch-col-header" style="left: 410px">
-      <div class="sysarch-col-title">资产积累</div>
-      <div class="sysarch-col-sub">形成资产沉淀</div>
-    </div>
-    <div class="sysarch-col-header" style="left: 683px">
-      <div class="sysarch-col-title">价值输出</div>
-      <div class="sysarch-col-sub">提供最终爽感</div>
-    </div>
-
-    <!-- SVG 连线层 -->
-    <svg class="sysarch-svg-layer" viewBox="0 0 820 350" preserveAspectRatio="xMidYMid meet">
-      <defs>
-        <marker id="sa2-arr" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
-          <polygon points="0 0, 7 2.5, 0 5" fill="var(--color-muted)"/>
-        </marker>
-      </defs>
-      <g fill="none" stroke="var(--color-muted)" stroke-width="1.5" stroke-linejoin="round">
-        <!-- 左侧三路汇聚 → 金币账户 -->
-        <path d="M 218 116 L 268 116 L 268 200"/>
-        <path d="M 218 200 L 268 200"/>
-        <path d="M 218 283 L 268 283 L 268 200"/>
-        <path d="M 268 200 L 319 200" marker-end="url(#sa2-arr)"/>
-        <!-- 金币账户 → 回收机制 -->
-        <path d="M 410 233 L 410 266" marker-end="url(#sa2-arr)"/>
-        <!-- 金币账户 → 右侧两路 -->
-        <path d="M 501 200 L 558 200"/>
-        <path d="M 558 200 L 558 150 L 601 150" marker-end="url(#sa2-arr)"/>
-        <path d="M 558 200 L 558 250 L 601 250" marker-end="url(#sa2-arr)"/>
-      </g>
-    </svg>
-
-    <!-- 连线标签 -->
-    <div class="sysarch-edge-label" style="left: 292px; top: 190px">获得</div>
-    <div class="sysarch-edge-label" style="left: 432px; top: 245px">回收</div>
-    <div class="sysarch-edge-label" style="left: 526px; top: 190px">消耗</div>
-
-    <!-- 节点：行为输入 -->
-    <div class="sysarch-node-wrap" style="left: 136px; top: 116px; width: 164px; height: 50px">
-      <div class="sysarch-node">
-        <span class="sysarch-node-tag">常规行为</span>
-        <span class="sysarch-node-title">每日签到</span>
-      </div>
-    </div>
-    <div class="sysarch-node-wrap" style="left: 136px; top: 200px; width: 164px; height: 50px">
-      <div class="sysarch-node">
-        <span class="sysarch-node-tag">杠杆行为</span>
-        <span class="sysarch-node-title">连续签到翻倍</span>
-      </div>
-    </div>
-    <div class="sysarch-node-wrap" style="left: 136px; top: 283px; width: 164px; height: 50px">
-      <div class="sysarch-node">
-        <span class="sysarch-node-tag">辅助行为</span>
-        <span class="sysarch-node-title">做任务</span>
+    <!-- 左侧：核心页面截图 -->
+    <div class="sysarch-page-col">
+      <div class="sysarch-page-img-wrap">
+        <img src="/growth-design-site/images/05-structure/flow-step1-1.png" alt="签到开红包核心页面" class="sysarch-page-img" />
       </div>
     </div>
 
-    <!-- 节点：资产积累 -->
-    <div class="sysarch-node-wrap" style="left: 410px; top: 200px; width: 182px; height: 66px">
-      <div class="sysarch-node sysarch-node--core">
-        <span class="sysarch-node-tag">核心资产</span>
-        <span class="sysarch-node-title">金币账户</span>
-      </div>
-    </div>
-    <div class="sysarch-node-wrap" style="left: 410px; top: 290px; width: 164px; height: 48px">
-      <div class="sysarch-node sysarch-node--recycle">
-        <span class="sysarch-node-tag">过期机制</span>
-        <span class="sysarch-node-title">14日不签到清零</span>
-      </div>
-    </div>
+    <!-- 右侧：系统架构图 -->
+    <div class="sysarch-diagram-col">
+      <div class="sysarch-canvas">
 
-    <!-- 节点：价值输出 -->
-    <div class="sysarch-node-wrap" style="left: 683px; top: 150px; width: 164px; height: 50px">
-      <div class="sysarch-node">
-        <span class="sysarch-node-tag">真实收益</span>
-        <span class="sysarch-node-title">提现至微信</span>
+        <!-- 表头背景 -->
+        <div class="sysarch-header-bg"></div>
+        <!-- 泳道分割线 -->
+        <div class="sysarch-lane-divider" style="left: 33.29%"></div>
+        <div class="sysarch-lane-divider" style="left: 66.59%"></div>
+
+        <!-- 表头文字 -->
+        <div class="sysarch-col-header" style="left: 16.59%">
+          <div class="sysarch-col-title">行为输入</div>
+        </div>
+        <div class="sysarch-col-header" style="left: 50%">
+          <div class="sysarch-col-title">资产积累</div>
+        </div>
+        <div class="sysarch-col-header" style="left: 83.29%">
+          <div class="sysarch-col-title">奖励输出</div>
+        </div>
+
+        <!-- SVG 连线层 (viewBox 820×420) -->
+        <svg class="sysarch-svg-layer" viewBox="0 0 820 420" preserveAspectRatio="none">
+          <defs>
+            <marker id="sa2-arr" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+              <polygon points="0 0, 7 2.5, 0 5" fill="var(--color-muted)"/>
+            </marker>
+          </defs>
+          <g fill="none" stroke="var(--color-muted)" stroke-width="1.5" stroke-linejoin="round">
+            <!-- 节点1-3 汇聚 → 现金账户 -->
+            <path d="M 218 101 L 268 101 L 268 186"/>
+            <path d="M 218 186 L 268 186"/>
+            <path d="M 218 271 L 268 271 L 268 186"/>
+            <path d="M 268 186 L 319 186" marker-end="url(#sa2-arr)"/>
+            <!-- 现金账户 → 14天清零 -->
+            <path d="M 410 215 L 410 267" marker-end="url(#sa2-arr)"/>
+            <!-- 现金账户 → 双路输出 -->
+            <path d="M 501 186 L 558 186"/>
+            <path d="M 558 186 L 558 146 L 601 146" marker-end="url(#sa2-arr)"/>
+            <path d="M 558 186 L 558 231 L 601 231" marker-end="url(#sa2-arr)"/>
+          </g>
+          <!-- 连签/累签 → 锁（解锁，虚线） -->
+          <path d="M 218 356 L 574 356 L 574 241"
+            fill="none" stroke="var(--color-muted)" stroke-width="1.5"
+            stroke-dasharray="5,4" stroke-linejoin="round"/>
+        </svg>
+
+        <!-- 连线标签 -->
+        <div class="sysarch-edge-label" style="left: 35.61%; top: 41%">获得</div>
+        <div class="sysarch-edge-label" style="left: 52.68%; top: 57%">回收</div>
+        <div class="sysarch-edge-label" style="left: 64.15%; top: 41%">消耗</div>
+        <div class="sysarch-edge-label" style="left: 70.5%; top: 71%; transform: translate(4px, -50%)">解锁</div>
+        <div class="sysarch-lock-icon" style="left: 70%; top: 55%">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="7" width="10" height="8" rx="1.5" fill="var(--color-surface)" stroke="var(--color-muted)" stroke-width="1.4"/>
+            <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="var(--color-muted)" stroke-width="1.4" stroke-linecap="round"/>
+            <circle cx="8" cy="11" r="1" fill="var(--color-muted)"/>
+          </svg>
+        </div>
+
+        <!-- 行为输入节点 -->
+        <div class="sysarch-node-wrap" style="left: 16.59%; top: 24.05%; width: 20%; height: 14%">
+          <div class="sysarch-node">
+            <span class="sysarch-node-tag">低门槛核心行为</span>
+            <span class="sysarch-node-title">每日签到</span>
+          </div>
+        </div>
+        <div class="sysarch-node-wrap" style="left: 16.59%; top: 44.29%; width: 20%; height: 14%">
+          <div class="sysarch-node">
+            <span class="sysarch-node-tag">高门槛核心行为</span>
+            <span class="sysarch-node-title">邀好友签到</span>
+          </div>
+        </div>
+        <div class="sysarch-node-wrap" style="left: 16.59%; top: 64.52%; width: 20%; height: 14%">
+          <div class="sysarch-node">
+            <span class="sysarch-node-tag">辅助行为</span>
+            <span class="sysarch-node-title">做任务&买团购</span>
+          </div>
+        </div>
+        <div class="sysarch-node-wrap" style="left: 16.59%; top: 84.76%; width: 20%; height: 14%">
+          <div class="sysarch-node sysarch-node--unlock">
+            <span class="sysarch-node-tag">提现门槛</span>
+            <span class="sysarch-node-title">连签/累签任务</span>
+          </div>
+        </div>
+
+        <!-- 资产积累节点 -->
+        <div class="sysarch-node-wrap" style="left: 50%; top: 44.29%; width: 22.2%; height: 14%">
+          <div class="sysarch-node sysarch-node--core">
+            <span class="sysarch-node-tag">核心资产</span>
+            <span class="sysarch-node-title">现金账户</span>
+          </div>
+        </div>
+        <div class="sysarch-node-wrap" style="left: 50%; top: 70.48%; width: 20%; height: 14%">
+          <div class="sysarch-node sysarch-node--recycle">
+            <span class="sysarch-node-tag">过期机制</span>
+            <span class="sysarch-node-title">14日不签到清零</span>
+          </div>
+        </div>
+
+        <!-- 奖励输出节点 -->
+        <div class="sysarch-node-wrap" style="left: 83.29%; top: 34.76%; width: 20%; height: 14%">
+          <div class="sysarch-node">
+            <span class="sysarch-node-tag">业务反哺</span>
+            <span class="sysarch-node-title">兑换无门槛券</span>
+          </div>
+        </div>
+        <div class="sysarch-node-wrap" style="left: 83.29%; top: 55%; width: 20%; height: 14%">
+          <div class="sysarch-node">
+            <span class="sysarch-node-tag">核心激励</span>
+            <span class="sysarch-node-title">提现至微信</span>
+          </div>
+        </div>
+
       </div>
-    </div>
-    <div class="sysarch-node-wrap" style="left: 683px; top: 250px; width: 164px; height: 50px">
-      <div class="sysarch-node">
-        <span class="sysarch-node-tag">业务反哺</span>
-        <span class="sysarch-node-title">兑换无门槛券</span>
+      <div class="sysarch-legend">
+        <span class="sysarch-legend-item">
+          <span class="sysarch-legend-solid-border"></span>主动行为 / 核心节点
+        </span>
+        <span class="sysarch-legend-item">
+          <span class="sysarch-legend-dashed-border"></span>系统自动执行的被动机制
+        </span>
+        <span class="sysarch-legend-item">
+          <span class="sysarch-legend-solid-arrow"></span>现金流转
+        </span>
+        <span class="sysarch-legend-item">
+          <span class="sysarch-legend-dashed-arrow"></span>条件解锁关系
+        </span>
       </div>
     </div>
 

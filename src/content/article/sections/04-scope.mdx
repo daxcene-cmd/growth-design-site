@@ -1,84 +1,167 @@
 ---
 id: scope
-title: "02 范围层"
+title: "范围层：设计玩法内核与包装概念"
 order: 4
 source: 增长运营产品设计思路_优化重写版.md
 ---
 import DesignFrameworkDiagram from "../../../components/content/DesignFrameworkDiagram.astro";
 import DoubleDiamondDiagram from "../../../components/content/DoubleDiamondDiagram.astro";
-import MotivationCardsBlock from "../../../components/content/MotivationCardsBlock.astro";
+import CaseGallery from "../../../components/content/CaseGallery.astro";
 import TabsBlock from "../../../components/interactive/TabsBlock";
 import QuizBlock from "../../../components/interactive/QuizBlock";
 import mechanismTypes from "../../data/tabs/mechanism-types.json";
 import rewardTypes from "../../data/tabs/reward-types.json";
-import rewardCheck from "../../../data/reward-check.json";
-import mechanismCheck from "../../../data/mechanism-check.json";
-import packagingSteps from "../../../data/packaging-steps.json";
+import CvdBlock from "../../../components/content/CvdBlock";
+import cvdData from "../../../data/combine-validate.json";
 import rewardQuiz from "../../data/quizzes/reward-check.json";
+import ProblemSplitBlock from "../../../components/content/ProblemSplitBlock.astro";
+import Annotation from "../../../components/content/Annotation.astro";
 
-### 02 范围层
+## 范围层：设计玩法内核与包装概念
 
 <DesignFrameworkDiagram highlight="scope" />
 
-范围层解决“做什么玩法”。为了避免拍脑袋定方案，这一层可以引入双钻模型作为推导逻辑。
+范围层解决的是：做什么样的增长玩法。
 
-具体来说，我们将设计拆分为两步：第一步是构建玩法内核，即奖励 X 机制；第二步是构思玩法包装，即把内核演绎成容易理解的故事。在处理每一步时，先发散（探索多维度的组合与概念），再收敛（结合成本、体验和风险确定最终方案）。
+为了避免一上来就直接套用“抽奖、签到、集卡”等现成形式，这一层可以借用双钻模型进行推导：先发散更多可能，再根据目标、体验和成本收敛方案。
+
+具体来说，范围层可以拆成两部分：第一部分是玩法内核，也就是「奖励 × 机制」；第二部分是玩法包装，也就是把玩法内核演绎成用户容易理解的故事。
 
 <DoubleDiamondDiagram />
 
-### 1）玩法内核：奖励 X 机制
+### 如何设计玩法内核？
 
-玩法内核解决的是：用什么价值吸引行动，用什么规则牵引目标。在设计初期，最忌讳一上来就陷入”做个抽奖吧”或”上个签到吧”的执行惯性。正确的做法是，将”奖励”与”机制”拆开独立推导，最后再做组合与收敛。
+玩法内核解决的是：用什么价值吸引用户行动，用什么规则牵引用户完成目标行为。具体设计时，可以将「奖励」与「机制」拆开独立推导，最后再进行组合与收敛。
 
+#### 1. 圈定奖励范围
 
-#### 第一步：圈定奖励范围
-
-玩法奖励绝不仅是单向的“发奖品”，而是我们用来交换用户行为的筹码。它必须精准映射战略层定下的用户动机。不同的动机假设，需要匹配不同类型的“筹码”来承接：
+奖励不是单纯“发奖品”，而是用来承接用户动机的价值回报。不同动机，需要匹配不同类型的奖励。
 
 <TabsBlock client:load data={rewardTypes} layout="vertical" />
 
-在通过上表初步圈定奖励类型后，还需要从以下三个维度对方案进行校验，确保奖励既能有效吸引用户，又能保证成本可控并带来实际的业务价值：
+通过上方图示初步圈定奖励后，还需要从以下三个维度校验：
 
-<MotivationCardsBlock groups={rewardCheck.groups} />
+- <strong>价值感知：</strong>用户能否一眼看懂奖励价值。越是公认的硬通货，认知门槛越低。
+- <strong>成本控制：</strong>人均成本是否在预算内，活动周期内是否发得起。
+- <strong>业务反哺：</strong>奖励能否将用户导回核心业务？最理想的奖励是能促进主营业务转化的奖励，例如电商业务发放代金券。
 
-以下两道题来自真实的线上测试，来验证下你对奖励的选择判断是否准确。
+以下两道题来自真实线上测试，可以验证你对奖励选择的判断是否准确。
 
 <QuizBlock client:load data={rewardQuiz} />
 
-#### 第二步：确定玩法机制范围
+#### 2. 确定玩法机制范围
 
-如果说奖励回答了”为什么行动”，那么机制就规定了”怎么行动才能拿到奖励”。选择机制时不要盲目叠加，而应根据目标行为的门槛难度和发生频次，匹配最合适的牵引手段。常见的机制按参与深度可以分为三类：
+如果说奖励回答"为什么行动"，机制回答的就是"怎么行动才能拿到奖励"。
+
+选择机制时，不要盲目叠加，而要回到目标行为本身，依据行为成本、发生频次等条件，匹配合适的牵引手段。常见的机制可以按复杂度分为三类：
 
 <TabsBlock client:load data={mechanismTypes} />
 
-在初步选定机制后，务必从以下三个维度对方案进行校验，确保机制是为业务服务的：
+初步选定机制后，还需要从三个维度校验：
 
-<MotivationCardsBlock groups={mechanismCheck.groups} />
+- <strong>认知门槛：</strong>用户能否快速理解"做什么、得什么"？
+- <strong>牵引有效性：</strong>机制是否真的推动了目标行动？而不是制造无效活跃？
+- <strong>疲劳度控制：</strong>长周期机制是否能支撑用户持续参与？
 
-#### 第三步：组合并校验方案
+#### 3. 组合并收敛方案
 
-将圈定出的“奖励”与“机制”交叉组合，得到多个候选方案后，通过两轮筛选锁定最优解：
+圈定奖励和机制后，可以将二者交叉组合，得到多个候选方案，最终通过三个维度收敛：
 
-第一轮：排除“错配”方案
-付出与回报对等吗？ 奖励诱惑力必须配得上任务难度，直接排除“高难度+低奖励”的组合。
-玩法一眼秒懂吗？ 组合后，用户必须能瞬间明白“做什么得什么”，直接排除解释成本过高的组合。
+- <strong>目标达成&动机匹配：</strong>这个组合是否既能牵引目标行为，又能承接用户动机？
+- <strong>用户参与体验：</strong>用户是否愿意参与且容易理解？
+- <strong>ROI：</strong>预算、开发成本和上线周期是否可控？
 
-第二轮：选出“最优”方案
-在底线合格的方案中，结合现实条件挑出性价比最高的一个：
-看成本与周期： 哪个能最快上线验证？
-看投入产出比： 哪个能用更少的预算，撬动更大的业务指标？
+以「餐餐摇现金」为例，增长目标是提升 DAU 和<Annotation num={1} note="平均每个用户能够成功邀请来的用户数量。">裂变系数</Annotation>，期望用户完成两个行为：一是进入活动摇一摇，二是邀请其他用户来活动一起摇一摇。选择的用户动机是「获得收益」。在明确目标和动机后，具体的玩法内核设计过程如下：
 
-经过两轮筛选锁定的最终方案，就是我们这一层的核心产出。此时，可以用极其清晰的一句话描述玩法内核：
-我们将用【某奖励】承接【某动机】，通过【某机制】来牵引用户完成【目标行为】。
+<CvdBlock client:load data={cvdData} />
 
-### 2）玩法包装
+### 如何把玩法包装成用户看得懂的概念？
 
-玩法包装的核心是“叙事逻辑”。它将枯燥的底层机制，转化为有趣、易懂且让用户愿意沉浸的概念。
-同样是“摇手机抽奖”，包装成摇骰子、摇签筒还是摇钱树，带给用户的氛围感完全不同。好的包装能极大降低理解门槛，并巧妙地沉淀产品心智。
-顺着双钻模型的思路，玩法包装按以下三步推进：
+玩法包装的核心，是把底层机制转化为用户看得懂、愿意参与的概念。
 
-<MotivationCardsBlock groups={packagingSteps.groups} />
+好的包装不是给玩法套一个好看的外壳，而是把「用户要做什么、为什么要做、做完会得到什么」翻译得更直观。具体设计时，可以分三步：确定包装命题、发散概念、收敛方案。
+
+
+#### 1. 确定包装命题
+
+包装命题通常可以从机制内核和产品特色两个维度确认，前者决定用户要理解的玩法规则，后者决定这个玩法应该长成哪个产品自己的样子。
+- <strong>机制内核：</strong>包括奖励特征、动作方式、参与范围和反馈方式
+- <strong>产品特色：</strong>包括品牌 IP、核心业务场景、用户关系或平台心智。
+
+例如「餐餐摇现金」的包装命题重点不是强行植入品牌 IP，而是把“附近用户一起摇现金”这套机制表达清楚。
+
+<section class="interactive-block tabs-block tabs-block--cvd">
+  <div class="folder-tab-panel">
+    <div class="cvd-groups-container">
+      <div class="cvd-group-section">
+        <p class="cvd-group-label">玩法内核</p>
+        <div class="cvd-group-items">
+          <div class="cvd-item">
+            <span class="cvd-item-chip">01</span>
+            <span>摇一摇得随机奖励</span>
+          </div>
+          <div class="cvd-item">
+            <span class="cvd-item-chip">02</span>
+            <span>特定区域内用户实时共同参与</span>
+          </div>
+        </div>
+      </div>
+      <div class="cvd-group-section">
+        <p class="cvd-group-label">产品特色</p>
+        <div class="cvd-group-items">
+          <div class="cvd-item">—</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+#### 2. 脑暴发散
+
+脑暴发散可以从两个方向展开：多角色与多维度。多角色负责补齐判断视角，多维度负责打开概念来源。
+- <strong>多角色发散：</strong>让产品、设计、运营和用户分别补充视角，避免只从单一职能理解玩法。
+- <strong>多维度发散：</strong>从现实世界映射、成熟玩法参考、业务场景等维度中寻找可用概念。
+
+围绕餐餐摇现金的两个包装命题，可以发散出以下包装方案。
+
+<div className="concept-card-grid">
+  <div className="concept-card">
+    <p className="concept-card-title">如何表达“摇一摇得随机奖励”</p>
+    <CaseGallery columns={2} gap={6} cases={[
+      { image: "/growth-design-site/images/04-scope/抽签桶.png", label: "抽签桶", alt: "抽签桶概念" },
+      { image: "/growth-design-site/images/04-scope/摇骰子.png", label: "摇骰子", alt: "摇骰子概念" },
+      { image: "/growth-design-site/images/04-scope/摇钱树.png", label: "摇钱树", alt: "摇钱树概念" },
+      { image: "/growth-design-site/images/04-scope/摇手机2.png", label: "摇手机得红包", alt: "摇手机得红包概念" },
+    ]} />
+  </div>
+  <div className="concept-card">
+    <p className="concept-card-title">如何表达“特定区域内的用户实时共同参与”</p>
+    <CaseGallery columns={2} gap={6} cases={[
+      { image: "/growth-design-site/images/04-scope/直播.png", label: "直播间播报", alt: "直播间播报概念" },
+      { image: "/growth-design-site/images/04-scope/虚拟社交空间.png", label: "虚拟社交空间", alt: "虚拟社交空间概念" },
+    ]} />
+  </div>
+</div>
+
+#### 3. 收敛方案
+
+收敛方案时，可以回到三个维度判断：吸引力与理解难度、拓展性与通用性、ROI。
+
+- <strong>吸引力与理解难度：</strong>判断用户是否愿意参与、能否快速看懂玩法。
+- <strong>拓展性与通用性：</strong>判断这个概念能否承载不同状态、奖励和后续玩法。
+- <strong>ROI：</strong>判断是否值得投入对应的设计与开发成本。
+
+以「餐餐摇现金」为例，通过三个维度综合对比，最终选择「摇钱树 + 直播间播报」。
+
+<ProblemSplitBlock
+  image="/growth-design-site/images/04-scope/摇一摇玩法包装.png"
+  alt="摇一摇玩法包装方案"
+  problems={[
+    { title: "吸引力强 & 理解难度低", body: '摇钱树直观表达“摇一摇得奖励”，直播间播报强化“多人正在参与”的氛围' },
+    { title: "延展 & 通用性强", body: "可承载现多种奖励，也可复用到抽奖玩法" },
+    { title: "ROI 高", body: '相比虚拟社交空间，实现成本更低' },
+  ]}
+/>
 
 玩法包装的价值在于，通过引入用户熟知的心智模型（如：种树、开盲盒），将复杂的业务逻辑转化为直觉化的操作。
-在实际推导中，直觉化应当永远优于新奇感——如果一个包装概念需要额外的规则解释，则视为无效包装。同时，包装的功能性应当优于装饰性，所有的视觉意向都应服务于奖励期待、动作引导和反馈。
-好的包装应让用户感知不到规则的存在，只感受到目标的达成。
+在实际推导中，直觉化应当永远优于新奇感——如果一个包装概念需要额外的规则解释，则视为无效包装。

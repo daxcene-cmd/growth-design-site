@@ -1,15 +1,15 @@
 {
   "id": "hook-model-check",
-  "title": "上瘾模型应用练习",
+  "title": "核心流程设计练习",
   "resultLabels": {
     "excellent": "对上瘾模型的判断很准，关键设计逻辑已经掌握。",
     "good": "基本掌握，建议回顾目标趋近与难度拆分部分。",
     "retry": "建议回看上瘾模型后再练一次。"
   },
   "resultImages": {
-    "excellent": "/growth-design-site/images/flower.webp",
-    "good": "/growth-design-site/images/flower.webp",
-    "retry": "/growth-design-site/images/flower.webp"
+    "excellent": "/growth-design-site/images/01-definition/flower.webp",
+    "good": "/growth-design-site/images/01-definition/flower.webp",
+    "retry": "/growth-design-site/images/01-definition/flower.webp"
   },
   "questions": [
     {
@@ -18,8 +18,8 @@
       "correctAnswerText": "初始进度60%",
       "explanation": "初始进度60%方案的分享率高8pp（40%→48%）。这是目标趋近效应的体现，当用户越是趋近最终目标，越愿意去完成它。",
       "caseImages": [
-        { "src": "/growth-design-site/images/quiz-goal-proximity-a.webp", "alt": "初始进度25%方案" },
-        { "src": "/growth-design-site/images/quiz-goal-proximity-b.webp", "alt": "初始进度60%方案" }
+        { "src": "/growth-design-site/images/05-structure/quiz-goal-proximity-a.webp", "alt": "初始进度25%方案" },
+        { "src": "/growth-design-site/images/05-structure/quiz-goal-proximity-b.webp", "alt": "初始进度60%方案" }
       ],
       "options": [
         { "id": "a", "text": "初始进度25%", "correct": false },
@@ -32,8 +32,8 @@
       "correctAnswerText": "梯度任务",
       "explanation": "梯度任务的人均邀请人数高10.4%，从4.8提升至5.3。对于高难度动作，可以通过拆分难度，循序渐进地牵引用户。",
       "caseImages": [
-        { "src": "/growth-design-site/images/quiz-invite-normal.webp", "alt": "普通任务（邀8人得8元）" },
-        { "src": "/growth-design-site/images/quiz-invite-gradient.webp", "alt": "梯度任务（邀1人得1.5元，再邀2人得1.5元…）" }
+        { "src": "/growth-design-site/images/05-structure/quiz-invite-normal.webp", "alt": "普通任务（邀8人得8元）" },
+        { "src": "/growth-design-site/images/05-structure/quiz-invite-gradient.webp", "alt": "梯度任务（邀1人得1.5元，再邀2人得1.5元…）" }
       ],
       "options": [
         { "id": "a", "text": "普通任务", "correct": false },

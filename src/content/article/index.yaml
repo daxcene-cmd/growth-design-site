@@ -7,23 +7,26 @@ sections:
     title: 开篇
     file: sections/00-intro.mdx
   - id: definition
-    title: 定义
+    title: 什么是增长运营产品？
     file: sections/01-definition.mdx
   - id: design-framework
-    title: 设计思路总览
+    title: 增长玩法五层设计模型
     file: sections/02-design-framework.mdx
   - id: strategy
-    title: 01 战略层
+    title: 战略层：明确增长目标和用户动机
     file: sections/03-strategy.mdx
   - id: scope
-    title: 02 范围层
+    title: 范围层：设计玩法内核与包装概念
     file: sections/04-scope.mdx
   - id: structure
-    title: 03 结构层
+    title: 结构层：搭建系统架构和玩法流程
     file: sections/05-structure.mdx
   - id: framework
-    title: 04 框架层
+    title: 框架层：将玩法逻辑转化为页面框架
     file: sections/06-framework.mdx
   - id: presentation
-    title: 05 表现层
+    title: 表现层：用感知设计放大行动意愿
     file: sections/07-presentation.mdx
+  - id: conclusion
+    title: 结语
+    file: sections/08-conclusion.mdx

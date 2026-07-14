@@ -1,0 +1,27 @@
+---
+const core = { label: '已开场但大奖未解锁', image: '/growth-design-site/images/06-framework/step4-core.png' };
+const arrowLabel = '检验不同场景下\n的适配性';
+const others = [
+  { label: '未开场', image: '/growth-design-site/images/06-framework/step4-other-1.png' },
+  { label: '已开场且大奖已解锁', image: '/growth-design-site/images/06-framework/step4-other-2.png' },
+];
+---
+
+<div class="fw-s4-wrap">
+  <div class="fw-s4-row">
+    <div class="fw-s4-item">
+      <img src={core.image} alt={core.label} />
+      <span class="fw-s4-img-label">{core.label}</span>
+    </div>
+    <div class="fw-s4-arrow">
+      <div class="fw-s4-arrow-line"></div>
+      <span class="fw-s4-arrow-text">{arrowLabel}</span>
+    </div>
+    {others.map(s => (
+      <div class="fw-s4-item">
+        <img src={s.image} alt={s.label} />
+        <span class="fw-s4-img-label">{s.label}</span>
+      </div>
+    ))}
+  </div>
+</div>

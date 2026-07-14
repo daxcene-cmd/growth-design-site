@@ -1,0 +1,39 @@
+---
+interface Item {
+  name: string;
+  desc: string;
+}
+
+interface Group {
+  id: string;
+  icon: string;
+  title: string;
+  subtitle: string;
+  items: Item[];
+}
+
+interface Props {
+  groups: Group[];
+}
+
+const { groups } = Astro.props;
+---
+
+<div class="group-cards-block">
+  {groups.map((group) => (
+    <div class="group-card">
+      <div class="group-card-header">
+        <p class="group-card-title">{group.title}</p>
+      </div>
+      <div class="group-card-rule" />
+      <ul class="group-card-items">
+        {group.items.map((item) => (
+          <li class="group-card-item">
+            <span class="group-card-item-name">{item.name}</span>
+            <span class="group-card-item-desc">{item.desc}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  ))}
+</div>

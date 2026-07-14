@@ -1,79 +1,418 @@
 ---
 id: structure
-title: "03 结构层"
+title: "结构层：搭建系统架构和玩法流程"
 order: 5
 source: 增长运营产品设计思路_优化重写版.md
 ---
 import DesignFrameworkDiagram from "../../../components/content/DesignFrameworkDiagram.astro";
+import CaseGallery from "../../../components/content/CaseGallery.astro";
+import FlowScreenshots from "../../../components/content/FlowScreenshots.astro";
+import ProblemSplitBlock from "../../../components/content/ProblemSplitBlock.astro";
 import SystemArchDiagram from "../../../components/content/SystemArchDiagram.astro";
-import MotivationCardsBlock from "../../../components/content/MotivationCardsBlock.astro";
-import FoggModelBlock from "../../../components/content/FoggModelBlock.astro";
-import HookModelBlock from "../../../components/content/HookModelBlock.astro";
-import flowSteps from "../../../data/flow-steps.json";
-import QuizBlock from "../../../components/interactive/QuizBlock";
-import hookModelCheck from "../../data/quizzes/hook-model-check.json";
+import ModelTabsBlock from "../../../components/content/ModelTabsBlock.astro";
+import CaseExampleBlock from "../../../components/content/CaseExampleBlock.astro";
+import FlowStepItem from "../../../components/content/FlowStepItem.astro";
+import flowTypes from "../../../data/flow-types.json";
 
-### 03 结构层
+## 结构层：搭建系统架构和玩法流程
 
 <DesignFrameworkDiagram highlight="structure" />
 
-结构层解决”用户怎么玩”。范围层确认了玩法内核与包装方案，结构层则负责将这些设定转化为具体的系统框架与操作路径。在这一层，我们主要产出两部分内容：系统架构 与 玩法流程。
+结构层解决的是“用户怎么玩”，把玩法和概念转化为可运转的系统，以及能够理解和执行的行动路径。
 
-需要特别明确的是：”系统架构”并非必选项。极简的短线玩法，重点在于”顺畅的流程”：比如点击就领红包的活动。这类玩法逻辑简单，用户的操作就是”进页面 ➔ 点按钮 ➔ 拿奖励走人”。设计时只需要画一个清晰的流程图，把这几个步骤说明白就足够了。复杂的长线玩法，必须先搭”运转的系统”：比如涉及金币累积、多任务并行、需要用户每天来打卡的项目。它其实已经变成了一个微型的”经济系统”。这时候，我们需要先用系统架构理清楚：用户怎么赚资源、又去哪里花资源。把这套循环规律想清楚后，再去规划具体的玩法流程。
+对应两部分：系统架构和玩法流程。前者理清资源如何获得、积累、消耗和回收，适合签到、养成、积分等复杂玩法；后者则把玩法主线转化为用户路径，重点包括核心流程和新手流程。
 
-### 1）系统架构
 
-复杂的增长玩法，其底层架构就是一个关于“资源获得与消耗”的模型。我们可以将其拆解为三个核心模块：行为输入端、资产蓄水池、价值出口端。
-以「签到领金币，金币可提现/兑换券」的经典玩法为例，其系统架构如下：
+### 什么是玩法系统架构？
+
+复杂的增长玩法，往往不是一次简单的「做任务、拿奖励」，而是一套围绕资源获得、积累、消耗和回收运转的系统。以「签到开红包」为例，可以沿着现金流转方向，将系统拆解为三个模块：行为输入、资产积累和奖励输出。
 <SystemArchDiagram />
 
-梳理出架构图后，我们需要重点校验这三个模块的底层运转规则：
-1. 行为输入端（控产出）： 界定任务的主次关系与产出上限。既要保证常规动作的低门槛，又要设置次数封顶，防止资源超发或被恶意刷量。
-2. 资产蓄水池（防通胀）： 制定资产的累积规则与损耗机制。通过引入周期性的“清零回收”策略，控制系统通胀，并利用损失与逃避强化用户的持续参与意愿。
-3. 价值出口端（保闭环）： 设定合理的消耗汇率与提现门槛。同时需配备低门槛的“兜底出口”（如小额抽奖），确保用户的尾部资产能被顺利消化，完成业务闭环。
+基于这套架构，设计时要优先保障「核心行为 → 核心资产 → 核心激励」这条主线跑通。以「签到开红包」为例，核心主线可以概括为：
 
-### 2）玩法流程
+每日签到 + 邀请好友签到 → 积累现金 → 完成连签任务，获得提现资格 → 提现至微信
 
-玩法流程解决的是：用户为了完成目标行为，需要按什么顺序经过哪些关键节点。结合我个人的实战经验，在设计玩法流程时，建议遵循“先主干、后分支”的原则，先设计核心流程，再设计新手流程。
-这两个流程的区别如下：
+### 如何设计核心流程？
 
-| 流程 | 面向用户 | 核心目标 |
-| --- | --- | --- |
-| 核心流程 | 已理解玩法的用户 | 让用户愿意重复参与 |
-| 新手流程 | 第一次参与的用户 | 手把手带他体验一次“低门槛拿奖励”的爽感 |
+系统架构明确后，下一步是设计核心流程，把系统主线转化为用户真正会经历的行动路径。实际设计时，可以按三步推进：铺设最短路径、排查转化卡点、优化并补全流程。
 
-**核心流程**
+#### 1. 铺设最短路径
 
-在实际设计时，我最常用的思路是：先铺最短路径，再排查转化卡点，最后优化并补全流程。具体按照以下三步推演：
+暂不考虑分支，先画出最顺利的一条主线，确保用户在一切顺利的情况下，能用最少的操作步数完成目标行为。「签到开红包」的最短路径如下：
 
-<MotivationCardsBlock groups={flowSteps.groups} />
+<FlowScreenshots steps={[
+  { image: "/growth-design-site/images/05-structure/flow-step1-1.png", title: "签到开红包", alt: "签到开红包" },
+  { image: "/growth-design-site/images/05-structure/flow-step1-2.png", title: "邀请好友开更多红包", alt: "邀请好友开更多红包" },
+  { image: "/growth-design-site/images/05-structure/flow-step1-3.png", title: "持续每日来开红包", alt: "持续每日来开红包" },
+  { image: "/growth-design-site/images/05-structure/flow-step1-4.png", title: "连签7天提现3元", alt: "连续签到7天提现3元" },
+]} />
 
-在第二步排查卡点时，可以借助两个理论模型，分别从“单次行为”和“持续行为”去校验流程是否顺畅：
+#### 2. 排查转化卡点
 
-#### 1. 排查”单次行为”卡点——福格模型
-<FoggModelBlock />
+沿着主干走一遍，排查用户可能卡壳的地方。建议从“单次行为”和“持续行为”两个维度排查，常用的校验模型如下：
 
-#### 2. 排查”持续行为”卡点——上瘾模型
-<HookModelBlock />
+<ModelTabsBlock />
 
-以下几道题来自真实的线上测试，来验证下你对流程的设计判断是否准确。
+在「签到开红包」案例中，主要卡点出现在“邀请好友开红包”阶段：
 
-<QuizBlock client:load data={hookModelCheck} />
+<ProblemSplitBlock
+  image="/growth-design-site/images/05-structure/卡点1@1x.png"
+  alt="邀请好友开更多红包卡点"
+  problems={[
+    {
+      title: "首次邀请动力不足",
+      body: "0.25 元不仅要消耗人情邀请，还得让朋友完成签到，社交成本远大于收益。"
+    },
+    {
+      title: "持续邀请体验枯燥，动力不足",
+      body: "红包金额全是明牌，整个过程一眼望到头，没有明显的情绪起伏。"
+    }
+  ]}
+/>
 
-**新手流程**
+#### 3. 优化并补全流程
 
-新手流程的核心目标有两个：一是让用户学会玩法，二是让用户愿意持续参与。为了达成这两个目标，设计可以拆解为以下两个关键步骤：
+针对卡点给出解法，再补全分支逻辑，确保全流程运转顺畅。「签到开红包」卡点的优化方案如下：
 
-#### 第一步：设定新手目标并牵引用户完成
-先设定一个代表新手已经掌握玩法的量化目标，例如完成 3 次核心行为。再遵循”先体验爽感、再理解规则”的原则进行设计。
+<ProblemSplitBlock
+  image="/growth-design-site/images/05-structure/%E4%BC%98%E5%8C%96%E5%90%8E@1x.png"
+  alt="优化后的流程方案"
+  problems={[
+    {
+      title: "放大首邀动机",
+      body: "用“最高 5 倍”和随机金额制造期待，让首次邀请不再只对应一个固定小额收益。"
+    },
+    {
+      title: "降低社交负担",
+      body: "加入“好友也可开红包”，把单向求人变成互利参与，降低用户发起邀请的心理阻力。"
+    },
+    {
+      title: "增加持续奔头",
+      body: "用随机红包和“必得 5 元”节点大奖打破明牌流程，让用户愿意继续开下去。"
+    }
+  ]}
+/>
 
-| 步骤 | 设计逻辑 | 落地动作 |
-| --- | --- | --- |
-| 1. 获得初次奖励 | 先体验爽感 | 隐藏复杂规则，奖励直接前置，引导用户完成首动并给足反馈 |
-| 2. 重复引导核心行为 | 建立“动作=收益”的预期 | 通过连续的即时反馈，带用户完成 2-3 次动作，建立肌肉记忆 |
-| 3. 适时呈现规则 | 高接受度的规则教育 | 在正向反馈（如领奖成功）的同时同步关键规则，此时用户接受度最高 |
+下面结合过往项目经验，从动机、能力、提示和能力线四个角度，补充几条核心流程设计的经验参考。
 
-#### 第二步：衔接常规流程
-衔接的核心在于动机衔接。当用户通过新手流程学会玩法后，单纯的操作指引已不再重要，重点应转向如何驱动用户自发进入常规循环。通常有以下几种做法：
-1. 从“短期获利”转向“长期预期”：明确告知常规玩法的长期收益（如：每天都能领、攒够即可提现），将用户的关注点从“新人奖”转向“长期收益”。
-2. 利用“损失与逃避”强化留存动机：强调用户已获得的资产（如：已攒 8.5 元），利用“不继续玩就浪费了”的心理，驱动用户去完成常规任务。
+<CaseExampleBlock categories={[
+  {
+    id: "motivation",
+    label: "动机",
+    description: "强化用户行动的动力",
+    principles: [
+      {
+        title: "小额现金适当放大金额，大额现金承诺必得",
+        cases: [{
+          desc: "小额现金可运用乐观偏差，让用户感觉能得到更多。当大额现金也同时存在时，需承诺必得消除不确定性。签到开红包的3种金额方案经过线上测试，最终沉淀策略为：",
+          before: [
+            "/growth-design-site/images/05-structure/cash-amount-small.png",
+            "/growth-design-site/images/05-structure/cash-amount-medium.png",
+            "/growth-design-site/images/05-structure/cash-amount-guaranteed.png"
+          ],
+          beforeLabels: ["金额 < 0.5元", "金额 0.5–1元", "金额 ≥ 1元"]
+        }]
+      },
+      {
+        title: "让用户感觉离目标很近",
+        cases: [
+          {
+            desc: "邀好友得无门槛券中，将首次默认助力进度从25%提高至60%，分享率提升8pp（40%→48%）。",
+            beforeLabel: "初始进度 25%",
+            before: ["/growth-design-site/images/05-structure/quiz-goal-proximity-a.webp"],
+            afterLabel: "初始进度 60%",
+            after: ["/growth-design-site/images/05-structure/quiz-goal-proximity-b.webp"]
+          },
+          {
+            desc: "21新春集卡新增了「前2抽必得不同卡」，让用户每次抽卡都能感觉在接近集齐目标，中低频用户的活动访次提升2.1%-5%。",
+            afterLabel: "前2抽必得不同卡",
+            after: ["/growth-design-site/images/05-structure/goal-proximity-card.jpeg"]
+          }
+        ]
+      },
+      {
+        title: "突出稀缺性和紧迫感",
+        cases: [{
+          desc: "稀缺效应和损失趋避效应让用户害怕错过奖励。签到玩法改为限量名额后，频道DAU整体降低，但8-9点高动机时段的来访DAU增加了10w。",
+          before: ["/growth-design-site/images/05-structure/scarcity-challenge.jpeg"],
+          after: ["/growth-design-site/images/05-structure/scarcity-limited.jpeg"],
+          beforeLabel: "每日8点开始挑战20万签到",
+          afterLabel: "每日8点开始限量20万签到"
+        }]
+      },
+      {
+        title: "用官方背书增加奖励可信度",
+        cases: [{
+          desc: "借助官方权威传递活动真实性，获取用户信任。在视频tab出现金红包奖励时，官方现金红包开启率比微信打款红包高1.84pp（25.61%→27.45%）。",
+          before: ["/growth-design-site/images/05-structure/credibility-wechat.jpeg"],
+          after: ["/growth-design-site/images/05-structure/credibility-official.jpeg"],
+          beforeLabel: "微信打款红包",
+          afterLabel: "官方现金红包"
+        }]
+      }
+    ]
+  },
+  {
+    id: "ability",
+    label: "能力",
+    description: "降低行为的阻力",
+    principles: [
+      {
+        title: "建立记忆点，帮助用户养成习惯",
+        cases: [{
+          desc: "瓜分现金玩法通过反复教育「明天8点开红包」，结合每日签到提醒，让用户养成了每日8点开红包的习惯。频道DAU在8-9点有一波高峰。",
+          beforeLabel: "玩法模块教育「明天8:00-24:00」开红包",
+          before: ["/growth-design-site/images/05-structure/ability-memory-before.jpeg"],
+          afterLabel: "签到后教育「明天8:00-24:00」开红包",
+          after: ["/growth-design-site/images/05-structure/ability-memory-after.jpeg"]
+        }]
+      },
+      {
+        title: "将高门槛任务拆解为小步骤",
+        cases: [{
+          desc: "邀请任务从「邀8人得8元」改为梯度机制，人均邀请人数提升10.4%（4.8→5.3人）。",
+          beforeLabel: "普通任务：邀8人得8元",
+          before: ["/growth-design-site/images/05-structure/quiz-invite-normal.webp"],
+          afterLabel: "梯度任务：邀1人得1.5元，再邀2人…",
+          after: ["/growth-design-site/images/05-structure/quiz-invite-gradient.webp"]
+        }]
+      },
+      {
+        title: "减少等待时间，如果必须等待需显示进度",
+        cases: [{
+          desc: "合成领现金加载时间长且未显示进度，导致用户流失。优化为分布加载后，参与率提升3.1pp（21.7%→24.8%）。",
+          beforeLabel: "优化前",
+          before: ["/growth-design-site/images/05-structure/ability-loading-before.jpeg"],
+          afterLabel: "优化后：分布加载",
+          after: ["/growth-design-site/images/05-structure/ability-loading-after.jpeg"]
+        }]
+      },
+      {
+        title: "减少概念包装",
+        cases: [{
+          desc: "积分签到改版至挑战签到，利益点吸引力增强，但新用户参与率下降16pp（57%→44%）。推测活动概念包装过多，挑战、瓜分等信息集合在一起，导致理解成本变高。",
+          beforeLabel: "积分签到",
+          before: ["/growth-design-site/images/05-structure/ability-concept-before.jpeg"],
+          afterLabel: "挑战签到",
+          after: ["/growth-design-site/images/05-structure/ability-concept-after.jpeg"]
+        }]
+      },
+      {
+        title: "采用更简单轻松的玩法",
+        cases: [{
+          desc: "同样的瓜分现金玩法，新用户更愿意参加「限量签到」而不是「挑战签到」。「挑战」让用户觉得负担重，「限量」只需签到，更轻松。新用户提升12.7pp（44.2%→56.9%）。",
+          beforeLabel: "挑战签到",
+          before: ["/growth-design-site/images/05-structure/ability-simple-before.jpeg"],
+          afterLabel: "限量签到",
+          after: ["/growth-design-site/images/05-structure/ability-simple-after.jpeg"]
+        }]
+      },
+      {
+        title: "减少操作步骤",
+        cases: [{
+          desc: "助力抵现，在助力反馈弹窗上直接引导用户领券，能够提升客态参与率。分享裂变来源的券点击率上升了10pp（22%→32%），任务发起率提升了3pp（10%→13%）。",
+          before: [
+            "/growth-design-site/images/05-structure/ability-steps-before1.jpeg",
+            "/growth-design-site/images/05-structure/ability-steps-before2.jpeg"
+          ],
+          beforeLabel: "优化前：先告知助力结果，再在活动页中领券",
+          afterLabel: "优化后：告知结果同时引导领券",
+          after: ["/growth-design-site/images/05-structure/ability-steps-after.jpeg"]
+        }]
+      },
+      {
+        title: "提供快捷路径",
+        cases: [{
+          desc: "在用户准备邀请时提供可邀请的用户推荐，用户能够拉来的首访用户更多。增加好友推荐后，分享渠道带来的首访用户量级提升了1w（16w→17w）。",
+          beforeLabel: "优化前",
+          before: ["/growth-design-site/images/05-structure/ability-shortcut-before.jpeg"],
+          afterLabel: "优化后",
+          after: ["/growth-design-site/images/05-structure/ability-shortcut-d.jpeg"]
+        }]
+      }
+    ]
+  },
+  {
+    id: "prompt",
+    label: "提示",
+    description: "在合适时机触发行为",
+    principles: [
+      {
+        title: "考虑提示时机对其他策略的影响，防止此消彼长",
+        cases: [{
+          desc: "每日福利在用户访问时引导兑换/提现，兑换量大幅提升但留存变化不明显（单天兑换用户量最高增幅480%）。后来验证了签到后引导兑换/提现，对留存有提升效果。",
+          beforeLabel: "提现后引导兑换",
+          before: ["/growth-design-site/images/05-structure/prompt-timing-before.jpeg"],
+          afterLabel: "签到后引导兑换",
+          after: ["/growth-design-site/images/05-structure/prompt-timing-after.jpeg"]
+        }]
+      },
+      {
+        title: "贴合用户场景的形式更好",
+        cases: [{
+          desc: "助力抵现在POI页的入口从侧边栏改成中通后，入口点击率提升1.5pp（4%→5.5%）。推测在找店场景中，侧边栏像广告容易被忽略，而中通位像是本店优惠的一种。",
+          beforeLabel: "侧边栏：领100元无门槛券",
+          before: ["/growth-design-site/images/05-structure/prompt-scene-before.jpeg"],
+          afterLabel: "中通：邀请好友得100元无门槛券",
+          after: ["/growth-design-site/images/05-structure/prompt-scene-after.jpeg"]
+        }]
+      },
+      {
+        title: "相较于静态，动态形式更好",
+        cases: [{
+          desc: "签到开红包针对低活/流失用户，首页入口从静态改为动态后，入口点击率提升（流失人群中APP高活用户点击率提升0.25pp，APP低活点击率提升0.1pp）。",
+          beforeLabel: "优化前：静态",
+          before: ["/growth-design-site/images/05-structure/prompt-animation-before.png"],
+          afterLabel: "优化后：动态",
+          after: ["/growth-design-site/images/05-structure/prompt-animation-after.mp4"]
+        }]
+      },
+      {
+        title: "强能力用户只需适当的提示",
+        cases: [{
+          desc: "签到开红包的签到引导中，老用户仅采用简单的呼吸动效，签到率反而比新用户蒙层强制引导更高（新用户蒙层强制引导签到率：91.09%；老用户呼吸动效引导签到率：95%）。",
+          beforeLabel: "新用户：蒙层强制引导",
+          before: ["/growth-design-site/images/05-structure/prompt-expert-new.jpeg"],
+          afterLabel: "老用户：呼吸动效引导",
+          after: ["/growth-design-site/images/05-structure/prompt-expert-old.jpeg"]
+        }]
+      }
+    ]
+  },
+  {
+    id: "ability-line",
+    label: "能力线",
+    description: "正确认识动机与能力的关系",
+    principles: [
+      {
+        title: "能力不足时，动机再大也无法产生行为",
+        cases: [
+          {
+            desc: "助力抵现改版取消了20元和50元券，只保留100元券，活动参与率下降。原因是原本领取20/50元券的用户进入活动后发现只能领100元券，超出能力范围后不再继续参与。",
+            beforeLabel: "改版前",
+            before: ["/growth-design-site/images/05-structure/abilityline-coupon-before.jpeg"],
+            afterLabel: "改版后",
+            after: ["/growth-design-site/images/05-structure/abilityline-coupon-after.jpeg"]
+          },
+          {
+            desc: "邀请新人活动中，用户更愿意参与「每邀1位立领8元」而不是「邀5位共领40元」。后者让用户认为需邀5人才能领券，超过了大多数用户的能力。优化后参与率提升1.34pp（7.15%→8.49%）。",
+            beforeLabel: "邀5位新用户共可领40元",
+            before: ["/growth-design-site/images/05-structure/abilityline-invite-before.jpeg"],
+            afterLabel: "每邀1位新用户立领8元",
+            after: ["/growth-design-site/images/05-structure/abilityline-invite-after.jpeg"]
+          }
+        ]
+      }
+    ]
+  }
+]} />
+
+### 如何设计新手流程？
+
+新手流程的核心目标有两个：一是让用户学会玩法，二是让用户愿意持续行动。为了达成这两个目标，我们需要遵循"先体验爽感，再理解规则"的底层原则。
+
+具体设计时，可以先设定一个"已学会玩法"的量化标准（如：完成 3 次核心行为），再依序通过以下四个步骤完成新手流程：
+
+<div class="flow-steps">
+
+<FlowStepItem n={1} title="收益前置，体验「开局就得奖励」">
+
+先展示最大收益或首个奖励吸引用户，再用低门槛操作引导用户"首动"，获得第一份奖励。
+
+<CaseGallery columns={2} cases={[
+  { image: "/growth-design-site/images/07-presentation/步骤1案例1.mp4", label: "淘金仔618：狂发10亿", alt: "前置展示收益案例", posterTime: 3 },
+  { image: "/growth-design-site/images/05-structure/步骤一案例2.mp4", label: "淘宝签到：提现10元", alt: "获得初次奖励案例", silent: true, posterTime: 3 },
+]} />
+
+</FlowStepItem>
+
+<FlowStepItem n={2} title="重复引导核心行为，建立「动作=收益」的预期">
+
+通过连续 2-3 次引导，让用户形成“做动作 → 得奖励”的基础认知。每次完成后，都要给出清晰反馈。
+
+<CaseGallery columns={2} cases={[
+  { image: "/growth-design-site/images/05-structure/onboarding-repeat-1.mp4", label: "淘金仔618：向前跳就能得加抵金", alt: "重复引导核心行为案例一", silent: true },
+  { image: "/growth-design-site/images/05-structure/步骤二案例2.mp4", label: "淘宝签到：点击就能得现金", alt: "重复引导核心行为案例二", silent: true, posterTime: 1 },
+]} />
+
+</FlowStepItem>
+
+<FlowStepItem n={3} title="适时呈现规则，渐进式教育">
+
+不要一次性弹出大段规则，而是在用户获得奖励后，用气泡、提示条或轻引导补充关键规则。用户在参与过程中理解规则，接受度会更高。
+
+<CaseGallery variant="stage" columns={3} cases={[
+  { image: "/growth-design-site/images/05-structure/onboarding-rule-5.jpeg", label: "向前跳得加抵金", alt: "适时呈现规则案例一" },
+  { image: "/growth-design-site/images/05-structure/onboarding-rule-4.jpeg", label: "攒满进度条得加抵金", alt: "适时呈现规则案例二" },
+  { image: "/growth-design-site/images/05-structure/onboarding-rule-2.jpeg", label: "体力满50时，可长按连跳", alt: "适时呈现规则案例四" },
+]} />
+
+</FlowStepItem>
+
+<FlowStepItem n={4} title="顺势衔接常规流程" isLast={true}>
+
+新手引导结束后，要把用户自然带入常规流程。常见方式有两种：一是强调长期收益，让用户愿意继续；二是提示已积累资产，降低用户中断的意愿。
+
+<CaseGallery variant="stage" columns={2} cases={[
+  { image: "/growth-design-site/images/05-structure/onboarding-handoff-1.jpeg", label: "强调长期收益", alt: "顺势衔接常规流程案例一" },
+  { image: "/growth-design-site/images/05-structure/onboarding-handoff-2.jpeg", label: "强调已积累资产", alt: "顺势衔接常规流程案例二" },
+]} />
+
+</FlowStepItem>
+
+</div>
+
+以下案例展示了新手流程设计中的常见经验。
+
+<CaseExampleBlock categories={[
+  {
+    id: "onboard-ability",
+    label: "能力",
+    description: "降低行为的阻力",
+    principles: [
+      {
+        title: "直接引导操作，优于文字说明",
+        cases: [{
+          desc: "集卡活动的新用户流程，将文字版新人引导改为引导用户操作，主要渠道参与率提升8.2pp（44.9%→53.1%）。",
+          layout: "vertical",
+          beforeLabel: "文字版新人引导",
+          before: ["/growth-design-site/images/05-structure/onboard-guide-text-before.jpeg"],
+          afterLabel: "流程提示版新人引导",
+          after: ["/growth-design-site/images/05-structure/onboard-guide-flow-after.jpeg"]
+        }]
+      },
+      {
+        title: "选择步骤可能劝退用户，能省则省",
+        cases: [{
+          desc: "大牌免单新手流程需先选奖品，这一环节流失了30%新用户。将流程优化为先开始活动再选择奖品，去掉选品页后新用户任务整体转化率提升1.5pp。",
+          layout: "vertical",
+          beforeLabel: "优化前：选择奖品→获得免单卡→进入活动页→分享",
+          before: ["/growth-design-site/images/05-structure/onboard-choice-before.jpeg"],
+          afterLabel: "优化后：获得免单卡→进入活动页→分享",
+          after: ["/growth-design-site/images/05-structure/onboard-choice-after.jpeg"]
+        }]
+      }
+    ]
+  },
+  {
+    id: "onboard-prompt",
+    label: "提示",
+    description: "在合适时机触发行为",
+    principles: [
+      {
+        title: "强制形式的效果需结合后续转化判断",
+        cases: [{
+          desc: "签到开红包新手引导的第一步点击蒙层任一区域都开红包。但任务完成率远高于改版前签到率，所以作为正向策略沿用。",
+          descNote: "任务完成率88.43%，改版前签到率只有75.31%（52.97%主动，22.34%自动）",
+          before: [
+            "/growth-design-site/images/05-structure/prompt-forced-1.jpeg",
+            "/growth-design-site/images/05-structure/prompt-forced-2.jpeg",
+            "/growth-design-site/images/05-structure/prompt-forced-3.jpeg",
+            "/growth-design-site/images/05-structure/prompt-forced-4.jpeg"
+          ],
+          beforeLabels: ["签到开红包", "已存入账户", "提现至微信", "完成浏览任务再开一个红包"]
+        }]
+      }
+    ]
+  }
+]} />

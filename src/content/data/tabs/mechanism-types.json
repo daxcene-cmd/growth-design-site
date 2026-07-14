@@ -11,9 +11,9 @@
       "content": {
         "type": "cards",
         "forms": [
-          { "label": "签到", "image": "/growth-design-site/images/mechanism/task-checkin.png" },
-          { "label": "3 单挑战", "image": "/growth-design-site/images/mechanism/task-order.png" },
-          { "label": "邀请好友", "image": "/growth-design-site/images/mechanism/task-invite.png" }
+          { "label": "签到", "image": "/growth-design-site/images/04-scope/task-checkin.png" },
+          { "label": "3 单挑战", "image": "/growth-design-site/images/04-scope/task-order.png" },
+          { "label": "邀请好友", "image": "/growth-design-site/images/04-scope/task-invite.png" }
         ]
       }
     },
@@ -26,12 +26,12 @@
       "content": {
         "type": "cards",
         "forms": [
-          { "label": "抽奖", "image": "/growth-design-site/images/mechanism/game-lottery.png" },
-          { "label": "收集兑换", "image": "/growth-design-site/images/mechanism/game-collect.png" },
-          { "label": "累积兑换", "image": "/growth-design-site/images/mechanism/game-accumulate.png" },
-          { "label": "排行榜", "image": "/growth-design-site/images/mechanism/game-leaderboard.png" },
-          { "label": "PK", "image": "/growth-design-site/images/mechanism/game-pk.png" },
-          { "label": "塔防", "image": "/growth-design-site/images/mechanism/game-tower-defense.png" }
+          { "label": "抽奖", "image": "/growth-design-site/images/04-scope/game-lottery.png" },
+          { "label": "收集兑换", "image": "/growth-design-site/images/04-scope/game-collect.png" },
+          { "label": "累积兑换", "image": "/growth-design-site/images/04-scope/game-accumulate.png" },
+          { "label": "排行榜", "image": "/growth-design-site/images/04-scope/game-leaderboard.png" },
+          { "label": "PK", "image": "/growth-design-site/images/04-scope/game-pk.png" },
+          { "label": "塔防", "image": "/growth-design-site/images/04-scope/game-tower-defense.png" }
         ]
       }
     },
@@ -44,12 +44,12 @@
       "content": {
         "type": "cards",
         "forms": [
-          { "label": "答题", "image": "/growth-design-site/images/mechanism/game-quiz.png" },
-          { "label": "合成", "image": "/growth-design-site/images/mechanism/game-watermelon.png" },
-          { "label": "消消乐", "image": "/growth-design-site/images/mechanism/game-match3.png" },
-          { "label": "找不同", "image": "/growth-design-site/images/mechanism/game-spot-diff.png" },
-          { "label": "跳一跳", "image": "/growth-design-site/images/mechanism/game-jump.png" },
-          { "label": "换装", "image": "/growth-design-site/images/mechanism/game-dress.png" }
+          { "label": "答题", "image": "/growth-design-site/images/04-scope/game-quiz.png" },
+          { "label": "合成", "image": "/growth-design-site/images/04-scope/game-watermelon.png" },
+          { "label": "消消乐", "image": "/growth-design-site/images/04-scope/game-match3.png" },
+          { "label": "找不同", "image": "/growth-design-site/images/04-scope/game-spot-diff.png" },
+          { "label": "跳一跳", "image": "/growth-design-site/images/04-scope/game-jump.png" },
+          { "label": "换装", "image": "/growth-design-site/images/04-scope/game-dress.png" }
         ]
       }
     }

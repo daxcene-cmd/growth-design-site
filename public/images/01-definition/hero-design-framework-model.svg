@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1003" height="712" viewBox="0 0 1003 712" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">增长玩法五层设计模型</title>
+  <desc id="desc">按首屏 Figma 方案排版的增长玩法五层设计模型。</desc>
+  <defs>
+    <style>
+      .bg { fill: #fffae5; stroke: rgba(19, 19, 19, 0.5); stroke-width: 1; }
+      .axis { stroke: #10162f; stroke-width: 1.2; }
+      .label { font: 400 20px "PingFang SC", "Microsoft YaHei", sans-serif; fill: #10162f; }
+      .title { font: 600 20px "PingFang SC", "Microsoft YaHei", sans-serif; fill: #10162f; }
+      .sub { font: 400 14px "PingFang SC", "Microsoft YaHei", sans-serif; fill: #10162f; letter-spacing: .0672px; }
+      .side { font: 400 20px "PingFang SC", "Microsoft YaHei", sans-serif; fill: #10162f; }
+    </style>
+    <marker id="arrow-up" markerWidth="16" markerHeight="16" refX="8" refY="8" orient="auto">
+      <path d="M8 0 16 16 8 11 0 16Z" fill="#10162f"/>
+    </marker>
+    <marker id="arrow-down" markerWidth="16" markerHeight="16" refX="8" refY="8" orient="auto">
+      <path d="M8 16 16 0 8 5 0 0Z" fill="#10162f"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x=".5" y=".5" width="1002" height="711"/>
+
+  <g stroke="#10162f" stroke-width="1.2" stroke-linejoin="round">
+    <path d="M340 60H714L663 168H289L340 60Z" fill="#F8EAE0"/>
+    <path d="M340 181H714L663 289H289L340 181Z" fill="#EAF2FC"/>
+    <path d="M340 302H714L663 410H289L340 302Z" fill="#F3EAF9"/>
+    <path d="M340 423H714L663 531H289L340 423Z" fill="#F0FBE5"/>
+    <path d="M340 544H714L663 652H289L340 544Z" fill="#ECE8FA"/>
+  </g>
+
+  <g text-anchor="middle">
+    <text class="title" x="501.5" y="110">表现层</text>
+    <text class="sub" x="501.5" y="137">感知设计</text>
+
+    <text class="title" x="501.5" y="231">框架层</text>
+    <text class="sub" x="501.5" y="258">主页框架</text>
+
+    <text class="title" x="501.5" y="352">结构层</text>
+    <text class="sub" x="501.5" y="379">系统架构、玩法流程</text>
+
+    <text class="title" x="501.5" y="473">范围层</text>
+    <text class="sub" x="501.5" y="500">玩法内核、玩法包装</text>
+
+    <text class="title" x="501.5" y="594">战略层</text>
+    <text class="sub" x="501.5" y="621">增长目标、用户动机</text>
+  </g>
+
+  <g>
+    <line class="axis" x1="219.5" y1="60" x2="219.5" y2="654.5" marker-start="url(#arrow-up)" marker-end="url(#arrow-down)"/>
+    <text class="label" x="164" y="78" text-anchor="middle">具体</text>
+    <text class="label" x="164" y="655" text-anchor="middle">抽象</text>
+  </g>
+
+  <g class="axis" fill="none">
+    <path d="M763 60H788V168H763"/>
+    <path d="M798 60H823V289H798"/>
+    <path d="M835 60H860V652H835"/>
+  </g>
+  <g>
+    <text class="side" x="781" y="114" text-anchor="middle" transform="rotate(90 781 114)">营销设计</text>
+    <text class="side" x="817" y="235" text-anchor="middle" transform="rotate(90 817 235)">视觉设计</text>
+    <text class="side" x="854" y="599" text-anchor="middle" transform="rotate(90 854 599)">交互设计</text>
+  </g>
+</svg>

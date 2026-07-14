@@ -25,9 +25,58 @@ const sections = Object.values(sectionModules)
   })
   .sort((a, b) => a.order - b.order);
 
-const introSection = sections.find((section) => section.id === 'intro');
 const articleSections = sections.filter((section) => section.id !== 'intro');
-const IntroContent = introSection?.Content;
+
+type SubTarget = { id: string; title: string };
+type SectionTarget = { id: string; title: string; sub?: SubTarget[] };
+
+const sectionTargets: Record<string, SectionTarget[]> = {
+  definition: [
+    { id: '与体验型产品有什么不同', title: '与体验型产品有什么不同？' },
+  ],
+  strategy: [
+    { id: '如何定义清晰的增长目标', title: '如何定义清晰的增长目标？' },
+    { id: '如何判断用户动机', title: '如何判断用户动机？' },
+  ],
+  scope: [
+    {
+      id: '如何设计玩法内核',
+      title: '如何设计玩法内核？',
+      sub: [
+        { id: '1-圈定奖励范围', title: '1. 圈定奖励范围' },
+        { id: '2-确定玩法机制范围', title: '2. 确定玩法机制范围' },
+        { id: '3-组合并校验方案', title: '3. 组合并校验方案' },
+      ],
+    },
+    {
+      id: '如何把玩法包装成用户看得懂的概念',
+      title: '如何把玩法包装成用户看得懂的概念？',
+      sub: [
+        { id: '1-确定包装命题', title: '1. 确定包装命题' },
+        { id: '2-脑暴发散', title: '2. 脑暴发散' },
+        { id: '3-收敛方案', title: '3. 收敛方案' },
+      ],
+    },
+  ],
+  structure: [
+    { id: '什么是玩法系统架构', title: '什么是玩法系统架构？' },
+    {
+      id: '如何设计核心流程',
+      title: '如何设计核心流程？',
+      sub: [
+        { id: '1-铺设最短路径', title: '1. 铺设最短路径' },
+        { id: '2-排查转化卡点', title: '2. 排查转化卡点' },
+        { id: '3-优化并补全流程', title: '3. 优化并补全流程' },
+      ],
+    },
+    { id: '如何设计新手流程', title: '如何设计新手流程？' },
+  ],
+  presentation: [
+    { id: '1-场景的情感化设计', title: '1. 场景的情感化设计' },
+    { id: '2-行为的引导设计', title: '2. 行为的引导设计' },
+    { id: '3-行为的反馈设计', title: '3. 行为的反馈设计' },
+  ],
+};
 ---
 
 <html lang="zh-CN">
@@ -39,6 +88,9 @@ const IntroContent = introSection?.Content;
       name="description"
       content="一套面向增长运营产品的设计方法论长文。"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2YHETVEPFJ"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -48,36 +100,51 @@ const IntroContent = introSection?.Content;
     </script>
   </head>
   <body>
-    <div class="site-titlebar" aria-hidden="true">
-      <span class="site-titlebar-text">增长运营产品设计思路</span>
-    </div>
-
     <div class="page-shell">
       <header class="site-hero" aria-labelledby="page-title">
+        <div class="hero-nav" aria-label="头部导航">
+          <a class="hero-brand" href="/growth-design-site/">DESIGN METHOD</a>
+          <nav class="hero-nav-links" aria-label="文章导航">
+            <a href="#strategy">战略层</a>
+            <a href="#scope">范围层</a>
+            <a href="#structure">结构层</a>
+            <a href="#framework">框架层</a>
+            <a href="#presentation">表现层</a>
+            <span aria-hidden="true">|</span>
+            <a class="hero-model-link" href="#design-framework">五层设计模型</a>
+          </nav>
+        </div>
         <div class="hero-inner">
           <div class="hero-text">
-            <p class="eyebrow">Growth Operation Design</p>
-            <h1 id="page-title">增长运营产品设计思路</h1>
-            {IntroContent ? <div class="hero-intro"><IntroContent /></div> : null}
+            <p class="hero-date">June 06, 2026</p>
+            <h1 id="page-title">
+              <span>如何设计一个有效的</span>
+              <span>增长运营产品</span>
+            </h1>
+            <div class="hero-meta">
+              <div class="hero-author">
+                <img class="hero-author-mark" src="/growth-design-site/images/01-definition/hero-author-mark.png" alt="" />
+                <span>Dax</span>
+              </div>
+              <div class="hero-tags" aria-label="文章标签">
+                <span>用户增长</span>
+                <span>设计方法论</span>
+                <span>运营玩法</span>
+              </div>
+            </div>
+            <div class="hero-intro">
+              <p>增长产品不只是做活动、发奖励。</p>
+              <p>本文基于「用户体验五要素」，整理了一套增长产品的五层设计模型，</p>
+              <p>帮助你从目标、动机、玩法到页面表现，系统设计增长产品。</p>
+            </div>
           </div>
           <div class="hero-image" aria-hidden="true">
-            <img src="/growth-design-site/images/toppic.webp" alt="" />
+            <img src="/growth-design-site/images/Hero/五层模型封面图.png" alt="" />
           </div>
         </div>
       </header>
 
       <div class="article-grid">
-        <aside class="toc" aria-label="文章目录">
-          <p class="toc-title">目录</p>
-          <nav>
-            {
-              articleSections.map((section) => (
-                <a href={`#${section.id}`}>{section.title}</a>
-              ))
-            }
-          </nav>
-        </aside>
-
         <main class="article-content">
           {
             articleSections.map((section) => {
@@ -91,27 +158,92 @@ const IntroContent = introSection?.Content;
             })
           }
         </main>
+
+        <aside class="toc" aria-label="文章目录" data-toc>
+          <div class="toc-header">
+            <p class="toc-title">目录</p>
+          </div>
+          <nav id="article-toc-nav">
+            {
+              articleSections.map((section) => (
+                <div class="toc-group" data-section-id={section.id}>
+                  <a class="toc-link toc-link--section" href={`#${section.id}`}>{section.title}</a>
+                  {sectionTargets[section.id]?.length && (
+                    <div class="toc-children">
+                      {sectionTargets[section.id].map((target) => (
+                        <a class="toc-link toc-link--target" href={`#${target.id}`}>{target.title}</a>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))
+            }
+          </nav>
+        </aside>
       </div>
     </div>
   </body>
 
   <script>
-    const hero = document.querySelector('.site-hero') as HTMLElement;
-    const titlebar = document.querySelector('.site-titlebar') as HTMLElement;
+    const heroAnchorLinks = document.querySelectorAll('.hero-nav-links a[href^="#"]');
+    let heroAnchorAnimation = 0;
 
-    if (hero && titlebar) {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          titlebar.setAttribute('aria-hidden', entry.isIntersecting ? 'true' : 'false');
-          titlebar.classList.toggle('is-visible', !entry.isIntersecting);
-        },
-        { threshold: 0 }
-      );
-      observer.observe(hero);
-    }
+    const easeInOutCubic = (progress) => (
+      progress < 0.5
+        ? 4 * progress * progress * progress
+        : 1 - Math.pow(-2 * progress + 2, 3) / 2
+    );
 
-    const sections = document.querySelectorAll('.article-section');
+    const smoothScrollToTarget = (target, duration = 650) => {
+      cancelAnimationFrame(heroAnchorAnimation);
+
+      const startY = window.scrollY;
+      const startTime = performance.now();
+      const previousScrollBehavior = document.documentElement.style.scrollBehavior;
+      document.documentElement.style.scrollBehavior = 'auto';
+
+      const step = (now) => {
+        const progress = Math.min((now - startTime) / duration, 1);
+        const targetY = Math.max(0, target.offsetTop - 96);
+        window.scrollTo(0, startY + (targetY - startY) * easeInOutCubic(progress));
+
+        if (progress < 1) {
+          heroAnchorAnimation = requestAnimationFrame(step);
+          return;
+        }
+
+        window.scrollTo(0, Math.max(0, target.offsetTop - 96));
+        document.documentElement.style.scrollBehavior = previousScrollBehavior;
+      };
+
+      heroAnchorAnimation = requestAnimationFrame(step);
+    };
+
+    const scrollToAnchorTarget = (href) => {
+      const target = document.getElementById(decodeURIComponent(href.slice(1)));
+      if (!target) return;
+
+      smoothScrollToTarget(target);
+      history.pushState(null, '', href);
+    };
+
+    heroAnchorLinks.forEach((link) => {
+      link.addEventListener('click', (event) => {
+        const href = link.getAttribute('href');
+        if (!href?.startsWith('#')) return;
+        event.preventDefault();
+        scrollToAnchorTarget(href);
+      });
+    });
+
     const tocLinks = document.querySelectorAll('.toc a');
+    const tocTargets = Array.from(tocLinks)
+      .map((link) => {
+        const href = link.getAttribute('href');
+        if (!href?.startsWith('#')) return null;
+        return document.getElementById(decodeURIComponent(href.slice(1)));
+      })
+      .filter((target): target is HTMLElement => Boolean(target));
 
     const tocObserver = new IntersectionObserver(
       (entries) => {
@@ -122,6 +254,9 @@ const IntroContent = introSection?.Content;
               const isActive = link.getAttribute('href') === `#${id}`;
               link.classList.toggle('is-active', isActive);
               if (isActive) {
+                document.querySelectorAll('.toc-group').forEach((group) => {
+                  group.classList.toggle('is-current', group === link.closest('.toc-group'));
+                });
                 const nav = link.closest('nav');
                 if (nav) {
                   const linkTop = link.getBoundingClientRect().top - nav.getBoundingClientRect().top + nav.scrollTop;
@@ -132,10 +267,10 @@ const IntroContent = introSection?.Content;
           }
         });
       },
-      { rootMargin: '-80px 0px -60% 0px', threshold: 0 }
+      { rootMargin: '-96px 0px -60% 0px', threshold: 0 }
     );
 
-    sections.forEach((section) => tocObserver.observe(section));
+    tocTargets.forEach((target) => tocObserver.observe(target));
   </script>
 
 </html>

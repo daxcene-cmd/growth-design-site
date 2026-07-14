@@ -1,0 +1,16 @@
+---
+interface Props {
+  note: string;
+  num: number;
+  term?: string;
+}
+const { note, num, term } = Astro.props;
+---
+
+<span class="annotation">
+  <slot /><sup class="annotation-num">[{num}]</sup>
+  <span class="annotation-tip">
+    <span class="annotation-tip-header">注释 [{num}]</span>
+    <span class="annotation-tip-body">{term ? `${term}：${note}` : note}</span>
+  </span>
+</span>

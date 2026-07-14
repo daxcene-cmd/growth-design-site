@@ -1,50 +1,49 @@
 ---
 id: strategy
-title: "01 战略层"
+title: "战略层：明确增长目标和用户动机"
 order: 3
 source: 增长运营产品设计思路_优化重写版.md
 ---
 import DesignFrameworkDiagram from "../../../components/content/DesignFrameworkDiagram.astro";
-import MotivationCardsBlock from "../../../components/content/MotivationCardsBlock.astro";
+import GroupCardsBlock from "../../../components/content/GroupCardsBlock.astro";
 import TabsBlock from "../../../components/interactive/TabsBlock";
 import QuizBlock from "../../../components/interactive/QuizBlock";
 import motivationJudgement from "../../data/tabs/motivation-judgement.json";
 import motivationTypes from "../../data/motivation-types.json";
 import growthGoalCheck from "../../data/quizzes/growth-goal-check.json";
 
-### 01 战略层
+## 战略层：明确增长目标和用户动机
 
 <DesignFrameworkDiagram highlight="strategy" />
 
 战略层回答两个问题：业务为什么做，用户为什么来。它通常依赖业务侧输入，但设计师只有理解增长目标和用户动机，才能判断后续奖励、机制、页面和视觉是否真的服务目标。
 
-#### 1）增长目标
+### 如何定义清晰的增长目标？
 
 一个清晰的增长目标至少包含四项：激励预算、目标用户、目标行为和衡量指标。可以用一句话表达增长目标：**我们将投入【激励预算】，引导【目标用户】完成【目标行为】，最终以【衡量指标】验证效果。**
 
-
-| 要素 | 说明 |
-| --- | --- |
-| 用户 | 产品期望激励的是大盘用户、新用户、低活用户，还是高价值用户。用户越聚焦，后续设计越精准。 |
-| 行为 | 可观察、可衡量、有明确路径的具体行为。比如”提升活跃”是抽象目标，”连续 3 天打开 App”才是具体行为。 |
-| 预算 | 建议折算到人均预算，即 X 元/人。只有站在单个用户视角上，才能判断激励强度是否足够。 |
-| 指标 | 用于验证目标行为是否发生的数据口径，如次日留存率、任务完成率、DAU、30 日留存等。 |
+- <strong>预算：</strong>建议折算到人均预算，即 X 元/人。只有站在单个用户视角上，才能判断激励强度是否足够。
+- <strong>用户：</strong>产品期望激励的是大盘用户、新用户、低活用户，还是高价值用户。用户越聚焦，后续设计越精准。
+- <strong>行为：</strong>可观察、可衡量、有明确路径的具体行为。比如”提升活跃”是抽象目标，”连续 3 天打开 App”才是具体行为。
+- <strong>指标：</strong>用于验证目标行为是否发生的数据口径，如次日留存率、任务完成率、DAU、30 日留存等。
 
 以下提供几个常见的增长目标描述案例，可以借此检验对增长目标的理解是否到位。
 
 <QuizBlock client:load data={growthGoalCheck} />
 
-#### 2）用户动机
+### 如何判断用户动机？
 
-明确增长目标后，还要继续回答：用户为什么愿意参与？这里的“用户动机”不是一个确定结论，而是一个动机假设。它用于指导后续玩法设计，并需要在范围层继续被验证：奖励是否能承接这个动机，机制是否能牵引目标行为，包装是否能让用户感知到“值得参与”。
+明确增长目标后，还需要判断：用户为什么愿意投入时间、精力或社交关系来参与玩法？
 
-常见的用户动机可以分为两类：外在动机和内在动机。外在动机通常来自实际收益，例如现金、优惠券；内在动机则来自成就、意义、社交认同等心理满足。
+这里的「用户动机」不是确定结论，而是一个动机假设。它需要在范围层继续验证：奖励是否能承接动机，机制是否与动机匹配，包装是否易懂。
 
-除此之外，还有一类更适合作为辅助的动机放大器。它本身通常不能独立驱动用户行动，而是依附在某个主动机之上，放大用户的行动意愿。例如「损失与逃避」通常需要和「获得收益」配合使用，用户不是单纯害怕损失，而是因为已经看到了潜在收益，才会更不愿意错过。典型案例是拼多多的“砍一刀”。
+常见动机可以分为三类：外在动机、内在动机和动机放大器。外在动机来自实际收益，内在动机来自心理满足；动机放大器则不能单独驱动用户行动，而是依附在主动机之上，强化用户的行动意愿。
 
-<MotivationCardsBlock groups={motivationTypes.groups} />
+<GroupCardsBlock groups={motivationTypes.groups} />
 
-明确动机类型后，还需要判断哪一种动机更适合当前增长目标。动机选择不能只看创意是否有趣，而要回到目标行为、目标周期、预算规模和目标用户本身：用户完成这个行为的门槛有多高，业务希望短期爆发还是长期留存，激励资源是否充足，以及目标用户的特征。
+明确动机类型后，还需要判断哪一种动机更适合当前增长目标。
+
+判断用户动机时，可以从目标特征、用户特征和可用资源入手。下方整理了一些常见的动机选择参考，帮助我们快速判断优先考虑哪类动机。
 
 <TabsBlock client:load data={motivationJudgement} />
 

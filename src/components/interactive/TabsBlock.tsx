@@ -71,7 +71,7 @@ function CardsPanel({ forms, description }: { forms: CardForm[]; description?: s
   );
 }
 
-function JudgementPanel({ groups, stacked }: { groups: JudgementGroup[]; stacked?: boolean }) {
+function JudgementPanel({ groups, stacked, compact }: { groups: JudgementGroup[]; stacked?: boolean; compact?: boolean }) {
   return (
     <div className="judgement-groups">
       {groups.map((group) => (
@@ -81,7 +81,15 @@ function JudgementPanel({ groups, stacked }: { groups: JudgementGroup[]; stacked
           )}
           <div className="judgement-rows">
             {group.rows.map((row) => (
-              stacked ? (
+              compact ? (
+                <div key={row.scene} className="judgement-row judgement-row--compact">
+                  <p className="judgement-result">
+                    {row.scene && <span className="judgement-scene">{row.scene}：</span>}
+                    <span className="judgement-motivation-text">{row.motivations.join('、')}</span>
+                  </p>
+                  {row.note && <p className="judgement-note">{row.note}</p>}
+                </div>
+              ) : stacked ? (
                 <div key={row.scene} className="judgement-row judgement-row--stacked">
                   {row.scene && <span className="judgement-scene">{row.scene}</span>}
                   <div className="judgement-motivations">
@@ -139,6 +147,7 @@ function TablePanel({ columns, rows }: { columns: string[]; rows: string[][] }) 
 export default function TabsBlock({ data, layout = 'horizontal' }: TabsBlockProps) {
   const [activeId, setActiveId] = useState(data.tabs[0]?.id);
   const activeTab = data.tabs.find((tab) => tab.id === activeId) ?? data.tabs[0];
+  const titleOnlyTabs = data.id === 'reward-types';
 
   if (!activeTab) return null;
 
@@ -148,7 +157,6 @@ export default function TabsBlock({ data, layout = 'horizontal' }: TabsBlockProp
       role="tabpanel"
       aria-labelledby={`${data.id}-${activeTab.id}-tab`}
       className={layout === 'vertical' ? 'vertical-tab-panel' : 'folder-tab-panel'}
-      style={layout === 'horizontal' ? { borderRadius: '0 0 10px 10px' } : undefined}
     >
       {activeTab.content.type === 'cards' && (
         <CardsPanel forms={activeTab.content.forms} description={activeTab.description} />
@@ -157,7 +165,11 @@ export default function TabsBlock({ data, layout = 'horizontal' }: TabsBlockProp
         <TablePanel columns={activeTab.content.columns} rows={activeTab.content.rows} />
       )}
       {activeTab.content.type === 'judgement' && (
-        <JudgementPanel groups={activeTab.content.groups} stacked={activeTab.content.stacked} />
+        <JudgementPanel
+          groups={activeTab.content.groups}
+          stacked={activeTab.content.stacked}
+          compact={data.id === 'motivation-judgement' || data.id === 'reward-types'}
+        />
       )}
     </div>
   );
@@ -180,10 +192,10 @@ export default function TabsBlock({ data, layout = 'horizontal' }: TabsBlockProp
                 onClick={() => setActiveId(tab.id)}
               >
                 <span className="vertical-tab-header">
-                  <span className="vertical-tab-index">{tab.index}</span>
+                  {!titleOnlyTabs && <span className="vertical-tab-index">{tab.index}</span>}
                   <span className="vertical-tab-title">{tab.title}</span>
                 </span>
-                {tab.descriptionShort && (
+                {!titleOnlyTabs && tab.descriptionShort && (
                   <span className="vertical-tab-desc">{tab.descriptionShort}</span>
                 )}
               </button>

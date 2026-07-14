@@ -1,31 +1,62 @@
 <svg width="2075" height="1079" viewBox="0 0 2075 1079" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="1" y="1" width="2073" height="1077" rx="20" ry="20" stroke="#b8b0a0" stroke-width="2" fill="none"/>
-<line x1="1037.5" y1="1" x2="1037.5" y2="1077" stroke="#b8b0a0" stroke-width="2"/>
-<line x1="1" y1="165.5" x2="2073" y2="165.5" stroke="#b8b0a0" stroke-width="2"/>
-<polygon points="3.5,622 521,168.5 1037.5,622 521,1075.5" fill="#fffdfa"/>
-<polygon points="1037.5,622 1555,168.5 2071.5,622 1555,1075.5" fill="#fffdfa"/>
-<text fill="#667085" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="32" letter-spacing="0em"><tspan x="78.5" y="635.46">&#x73a9;&#x6cd5;&#x5956;&#x52b1;</tspan></text>
-<text fill="#667085" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="32" letter-spacing="0em"><tspan x="1112.5" y="635.46">&#x673a;&#x5236;&#x6f14;&#x7ece;</tspan></text>
-<text fill="#667085" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="32" letter-spacing="0em"><tspan x="301.5" y="635.46">&#x73a9;&#x6cd5;&#x673a;&#x5236;</tspan></text>
-<text fill="#667085" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="32" letter-spacing="0em"><tspan x="1335.5" y="635.46">&#x4ea7;&#x54c1;&#x7279;&#x8272;</tspan></text>
-<text fill="#667085" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="32" letter-spacing="0em"><tspan x="336.5" y="404.46">&#x7ec4;&#x5408;&#x53d1;&#x6563;</tspan></text>
-<text transform="translate(188.5 364.5) rotate(-39.8276)" fill="#667085" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="28" letter-spacing="0em"><tspan x="0" y="37.96">&#x53d1;&#x6563;</tspan></text>
-<text transform="translate(1225.5 364.5) rotate(-39.8276)" fill="#667085" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="28" letter-spacing="0em"><tspan x="0" y="37.96">&#x53d1;&#x6563;</tspan></text>
-<text transform="translate(790.526 318.5) rotate(39.83)" fill="#667085" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="28" letter-spacing="0em"><tspan x="0" y="37.96">&#x6536;&#x655b;</tspan></text>
-<text transform="translate(1827.53 318.5) rotate(39.83)" fill="#667085" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="28" letter-spacing="0em"><tspan x="0" y="37.96">&#x6536;&#x655b;</tspan></text>
-<text fill="#1f2933" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="40" font-weight="700" letter-spacing="0em" text-anchor="middle"><tspan x="520.5" y="97.28">&#x73a9;&#x6cd5;&#x5185;&#x6838; : &#x5956;&#x52b1; X &#x673a;&#x5236;</tspan></text>
-<text fill="#1f2933" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="40" font-weight="700" letter-spacing="0em" text-anchor="middle"><tspan x="1554.5" y="99.28">&#x73a9;&#x6cd5;&#x5305;&#x88c5;</tspan></text>
-<text fill="#667085" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="32" letter-spacing="0em"><tspan x="1368.5" y="404.46">&#x8111;&#x66b4;&#x53d1;&#x6563;</tspan></text>
-<text fill="#667085" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="32" letter-spacing="0em"><tspan x="1368.5" y="862.46">&#x8111;&#x66b4;&#x53d1;&#x6563;</tspan></text>
-<text fill="#667085" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="32" letter-spacing="0em"><tspan x="336.5" y="862.46">&#x7ec4;&#x5408;&#x53d1;&#x6563;</tspan></text>
-<text fill="#667085" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="32" letter-spacing="0em"><tspan x="572.5" y="447.46">&#x5438;&#x2028;</tspan><tspan x="572.5" y="497.46">&#x5f15;&#x2028;</tspan><tspan x="572.5" y="547.46">&#x529b;&#10;</tspan><tspan x="577.439" y="597.46">&#38;&#10;</tspan><tspan x="572.5" y="647.46">&#x7406;&#10;</tspan><tspan x="572.5" y="697.46">&#x89e3;&#x2028;</tspan><tspan x="572.5" y="747.46">&#x96be;&#x2028;</tspan><tspan x="572.5" y="797.46">&#x5ea6;</tspan></text>
-<text fill="#667085" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="32" letter-spacing="0em"><tspan x="1602.5" y="447.46">&#x5438;&#x2028;</tspan><tspan x="1602.5" y="497.46">&#x5f15;&#x2028;</tspan><tspan x="1602.5" y="547.46">&#x529b;&#10;</tspan><tspan x="1607.44" y="597.46">&#38;&#10;</tspan><tspan x="1602.5" y="647.46">&#x7406;&#10;</tspan><tspan x="1602.5" y="697.46">&#x89e3;&#x2028;</tspan><tspan x="1602.5" y="747.46">&#x96be;&#x2028;</tspan><tspan x="1602.5" y="797.46">&#x5ea6;</tspan></text>
-<text fill="#667085" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="32" letter-spacing="0em"><tspan x="698.5" y="497.46">&#x589e;&#x2028;</tspan><tspan x="698.5" y="547.46">&#x957f;&#10;</tspan><tspan x="698.5" y="597.46">&#x76ee;&#x2028;</tspan><tspan x="698.5" y="647.46">&#x6807;&#10;</tspan><tspan x="698.5" y="697.46">&#x8fbe;&#x2028;</tspan><tspan x="698.5" y="747.46">&#x6210;</tspan></text>
-<text fill="#667085" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="32" letter-spacing="0em"><tspan x="1730.5" y="497.46">&#x5ef6;&#10;</tspan><tspan x="1730.5" y="547.46">&#x5c55;&#10;</tspan><tspan x="1735.44" y="597.46">&#38;&#10;</tspan><tspan x="1730.5" y="647.46">&#x901a;&#10;</tspan><tspan x="1730.5" y="697.46">&#x7528;&#10;</tspan><tspan x="1730.5" y="747.46">&#x6027;</tspan></text>
-<text fill="#667085" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="32" letter-spacing="0em"><tspan x="816.5" y="635.46">ROI</tspan></text>
-<text fill="#667085" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="32" letter-spacing="0em"><tspan x="1849.5" y="635.46">ROI</tspan></text>
-<text fill="#667085" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="32" letter-spacing="0em"><tspan x="925.5" y="635.46">&#x5b9a;&#x6848;</tspan></text>
-<text fill="#667085" style="white-space: pre" xml:space="preserve" font-family="PingFang SC" font-size="32" letter-spacing="0em"><tspan x="1958.5" y="635.46">&#x5b9a;&#x6848;</tspan></text>
-<path d="M650.125 281.875L521 168.5L262.25 395.25M521 168.5V622M650.125 962.125L521 1075.5L262.25 848.75M521 1075.5V622M262.25 395.25L3.5 622L262.25 848.75M262.25 395.25V848.75M262.25 395.25L521 622M262.25 848.75L521 622M779.25 848.75L650.125 962.125M779.25 848.75L908.375 735.375M779.25 848.75V395.25M779.25 395.25L908.375 508.625M779.25 395.25L650.125 281.875M650.125 962.125V281.875M908.375 735.375L1037.5 622L908.375 508.625M908.375 735.375V508.625" stroke="#b8b0a0" stroke-width="4"/>
-<path d="M1684.12 281.875L1555 168.5L1296.25 395.25M1555 168.5V622M1684.12 962.125L1555 1075.5L1296.25 848.75M1555 1075.5V622M1296.25 395.25L1037.5 622L1296.25 848.75M1296.25 395.25V848.75M1296.25 395.25L1555 622M1296.25 848.75L1555 622M1813.25 848.75L1684.12 962.125M1813.25 848.75L1942.38 735.375M1813.25 848.75V395.25M1813.25 395.25L1942.38 508.625M1813.25 395.25L1684.12 281.875M1684.12 962.125V281.875M1942.38 735.375L2071.5 622L1942.38 508.625M1942.38 735.375V508.625" stroke="#b8b0a0" stroke-width="4"/>
+
+  <!-- border + dividers -->
+  <rect x="2" y="2" width="2071" height="1075" rx="0" ry="0" stroke="#c0c0c0" stroke-width="2.5" fill="none"/>
+  <line x1="1037.5" y1="1" x2="1037.5" y2="1077" stroke="#c0c0c0" stroke-width="2.5"/>
+  <line x1="1" y1="165.5" x2="2073" y2="165.5" stroke="#c0c0c0" stroke-width="2.5"/>
+
+  <!-- diamond fills -->
+  <polygon points="3.5,622 521,168.5 1037.5,622 521,1075.5" fill="#f7f7f5" stroke="none"/>
+  <polygon points="1037.5,622 1555,168.5 2071.5,622 1555,1075.5" fill="#f7f7f5" stroke="none"/>
+
+  <!-- left diamond geometry -->
+  <path d="M650.125 281.875L521 168.5L262.25 395.25M521 168.5V622M650.125 962.125L521 1075.5L262.25 848.75M521 1075.5V622M262.25 395.25L3.5 622L262.25 848.75M262.25 395.25V848.75M262.25 395.25L521 622M262.25 848.75L521 622M779.25 848.75L650.125 962.125M779.25 848.75L908.375 735.375M779.25 848.75V395.25M779.25 395.25L908.375 508.625M779.25 395.25L650.125 281.875M650.125 962.125V281.875M908.375 735.375L1037.5 622L908.375 508.625M908.375 735.375V508.625" stroke="#c0c0c0" stroke-width="2.5"/>
+
+  <!-- right diamond geometry -->
+  <path d="M1684.12 281.875L1555 168.5L1296.25 395.25M1555 168.5V622M1684.12 962.125L1555 1075.5L1296.25 848.75M1555 1075.5V622M1296.25 395.25L1037.5 622L1296.25 848.75M1296.25 395.25V848.75M1296.25 395.25L1555 622M1296.25 848.75L1555 622M1813.25 848.75L1684.12 962.125M1813.25 848.75L1942.38 735.375M1813.25 848.75V395.25M1813.25 395.25L1942.38 508.625M1813.25 395.25L1684.12 281.875M1684.12 962.125V281.875M1942.38 735.375L2071.5 622L1942.38 508.625M1942.38 735.375V508.625" stroke="#c0c0c0" stroke-width="2.5"/>
+
+
+  <!-- section headers -->
+  <text fill="#111111" font-family="Inter, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="46" font-weight="400" text-anchor="middle" x="520.5" y="97">玩法内核：奖励 X 机制</text>
+  <text fill="#111111" font-family="Inter, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="46" font-weight="400" text-anchor="middle" x="1554.5" y="97">玩法包装</text>
+
+  <!-- left diamond: horizontal labels -->
+  <text fill="#4f4f4f" font-family="Inter, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="40" font-weight="300" text-anchor="middle" x="133" y="635">玩法奖励</text>
+  <text fill="#4f4f4f" font-family="Inter, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="40" font-weight="300" text-anchor="middle" x="392" y="635">玩法机制</text>
+  <text fill="#4f4f4f" font-family="Inter, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="40" font-weight="300" text-anchor="middle" x="392" y="404">组合发散</text>
+  <text fill="#4f4f4f" font-family="Inter, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="40" font-weight="300" text-anchor="middle" x="392" y="862">组合发散</text>
+  <text fill="#4f4f4f" font-family="Inter, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="40" font-weight="300" text-anchor="middle" x="844" y="635">ROI</text>
+  <text fill="#4f4f4f" font-family="Inter, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="40" font-weight="300" text-anchor="middle" x="965" y="635">定案</text>
+
+  <!-- right diamond: horizontal labels -->
+  <text fill="#4f4f4f" font-family="Inter, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="40" font-weight="300" text-anchor="middle" x="1167" y="635">内核演绎</text>
+  <text fill="#4f4f4f" font-family="Inter, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="40" font-weight="300" text-anchor="middle" x="1426" y="635">产品特色</text>
+  <text fill="#4f4f4f" font-family="Inter, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="40" font-weight="300" text-anchor="middle" x="1426" y="404">脑暴发散</text>
+  <text fill="#4f4f4f" font-family="Inter, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="40" font-weight="300" text-anchor="middle" x="1426" y="862">脑暴发散</text>
+  <text fill="#4f4f4f" font-family="Inter, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="40" font-weight="300" text-anchor="middle" x="1878" y="635">ROI</text>
+  <text fill="#4f4f4f" font-family="Inter, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="40" font-weight="300" text-anchor="middle" x="1999" y="635">定案</text>
+
+  <!-- diagonal edge labels -->
+  <text transform="translate(188.5 364.5) rotate(-39.83)" fill="#4f4f4f" font-family="Inter, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="40" font-weight="300" y="30">发散</text>
+  <text transform="translate(1225.5 364.5) rotate(-39.83)" fill="#4f4f4f" font-family="Inter, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="40" font-weight="300" y="30">发散</text>
+  <text transform="translate(790.526 318.5) rotate(39.83)" fill="#4f4f4f" font-family="Inter, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="40" font-weight="300" y="30">收敛</text>
+  <text transform="translate(1827.53 318.5) rotate(39.83)" fill="#4f4f4f" font-family="Inter, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="40" font-weight="300" y="30">收敛</text>
+
+  <!-- vertical labels -->
+  <text fill="#4f4f4f" font-family="Inter, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="40" font-weight="300" letter-spacing="8"
+        writing-mode="vertical-lr" text-anchor="middle"
+        x="586" y="622">目标达成&amp;动机匹配</text>
+
+  <text fill="#4f4f4f" font-family="Inter, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="40" font-weight="300" letter-spacing="8"
+        writing-mode="vertical-lr" text-anchor="middle"
+        x="715" y="622">用户参与体验</text>
+
+  <text fill="#4f4f4f" font-family="Inter, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="40" font-weight="300" letter-spacing="8"
+        writing-mode="vertical-lr" text-anchor="middle"
+        x="1620" y="622">吸引力&amp;理解难度</text>
+
+  <text fill="#4f4f4f" font-family="Inter, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" font-size="40" font-weight="300" letter-spacing="8"
+        writing-mode="vertical-lr" text-anchor="middle"
+        x="1749" y="622">拓展性&amp;通用性</text>
+
 </svg>

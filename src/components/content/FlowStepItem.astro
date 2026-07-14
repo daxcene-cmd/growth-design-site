@@ -1,0 +1,25 @@
+---
+interface Props {
+  n: number;
+  title: string;
+  isLast?: boolean;
+}
+
+const { n, title, isLast = false } = Astro.props;
+---
+
+<div class="flow-step">
+  <div class="flow-step-header">
+    <div class="flow-step-number">{n}</div>
+    <h4 class="flow-step-title">{title}</h4>
+  </div>
+  <div class="flow-step-main">
+    {!isLast
+      ? <div class="flow-step-line" />
+      : <div class="flow-step-line flow-step-line--empty" />
+    }
+    <div class="flow-step-content">
+      <slot />
+    </div>
+  </div>
+</div>

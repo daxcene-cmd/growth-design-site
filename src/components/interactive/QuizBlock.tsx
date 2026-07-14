@@ -46,6 +46,14 @@ type QuizBlockProps = {
   data: QuizData;
 };
 
+function getQuestionText(question: QuizQuestion) {
+  if (!question.caseText) {
+    return question.question;
+  }
+
+  return `${question.question.replace(/[？?]\s*$/, '')}：${question.caseText}`;
+}
+
 export default function QuizBlock({ data }: QuizBlockProps) {
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -65,19 +73,28 @@ export default function QuizBlock({ data }: QuizBlockProps) {
   const totalNumber = String(data.questions.length).padStart(2, '0');
   const hasImageQuestions = data.questions.some((question) => question.caseImage || question.caseImages);
   const quizModeClass = hasImageQuestions ? 'is-image-quiz' : 'is-text-quiz';
-  const resultLabel =
-    accuracy === 100
-      ? data.resultLabels?.excellent ?? '判断很稳，关键概念已经掌握。'
-      : accuracy >= 60
-        ? data.resultLabels?.good ?? '基本掌握，可以继续校准细节。'
-        : data.resultLabels?.retry ?? '建议回看关键概念后再练一次。';
-
   const resultImage =
     accuracy === 100
       ? data.resultImages?.excellent
-      : accuracy >= 60
+      : accuracy >= 50
         ? data.resultImages?.good
         : data.resultImages?.retry;
+
+  const answerReview = data.questions
+    .map((question, index) => {
+      const answerId = answers[question.id];
+      const answer = question.options.find((option) => option.id === answerId);
+      const correct = question.options.find((option) => option.correct);
+      return {
+        id: question.id,
+        number: String(index + 1).padStart(2, '0'),
+        question: getQuestionText(question),
+        isCorrect: Boolean(answer?.correct),
+        correctText: question.correctAnswerText ?? correct?.text ?? '见解析',
+        explanation: question.explanation ?? answer?.explanation,
+      };
+    })
+    .filter((item) => !item.isCorrect);
 
   const handleAnswer = (question: QuizQuestion, optionId: string) => {
     if (answers[question.id]) {
@@ -121,7 +138,7 @@ export default function QuizBlock({ data }: QuizBlockProps) {
       </div>
 
       <div
-        className="quiz-result"
+        className={`quiz-result ${answerReview.length > 0 ? 'has-review' : 'has-no-review'}`}
         role="status"
         style={{ display: showResult ? undefined : 'none' }}
       >
@@ -130,12 +147,34 @@ export default function QuizBlock({ data }: QuizBlockProps) {
             alt=""
             aria-hidden="true"
             className="quiz-result-image"
-            src={resultImage ?? '/growth-design-site/images/flower.webp'}
+            src={resultImage ?? '/growth-design-site/images/01-definition/flower.webp'}
           />
-          <p className="quiz-result-label-small">本轮答题准确率为</p>
-          <p className="quiz-result-accuracy">{accuracy}%</p>
-          <p className="quiz-result-label">{resultLabel}</p>
+          <div className="quiz-result-summary">
+            <p className="quiz-result-score">
+              <span className="quiz-result-accuracy">{accuracy}%</span>
+              <span className="quiz-result-label-small">答题准确率</span>
+            </p>
+          </div>
         </div>
+        {answerReview.length > 0 ? (
+          <div className="quiz-result-review-wrap">
+            <p className="quiz-result-review-title">错题复盘</p>
+            <ol className="quiz-result-review">
+              {answerReview.map((item) => (
+                <li className="quiz-result-review-item" key={item.id}>
+                  <span className="quiz-result-review-number">{item.number}</span>
+                  <span className="quiz-result-review-body">
+                    <span className="quiz-result-review-question">{item.question}</span>
+                    <span className="quiz-result-review-answer">正确答案：{item.correctText}</span>
+                    {item.explanation ? (
+                      <span className="quiz-result-review-note">{item.explanation}</span>
+                    ) : null}
+                  </span>
+                </li>
+              ))}
+            </ol>
+          </div>
+        ) : null}
         <div className="quiz-action-area quiz-action-area--center">
           <button className="quiz-restart-button" onClick={handleRestart} type="button">
             重新练习
@@ -149,14 +188,10 @@ export default function QuizBlock({ data }: QuizBlockProps) {
       >
         <h5>
           <span className="quiz-question-number">{currentNumber}</span>
-          {currentQuestion.question}
+          <span className="quiz-question-text">{getQuestionText(currentQuestion)}</span>
         </h5>
         {currentQuestion.description ? (
           <p className="quiz-question-description">{currentQuestion.description}</p>
-        ) : null}
-
-        {currentQuestion.caseText ? (
-          <div className="quiz-case-text">{currentQuestion.caseText}</div>
         ) : null}
 
         {currentQuestion.caseImages ? (
@@ -231,13 +266,13 @@ export default function QuizBlock({ data }: QuizBlockProps) {
               }`}
               role="status"
             >
-              <p className="quiz-feedback-title">
+              <p className="quiz-feedback-status">
                 {selectedOption.correct
                   ? '回答正确'
-                  : `回答错误：正确答案是${currentQuestion.correctAnswerText ?? correctOption?.text ?? '见解析'}`}
+                  : `回答错误，正确答案为${currentQuestion.correctAnswerText ?? correctOption?.text ?? '见解析'}`}
               </p>
               {currentQuestion.explanation ?? selectedOption.explanation ? (
-                <p>{currentQuestion.explanation ?? selectedOption.explanation}</p>
+                <p className="quiz-feedback-text">{currentQuestion.explanation ?? selectedOption.explanation}</p>
               ) : null}
             </div>
           </div>

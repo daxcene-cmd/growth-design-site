@@ -3,22 +3,148 @@ interface Case {
   image: string;
   label: string;
   alt: string;
+  link?: string;
+  linkText?: string;
+  crop?: number;
+  silent?: boolean;
+  posterTime?: number;
 }
 
 interface Props {
   cases: Case[];
+  columns?: number;
+  gap?: number;
+  fixedHeight?: number;
+  variant?: 'grid' | 'stage';
 }
 
-const { cases } = Astro.props;
+const { cases, columns, gap, fixedHeight, variant = 'grid' } = Astro.props;
+const gridParts = [
+  columns ? `grid-template-columns: repeat(${columns}, minmax(0, 1fr))` : '',
+  gap != null ? `gap: ${gap}px` : '',
+].filter(Boolean).join('; ');
+const gridStyle = gridParts || undefined;
+const isVideo = (src: string) => /\.(mp4|webm|mov)$/i.test(src);
 ---
 
-<div class="case-gallery">
+<div class={`case-gallery case-gallery--${variant}`} style={gridStyle}>
   {cases.map((c) => (
     <div class="case-gallery-item">
-      <div class="case-gallery-image-wrap">
-        <img src={c.image} alt={c.alt} loading="lazy" />
+      <div class="case-gallery-image-wrap" style={fixedHeight ? `height: ${fixedHeight}px; width: fit-content; margin: 0 auto;` : c.crop ? `max-height: ${Math.round(c.crop * 420)}px; overflow: hidden;` : undefined}>
+        {isVideo(c.image)
+          ? <video src={c.image} playsinline preload="metadata" muted={c.silent} data-poster-time={c.posterTime ?? 0} />
+          : <img src={c.image} alt={c.alt} loading="lazy" style={fixedHeight ? 'height: 100%; width: auto; display: block;' : undefined} />
+        }
+        {isVideo(c.image) && (
+          <div class="case-video-controls">
+            <button class="case-video-btn case-video-play" aria-label="播放">
+              <svg class="icon-play" viewBox="0 0 16 16" fill="currentColor"><polygon points="3,1 14,8 3,15"/></svg>
+              <svg class="icon-pause" viewBox="0 0 16 16" fill="currentColor"><rect x="2" y="1" width="4.5" height="14" rx="1"/><rect x="9.5" y="1" width="4.5" height="14" rx="1"/></svg>
+            </button>
+            <button class="case-video-btn case-video-fullscreen" aria-label="全屏">
+              <svg viewBox="0 0 16 16" fill="currentColor">
+                <path d="M1 1h4v1.5H2.5V4H1V1zM11 1h4v3h-1.5V2.5H11V1zM1 12h1.5v1.5H4V15H1v-3zM13.5 13.5V12H15v3h-3v-1.5h1.5z"/>
+              </svg>
+            </button>
+          </div>
+        )}
+        {isVideo(c.image) && (
+          <div class="case-video-progress" role="progressbar">
+            <div class="case-video-bar"></div>
+          </div>
+        )}
       </div>
-      <span class="case-gallery-label">{c.label}</span>
+      {c.link
+        ? <a class="case-gallery-caption case-gallery-link" href={c.link} target="_blank" rel="noopener noreferrer">{c.linkText ?? c.link}</a>
+        : <span class="case-gallery-caption case-gallery-label">{c.label}</span>
+      }
     </div>
   ))}
 </div>
+
+<script>
+  document.querySelectorAll('.case-video-controls').forEach((controls) => {
+    const controlEl = controls as HTMLElement;
+    if (controlEl.dataset.caseVideoReady === 'true') return;
+    controlEl.dataset.caseVideoReady = 'true';
+
+    const item = controls.closest('.case-gallery-item')!;
+    const mediaWrap = controls.closest('.case-gallery-image-wrap')!;
+    const video = item.querySelector('video') as HTMLVideoElement;
+    const playBtn = controls.querySelector('.case-video-play')!;
+    const progressWrap = mediaWrap.querySelector('.case-video-progress')!;
+    const bar = mediaWrap.querySelector('.case-video-bar') as HTMLElement;
+    const fsBtn = controls.querySelector('.case-video-fullscreen')!;
+
+    // Poster frame
+    const posterTime = parseFloat(video.dataset.posterTime ?? '0');
+    let isShowingPoster = posterTime > 0;
+    if (posterTime > 0) {
+      const applyPosterTime = () => { video.currentTime = posterTime; };
+      if (video.readyState >= 1) {
+        applyPosterTime();
+      } else {
+        video.addEventListener('loadedmetadata', applyPosterTime, { once: true });
+      }
+    }
+
+    // Play / pause
+    const setPlaying = (playing: boolean) => {
+      playBtn.classList.toggle('is-playing', playing);
+      playBtn.setAttribute('aria-label', playing ? '暂停' : '播放');
+    };
+    let controlsTimer: number | undefined;
+    const showControls = (hideAfter?: number) => {
+      window.clearTimeout(controlsTimer);
+      mediaWrap.classList.add('is-controls-visible');
+      if (hideAfter) {
+        controlsTimer = window.setTimeout(() => mediaWrap.classList.remove('is-controls-visible'), hideAfter);
+      }
+    };
+    const togglePlay = () => {
+      if (video.paused) {
+        if (posterTime > 0 && video.currentTime === posterTime) video.currentTime = 0;
+        isShowingPoster = false;
+        video.play();
+      } else {
+        video.pause();
+      }
+    };
+
+    playBtn.addEventListener('click', togglePlay);
+    video.addEventListener('click', togglePlay);
+    video.addEventListener('play', () => {
+      setPlaying(true);
+      showControls(1800);
+    });
+    video.addEventListener('pause', () => {
+      setPlaying(false);
+      showControls();
+    });
+    video.addEventListener('ended', () => {
+      setPlaying(false);
+      showControls();
+      if (posterTime > 0) {
+        video.currentTime = posterTime;
+        isShowingPoster = true;
+        bar.style.width = '0%';
+      }
+    });
+
+    // Progress
+    video.addEventListener('timeupdate', () => {
+      if (!isShowingPoster && video.duration) bar.style.width = `${(video.currentTime / video.duration) * 100}%`;
+    });
+    progressWrap.addEventListener('click', (e) => {
+      const rect = progressWrap.getBoundingClientRect();
+      video.currentTime = ((e as MouseEvent).clientX - rect.left) / rect.width * video.duration;
+      showControls(1800);
+    });
+
+    // Fullscreen
+    fsBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      document.fullscreenElement ? document.exitFullscreen() : video.requestFullscreen();
+    });
+  });
+</script>

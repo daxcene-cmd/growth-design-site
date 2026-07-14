@@ -1,0 +1,97 @@
+---
+---
+<div class="model-tabs-block fogg-variant-a">
+  <div class="folder-tab-nav" role="tablist">
+    <button class="folder-tab is-active" role="tab" aria-selected="true" data-model-tab="fogg">
+      <div class="folder-tab-header">
+        <span class="folder-tab-index">01</span>
+        <span class="folder-tab-title">单次行为卡点排查</span>
+      </div>
+    </button>
+    <button class="folder-tab" role="tab" aria-selected="false" data-model-tab="hook">
+      <div class="folder-tab-header">
+        <span class="folder-tab-index">02</span>
+        <span class="folder-tab-title">持续行为卡点排查</span>
+      </div>
+    </button>
+  </div>
+
+  <div class="model-panel-wrap">
+  <div class="folder-tab-panel model-tab-panel" data-model-panel="fogg">
+    <div class="fogg-block">
+      <div class="fogg-left">
+        <div class="fogg-image-group">
+          <svg class="fogg-svg fogg-svg--fogg" viewBox="0 0 220 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="36" y1="174" x2="204" y2="174" stroke="var(--color-text)" stroke-width="1.6" stroke-linecap="round"/>
+            <line x1="36" y1="174" x2="36" y2="10" stroke="var(--color-text)" stroke-width="1.6" stroke-linecap="round"/>
+            <polyline points="199,169 204,174 199,179" fill="none" stroke="var(--color-text)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <polyline points="31,15 36,10 41,15" fill="none" stroke="var(--color-text)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="120" y="194" text-anchor="middle" class="fogg-axis-label">Ability 能力</text>
+            <text x="22" y="96" text-anchor="middle" class="fogg-axis-label" transform="rotate(-90, 22, 96)">Motivation 动机</text>
+            <text x="198" y="192" text-anchor="middle" class="fogg-plus">+</text>
+            <text x="22" y="22" text-anchor="middle" class="fogg-plus">+</text>
+            <defs>
+              <path id="mt-fogg-curve" d="M 44 22 C 44 80 60 140 185 168"/>
+              <path id="mt-fogg-curve-label" d="M 54 14 C 54 72 70 132 210 160"/>
+            </defs>
+            <use href="#mt-fogg-curve" stroke="var(--color-accent)" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+            <text class="fogg-zone-label fogg-zone-label--on">
+              <textPath href="#mt-fogg-curve-label" startOffset="50%" text-anchor="middle">行动线</textPath>
+            </text>
+          </svg>
+        </div>
+      </div>
+      <div class="fogg-divider"></div>
+      <div class="fogg-right">
+        <div class="fogg-heading">
+          <p class="fogg-title">福格模型：行为 = 动机 × 能力 × 触发</p>
+          <p class="fogg-subtitle">三者同时到位，行为才会发生</p>
+        </div>
+        <p>动机：奖励是否前置并足以驱动行为？</p>
+        <p>能力：用户能否无障碍 / 更轻松地完成？</p>
+        <p>触发：触发时机及方案是否合理？</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="folder-tab-panel model-tab-panel" data-model-panel="hook" hidden>
+    <div class="fogg-block">
+      <div class="fogg-left">
+        <div class="fogg-image-group">
+          <img class="fogg-svg hook-model-img" src="/growth-design-site/images/05-structure/hook-model.svg" alt="上瘾模型四象限图：触发、行动、多变奖赏、投入" />
+        </div>
+      </div>
+      <div class="fogg-divider"></div>
+      <div class="fogg-right">
+        <div class="fogg-heading">
+          <p class="fogg-title">上瘾模型：触发 → 行动 → 多变奖赏 → 投入</p>
+          <p class="fogg-subtitle">四个环节循环驱动持续回访，形成使用习惯</p>
+        </div>
+        <p>触发：下次回访的理由是否到位？</p>
+        <p>行动：参考单次行为卡点排查</p>
+        <p>多变奖赏：反馈是否有差异化和惊喜感？</p>
+        <p>投入：用户是否积累了资产？是否可感知？</p>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<script>
+  const block = document.querySelector('.model-tabs-block');
+  if (block) {
+    block.querySelectorAll('[data-model-tab]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = (btn as HTMLElement).dataset.modelTab;
+        block.querySelectorAll('[data-model-tab]').forEach(b => {
+          b.classList.toggle('is-active', b === btn);
+          (b as HTMLElement).setAttribute('aria-selected', b === btn ? 'true' : 'false');
+        });
+        block.querySelectorAll('[data-model-panel]').forEach(panel => {
+          const el = panel as HTMLElement;
+          el.hidden = el.dataset.modelPanel !== target;
+        });
+      });
+    });
+  }
+</script>

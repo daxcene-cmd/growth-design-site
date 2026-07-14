@@ -1,40 +1,62 @@
 ---
 id: framework
-title: "04 框架层"
+title: "框架层：将玩法逻辑转化为页面框架"
 order: 6
 source: 增长运营产品设计思路_优化重写版.md
 ---
 import DesignFrameworkDiagram from "../../../components/content/DesignFrameworkDiagram.astro";
+import FrameworkStep from "../../../components/content/FrameworkStep.astro";
+import FwSceneCards from "../../../components/content/FwSceneCards.astro";
 import PageStructureDiagram from "../../../components/content/PageStructureDiagram.astro";
 import PageHierarchyDiagram from "../../../components/content/PageHierarchyDiagram.astro";
+import FwAdaptCheck from "../../../components/content/FwAdaptCheck.astro";
 
-### 04 框架层
+## 框架层：将玩法逻辑转化为页面框架
 
 <DesignFrameworkDiagram highlight="framework" />
 
-框架层本质上是把“抽象的逻辑流程”翻译成“具象的空间排版”。在增长玩法里，主页不是承载所有信息，而是服务一个主目标行为。
+框架层解决的是：如何把玩法逻辑变成用户能看懂、能操作的页面框架。具体可以按四步设计：明确核心场景、组织内容顺序、建立空间层级、检验场景适配性。
 
+<div class="flow-steps">
 
-主页框架可以按四步设计：
+<FrameworkStep number={1} title="明确主页核心场景">
 
-#### 第一步：明确主页核心场景
+从结构层的逻辑中提炼出页面的「核心场景」。\
+例如「餐餐摇现金」的核心场景是已开场但大奖未解锁，因为它主要贡献增长指标DAU和裂变系数。
 
-在动手画原型前，必须先从结构层的逻辑中提炼出页面的"核心场景"。以"餐餐摇现金"为例，主页包含三个关键状态：未开场、进行中但大奖未解锁、进行中且大奖已解锁。其中，进行中但大奖未解锁是核心场景。因为该玩法的核心增长指标是 DAU 和裂变系数，而用户为了解锁大奖来访、邀请好友的这个阶段，正是贡献这两个指标的最大来源。
+<FwSceneCards />
 
-#### 第二步：按用户认知顺序填充结构
+</FrameworkStep>
 
-按照用户进入页面后的认知路径“吸引 -> 理解 -> 行动”组织内容：
+<FrameworkStep number={2} title="按用户认知顺序填充结构">
+
+用户进入页面后，通常会先判断「值不值得留下」，再判断「能不能完成」，最后决定「要不要行动」。因此，页面结构可以按「吸引 → 理解 → 行动」组织内容：
+
+- <strong>吸引：</strong>回答「这是什么？我能得到什么？」。将标题和核心利益点放在最显眼的位置，让用户第一眼看到留下来的理由。
+- <strong>理解：</strong>回到「如何得到」。通过玩法对象、场景，帮助用户快速理解参与方式。
+- <strong>行动：</strong>回答「我现在该做什么？」。给出明确的下一步行动指引，别让用户自己思考。
 
 <PageStructureDiagram />
 
-#### 第三步：建立清晰的页面空间层级
-增长页面信息繁杂，层级分工越明确，用户的注意力就越集中。建议将页面在纵深空间上拆解为三层：
+</FrameworkStep>
+
+<FrameworkStep number={3} title="建立清晰的页面空间层级">
+
+增长玩法的页面往往有很多信息，空间层级的分工，能避免所有内容一起抢用户注意力。通常可以拆解为以下三层：
+- <strong>背景层：</strong>负责渲染活动氛围。背景可以丰富，但不能干扰其他两层的表达。
+- <strong>玩法层：</strong>负责表达玩法概念。通过玩法主对象表达机制、奖励、进度等信息。
+- <strong>交互层：</strong>负责指引行动。用清晰的奖励、进度和提示推动用户行动。
 
 <PageHierarchyDiagram />
 
-#### 第四步：检验不同状态下的框架适配性
+</FrameworkStep>
 
-确认完核心场景的框架后，还要依据其他场景，检验框架是否依然可用，保证设计的适配性。无论哪个场景，页面都要能清晰回答：
-1. 现在是什么状态?
-2. 我能得到什么?
-3. 我下一步该做什么?
+<FrameworkStep number={4} title="检验不同场景下的框架适配性" isLast>
+
+确认完核心场景的框架后，还要放到其他场景中检验适配性。无论哪个场景，页面都要能清晰回答：现在是什么状态？我能得到什么？我下一步该做什么？
+
+<FwAdaptCheck />
+
+</FrameworkStep>
+
+</div>

@@ -1,0 +1,322 @@
+---
+interface CaseItem {
+  desc: string;
+  descNote?: string;
+  before?: string[];
+  after?: string[];
+  beforeLabel?: string;
+  afterLabel?: string;
+  beforeLabels?: string[];
+  afterLabels?: string[];
+  layout?: 'vertical';
+  imgBg?: string;
+}
+
+interface Principle {
+  title: string;
+  cases: CaseItem[];
+}
+
+interface Category {
+  id: string;
+  label: string;
+  description: string;
+  principles: Principle[];
+}
+
+interface Props {
+  categories: Category[];
+}
+
+const { categories } = Astro.props;
+const pad = (n: number) => String(n);
+const normalizeImages = (images?: string[]) => images ?? [];
+const isVideo = (src: string) => src.endsWith('.mp4') || src.endsWith('.webm');
+
+const firstTitle = categories[0]?.principles[0]?.title ?? '';
+const firstTotal = categories[0]?.principles.length ?? 0;
+---
+
+<div class="case-example-block">
+
+  <div class="folder-tab-nav" role="tablist">
+    {categories.map((cat, ci) => (
+      <button
+        class={`folder-tab${ci === 0 ? ' is-active' : ''}`}
+        data-cat-idx={ci}
+        role="tab"
+        aria-selected={ci === 0 ? "true" : "false"}
+      >
+        <div class="folder-tab-header">
+          <span class="folder-tab-title">{cat.label}</span>
+        </div>
+        <span class="folder-tab-desc">{cat.description}</span>
+      </button>
+    ))}
+  </div>
+
+  <div class="folder-tab-panel case-example-panel">
+
+    <div class="case-content-header">
+      <div class="case-slide-title case-example-num-title">
+        <span class="case-num case-slide-num">{pad(1)}</span>
+        <h4 class="case-title case-slide-name">{firstTitle}</h4>
+      </div>
+      <div class="case-header-actions">
+        <div class="case-header-sub-nav" aria-label="案例切换" hidden></div>
+        <div class="case-example-controls" style={firstTotal <= 1 ? "display:none" : ""}>
+          <button class="case-example-btn case-example-btn--prev" aria-label="上一个" disabled>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+              <polyline points="10,3 5,8 10,13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <span class="quiz-header-progress">
+            <span class="case-counter-cur">{pad(1)}</span><span class="case-counter-total">/{pad(firstTotal)}</span>
+          </span>
+          <button class="case-example-btn case-example-btn--next" aria-label="下一个" disabled={firstTotal <= 1}>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+              <polyline points="6,3 11,8 6,13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    {categories.map((cat, ci) => (
+      <div class={`case-category-panel${ci === 0 ? ' is-active' : ''}`} data-cat-panel={ci}>
+        {cat.principles.length > 0 ? (
+          <div class="case-example-track-wrap">
+            <div class="case-example-track">
+              {cat.principles.map((p) => (
+                <div class="case-example-slide" data-title={p.title}>
+                  {p.cases.length > 1 && (
+                    <div class="case-sub-nav">
+                      {p.cases.map((_, ci) => (
+                        <button class={`case-sub-tab${ci === 0 ? ' is-active' : ''}`} data-sub-idx={ci}>
+                          案例 {String.fromCharCode(65 + ci)}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                  {p.cases.map((c, ci) => {
+                    const beforeImgs = normalizeImages(c.before);
+                    const afterImgs = normalizeImages(c.after);
+                    const totalImgs = beforeImgs.length + afterImgs.length;
+                    const isGrouped = beforeImgs.length > 1 && !!c.beforeLabel && !c.beforeLabels;
+                    const gridMod = c.layout === 'vertical' ? 'case-images--vertical'
+                      : isGrouped ? 'case-images--grouped'
+                      : totalImgs === 4 ? 'case-images--four'
+                      : totalImgs === 3 ? 'case-images--three'
+                      : totalImgs === 1 ? 'case-images--one' : '';
+                    const figStyle = c.imgBg ? `background:${c.imgBg}` : undefined;
+                    return (
+                      <div class={`case-example-case${p.cases.length > 1 && ci > 0 ? '' : ''}${p.cases.length > 1 ? ' case-example-case--sub' : ''}${ci === 0 ? ' is-active' : ''}`} data-sub-panel={ci}>
+                        <p class="case-desc">{c.desc}{c.descNote && <><br />{c.descNote}</>}</p>
+                        <div class={`case-images ${gridMod}`}>
+                          {isGrouped ? (
+                            <div class="case-img-before-group">
+                              <div class="case-img-before-row">
+                                {beforeImgs.map((src) => (
+                                  <div class="case-img-wrap">
+                                    <figure class="case-img-figure">
+                                      {isVideo(src) ? <video src={src} autoplay loop muted playsinline /> : <img src={src} alt={c.beforeLabel ?? ''} />}
+                                    </figure>
+                                  </div>
+                                ))}
+                              </div>
+                              {c.beforeLabel && <span class="case-img-label case-img-label--before">{c.beforeLabel}</span>}
+                            </div>
+                          ) : beforeImgs.map((src, i) => {
+                            const lbl = c.beforeLabels?.[i] ?? c.beforeLabel;
+                            return (
+                              <div class="case-img-wrap">
+                                <figure class="case-img-figure" style={figStyle}>
+                                  {isVideo(src) ? <video src={src} autoplay loop muted playsinline /> : <img src={src} alt={lbl ?? ''} />}
+                                </figure>
+                                {lbl && <span class="case-img-label case-img-label--before">{lbl}</span>}
+                              </div>
+                            );
+                          })}
+                          {afterImgs.map((src, i) => {
+                            const lbl = c.afterLabels?.[i] ?? c.afterLabel;
+                            return (
+                              <div class="case-img-wrap">
+                                <figure class="case-img-figure" style={figStyle}>
+                                  {isVideo(src) ? <video src={src} autoplay loop muted playsinline /> : <img src={src} alt={lbl ?? ''} />}
+                                </figure>
+                                {lbl && <span class="case-img-label case-img-label--after">{lbl}</span>}
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              ))}
+            </div>
+          </div>
+        ) : (
+          <p class="case-empty">暂无案例</p>
+        )}
+      </div>
+    ))}
+
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.case-example-block').forEach(block => {
+    const tabs = Array.from(block.querySelectorAll('.folder-tab')) as HTMLButtonElement[];
+    const panels = Array.from(block.querySelectorAll('.case-category-panel')) as HTMLElement[];
+    const slideNum = block.querySelector('.case-slide-num');
+    const slideName = block.querySelector('.case-slide-name');
+    const cur = block.querySelector('.case-counter-cur');
+    const tot = block.querySelector('.case-counter-total');
+    const prev = block.querySelector('.case-example-btn--prev') as HTMLButtonElement | null;
+    const next = block.querySelector('.case-example-btn--next') as HTMLButtonElement | null;
+    const controls = block.querySelector('.case-example-controls') as HTMLElement | null;
+    const headerSubNav = block.querySelector('.case-header-sub-nav') as HTMLElement | null;
+
+    let activeCat = 0;
+    let activeSlide = 0;
+
+    function pad(n: number) { return String(n); }
+
+    function getTrack(ci: number) {
+      return panels[ci]?.querySelector('.case-example-track') as HTMLElement | null;
+    }
+
+    function getTrackWrap(ci: number) {
+      return panels[ci]?.querySelector('.case-example-track-wrap') as HTMLElement | null;
+    }
+
+    function getSlides(ci: number) {
+      return Array.from(panels[ci]?.querySelectorAll('.case-example-slide') ?? []) as HTMLElement[];
+    }
+
+    function updateActiveHeight() {
+      const wrap = getTrackWrap(activeCat);
+      const slide = getSlides(activeCat)[activeSlide];
+      if (!wrap || !slide) return;
+      wrap.style.height = `${slide.scrollHeight}px`;
+    }
+
+    function scheduleActiveHeight() {
+      requestAnimationFrame(updateActiveHeight);
+    }
+
+    function updateHeader(ci: number, si: number) {
+      const slide = getSlides(ci)[si];
+      const title = slide?.dataset.title ?? '';
+      if (slideNum) slideNum.textContent = pad(si + 1);
+      if (slideName) slideName.textContent = title;
+      if (cur) cur.textContent = pad(si + 1);
+      updateHeaderSubNav(slide);
+    }
+
+    function setSubCase(slide: HTMLElement, idx: number) {
+      const subTabs = Array.from(slide.querySelectorAll('.case-sub-tab')) as HTMLButtonElement[];
+      const subPanels = Array.from(slide.querySelectorAll('.case-example-case--sub')) as HTMLElement[];
+      subTabs.forEach((t, i) => t.classList.toggle('is-active', i === idx));
+      subPanels.forEach((p, i) => p.classList.toggle('is-active', i === idx));
+      headerSubNav?.querySelectorAll('.case-sub-tab').forEach((t, i) => t.classList.toggle('is-active', i === idx));
+      scheduleActiveHeight();
+    }
+
+    function updateHeaderSubNav(slide?: HTMLElement) {
+      if (!headerSubNav) return;
+      headerSubNav.innerHTML = '';
+      const subTabs = Array.from(slide?.querySelectorAll('.case-sub-tab') ?? []) as HTMLButtonElement[];
+      if (!slide || subTabs.length <= 1) {
+        headerSubNav.hidden = true;
+        return;
+      }
+      headerSubNav.hidden = false;
+      subTabs.forEach((sourceTab, idx) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = `case-sub-tab${sourceTab.classList.contains('is-active') ? ' is-active' : ''}`;
+        btn.dataset.subIdx = String(idx);
+        btn.textContent = sourceTab.textContent;
+        btn.addEventListener('click', () => setSubCase(slide, idx));
+        headerSubNav.appendChild(btn);
+      });
+    }
+
+    function goSlide(i: number) {
+      const total = getSlides(activeCat).length;
+      activeSlide = Math.max(0, Math.min(total - 1, i));
+      const track = getTrack(activeCat);
+      if (track) track.style.transform = `translateX(-${activeSlide * 100}%)`;
+      updateHeader(activeCat, activeSlide);
+      if (prev) prev.disabled = activeSlide === 0;
+      if (next) next.disabled = activeSlide >= total - 1;
+      const slide = getSlides(activeCat)[activeSlide];
+      if (slide) resetSubNav(slide);
+      scheduleActiveHeight();
+    }
+
+    function goCategory(ci: number) {
+      tabs[activeCat]?.classList.remove('is-active');
+      tabs[activeCat]?.setAttribute('aria-selected', 'false');
+      panels[activeCat]?.classList.remove('is-active');
+
+      activeCat = ci;
+      activeSlide = 0;
+
+      tabs[activeCat]?.classList.add('is-active');
+      tabs[activeCat]?.setAttribute('aria-selected', 'true');
+      panels[activeCat]?.classList.add('is-active');
+
+      const total = getSlides(activeCat).length;
+      if (tot) tot.textContent = '/' + pad(total);
+      const track = getTrack(activeCat);
+      if (track) track.style.transform = 'translateX(0)';
+      if (controls) controls.style.display = total <= 1 ? 'none' : '';
+      if (prev) prev.disabled = true;
+      if (next) next.disabled = total <= 1;
+      updateHeader(ci, 0);
+      scheduleActiveHeight();
+    }
+
+    tabs.forEach((tab, ci) => {
+      tab.addEventListener('click', () => goCategory(ci));
+    });
+
+    prev?.addEventListener('click', () => goSlide(activeSlide - 1));
+    next?.addEventListener('click', () => goSlide(activeSlide + 1));
+
+    function resetSubNav(slide: HTMLElement) {
+      setSubCase(slide, 0);
+    }
+
+    block.addEventListener('click', e => {
+      const btn = (e.target as HTMLElement).closest('.case-sub-tab') as HTMLButtonElement | null;
+      if (!btn) return;
+      const slide = btn.closest('.case-example-slide') as HTMLElement;
+      if (!slide) return;
+      setSubCase(slide, Number(btn.dataset.subIdx));
+    });
+
+    panels.forEach(panel => {
+      const track = panel.querySelector('.case-example-track') as HTMLElement | null;
+      if (!track) return;
+      let sx = 0;
+      track.addEventListener('touchstart', e => { sx = e.touches[0].clientX; }, { passive: true });
+      track.addEventListener('touchend', e => {
+        const d = sx - e.changedTouches[0].clientX;
+        if (Math.abs(d) > 40) goSlide(d > 0 ? activeSlide + 1 : activeSlide - 1);
+      });
+    });
+
+    block.querySelectorAll('img, video').forEach(media => {
+      media.addEventListener('load', scheduleActiveHeight);
+      media.addEventListener('loadedmetadata', scheduleActiveHeight);
+    });
+
+    window.addEventListener('resize', scheduleActiveHeight);
+
+    goCategory(0);
+  });
+</script>

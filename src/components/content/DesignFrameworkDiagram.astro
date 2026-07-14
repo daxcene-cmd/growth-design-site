@@ -6,22 +6,72 @@ interface Props {
 }
 const { highlight } = Astro.props;
 
-const skew = 40;
+const skew = 64;
 const layers = highlight
   ? data.layers.filter((l) => l.id === highlight)
   : data.layers;
+const showAxis = !highlight;
+const isHighlight = Boolean(highlight);
+const useLayerTint = true;
+
+// 平行四边形布局常量
+const X_LEFT_TOP = 242;   // 顶边左端
+const X_RIGHT_TOP = 728;  // 顶边右端
+const LABEL_X = 149;      // 层级标签 x
+const CORNER_RADIUS = 8;
+const AXIS_X = 52;
+const AXIS_LABEL_X = 30;
+const AXIS_TOP = data.layers[0].y_top;
+const AXIS_BOTTOM = data.layers[data.layers.length - 1].y_bot;
+const AXIS_ARROW_EXTENT = 2;
+
+const roleRanges = [
+  { label: "营销设计", x: 806, yTop: data.layers[0].y_top, yBot: data.layers[0].y_bot },
+  { label: "视觉设计", x: 836, yTop: data.layers[0].y_top, yBot: data.layers[1].y_bot },
+  { label: "交互设计", x: 866, yTop: data.layers[0].y_top, yBot: data.layers[data.layers.length - 1].y_bot },
+];
+const ROLE_RANGE_TICK = 16;
+const ROLE_RANGE_TEXT_OFFSET = 2;
 
 // viewBox：全览或单层
 const allY = layers.map((l) => l.y_top);
 const allYBot = layers.map((l) => l.y_bot);
 const vTop = Math.min(...allY) - 10;
 const vBot = Math.max(...allYBot) + 10;
-const viewBox = `-20 ${vTop} 740 ${vBot - vTop}`;
+const viewBoxLeft = showAxis ? -6 : LABEL_X - 26;
+const viewBoxRight = showAxis ? 918 : X_RIGHT_TOP + 72;
+const viewBox = `${viewBoxLeft} ${vTop} ${viewBoxRight - viewBoxLeft} ${vBot - vTop}`;
 
-// 平行四边形布局常量
-const X_LEFT_TOP = 140;   // 顶边左端
-const X_RIGHT_TOP = 660;  // 顶边右端
-const LABEL_X = 56;       // 层级标签 x
+type Point = { x: number; y: number };
+
+function pointToward(from: Point, to: Point, distance: number) {
+  const dx = to.x - from.x;
+  const dy = to.y - from.y;
+  const length = Math.hypot(dx, dy);
+  const d = Math.min(distance, length / 2);
+  return {
+    x: from.x + (dx / length) * d,
+    y: from.y + (dy / length) * d,
+  };
+}
+
+function roundedPolygonPath(points: Point[], radius: number) {
+  const start = pointToward(points[0], points[1], radius);
+  const commands = [`M ${start.x} ${start.y}`];
+
+  for (let i = 1; i <= points.length; i += 1) {
+    const current = points[i % points.length];
+    const prev = points[(i - 1 + points.length) % points.length];
+    const next = points[(i + 1) % points.length];
+    const before = pointToward(current, prev, radius);
+    const after = pointToward(current, next, radius);
+    commands.push(`L ${before.x} ${before.y}`);
+    commands.push(`Q ${current.x} ${current.y} ${after.x} ${after.y}`);
+  }
+
+  commands.push("Z");
+  return commands.join(" ");
+}
 
 // 计算垂直中心处的内容区左右边界（修正 skew 偏移）
 function contentBounds(layer: typeof data.layers[0]) {
@@ -44,34 +94,43 @@ function moduleX(layer: typeof data.layers[0], idx: number) {
 }
 ---
 
-<div class="dfd-wrap" role="img" aria-label="增长运营产品五层设计框架">
+<div class={`dfd-wrap ${isHighlight ? "dfd-wrap--highlight" : "dfd-wrap--full"}`} role="img" aria-label="增长运营产品五层设计框架">
   <svg class="dfd-svg" viewBox={viewBox} fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <marker id="dfd-axis-arrow-up" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="0">
+        <path d="M 1 6 L 4 2 L 7 6" class="dfd-axis-arrow" />
+      </marker>
+      <marker id="dfd-axis-arrow-down" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="0">
+        <path d="M 1 2 L 4 6 L 7 2" class="dfd-axis-arrow" />
+      </marker>
+    </defs>
     {layers.map((layer) => {
       const cy = (layer.y_top + layer.y_bot) / 2;
       const pts = [
-        `${X_LEFT_TOP},${layer.y_top}`,
-        `${X_RIGHT_TOP},${layer.y_top}`,
-        `${X_RIGHT_TOP - skew},${layer.y_bot}`,
-        `${X_LEFT_TOP - skew},${layer.y_bot}`,
-      ].join(' ');
+        { x: X_LEFT_TOP, y: layer.y_top },
+        { x: X_RIGHT_TOP, y: layer.y_top },
+        { x: X_RIGHT_TOP - skew, y: layer.y_bot },
+        { x: X_LEFT_TOP - skew, y: layer.y_bot },
+      ];
+      const path = roundedPolygonPath(pts, CORNER_RADIUS);
 
       const hasDivider = layer.modules.length > 1;
       const dx = dividerX(layer);
       // divider line: top at dx, bot at dx - skew (parallel to sides)
-      const divTop = { x: dx, y: layer.y_top + 2 };
-      const divBot = { x: dx - skew, y: layer.y_bot - 2 };
+      const divTop = { x: dx + skew / 2, y: layer.y_top + 2 };
+      const divBot = { x: dx - skew / 2, y: layer.y_bot - 2 };
 
       const titleY = cy - 12;
       const subY = cy + 12;
 
       return (
         <g>
-          <polygon points={pts} class="dfd-layer-fill dfd-layer-border"/>
+          <path d={path} class={`dfd-layer-fill dfd-layer-fill--${layer.id} ${useLayerTint ? "dfd-layer-fill--tinted" : ""} dfd-layer-border`}/>
           {hasDivider && (
             <line
               x1={divTop.x} y1={divTop.y}
               x2={divBot.x} y2={divBot.y}
-              class="dfd-divider"
+              class={`dfd-divider dfd-divider--${layer.id} ${useLayerTint ? "dfd-divider--tinted" : ""}`}
             />
           )}
           <text x={LABEL_X} y={cy} text-anchor="middle" dominant-baseline="middle" class="dfd-layer-label">
@@ -93,5 +152,47 @@ function moduleX(layer: typeof data.layers[0], idx: number) {
         </g>
       );
     })}
+    {showAxis && (
+      <g class="dfd-axis" aria-hidden="true">
+        <line
+          x1={AXIS_X}
+          y1={AXIS_TOP}
+          x2={AXIS_X}
+          y2={AXIS_BOTTOM}
+          class="dfd-axis-line"
+          marker-start="url(#dfd-axis-arrow-up)"
+          marker-end="url(#dfd-axis-arrow-down)"
+        />
+        <text x={AXIS_LABEL_X} y={AXIS_TOP - AXIS_ARROW_EXTENT} text-anchor="middle" dominant-baseline="hanging" class="dfd-axis-label">具象</text>
+        <text x={AXIS_LABEL_X} y={AXIS_BOTTOM + AXIS_ARROW_EXTENT} text-anchor="middle" dominant-baseline="text-after-edge" class="dfd-axis-label">抽象</text>
+      </g>
+    )}
+    {showAxis && (
+      <g class="dfd-role-ranges" aria-hidden="true">
+        {roleRanges.map((range) => {
+          const verticalX = range.x + ROLE_RANGE_TICK;
+          const textX = range.x + ROLE_RANGE_TEXT_OFFSET;
+          const textY = (range.yTop + range.yBot) / 2;
+          return (
+            <g>
+              <path
+                d={`M ${range.x} ${range.yTop} H ${verticalX} V ${range.yBot} H ${range.x}`}
+                class="dfd-role-range-line"
+              />
+              <text
+                x={textX}
+                y={textY}
+                text-anchor="middle"
+                dominant-baseline="middle"
+                transform={`rotate(90 ${textX} ${textY})`}
+                class="dfd-role-range-label"
+              >
+                {range.label}
+              </text>
+            </g>
+          );
+        })}
+      </g>
+    )}
   </svg>
 </div>

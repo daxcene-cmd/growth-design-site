@@ -1,0 +1,33 @@
+---
+interface Problem {
+  title: string;
+  body?: string;
+}
+
+interface Props {
+  image: string;
+  alt: string;
+  title?: string;
+  problems: Problem[];
+  variant?: "default" | "wide";
+}
+
+const { image, alt, title, problems, variant = "default" } = Astro.props;
+---
+
+<figure class={`problem-split-block problem-split-block--${variant}`}>
+  <div class="problem-split-image">
+    <img src={image} alt={alt} loading="lazy" />
+  </div>
+  <figcaption class="problem-split-content">
+    {title && <p class="problem-split-title">{title}</p>}
+    <div class="problem-split-list">
+      {problems.map((problem) => (
+        <div class="problem-split-item">
+          <p class="problem-split-item-title">{problem.title}</p>
+          {problem.body && <p class="problem-split-item-body">{problem.body}</p>}
+        </div>
+      ))}
+    </div>
+  </figcaption>
+</figure>

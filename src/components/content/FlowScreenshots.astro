@@ -1,0 +1,35 @@
+---
+interface FlowStep {
+  image: string;
+  title: string;
+  alt: string;
+}
+
+interface Props {
+  steps: FlowStep[];
+}
+
+const { steps } = Astro.props;
+---
+
+<figure class="flow-screenshots" aria-label="最短路径流程截图">
+  <div class="flow-screenshots-track">
+    {steps.map((step, index) => (
+      <>
+        <div class="flow-screenshot-node">
+          <span class="flow-screenshot-label">
+            <span>{step.title}</span>
+          </span>
+          <div class="flow-screenshot-image">
+            <img src={step.image} alt={step.alt} loading="lazy" />
+          </div>
+        </div>
+        {index < steps.length - 1 && (
+          <div class="flow-screenshot-arrow" aria-hidden="true">
+            <span></span>
+          </div>
+        )}
+      </>
+    ))}
+  </div>
+</figure>
