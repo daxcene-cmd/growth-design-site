@@ -7,6 +7,7 @@ interface Case {
   linkText?: string;
   crop?: number;
   silent?: boolean;
+  poster?: string;
   posterTime?: number;
 }
 
@@ -25,6 +26,7 @@ const gridParts = [
 ].filter(Boolean).join('; ');
 const gridStyle = gridParts || undefined;
 const isVideo = (src: string) => /\.(mp4|webm|mov)$/i.test(src);
+const posterFor = (c: Case) => c.poster ?? (isVideo(c.image) ? c.image.replace(/\.(mp4|webm|mov)$/i, '.jpg') : undefined);
 ---
 
 <div class={`case-gallery case-gallery--${variant}`} style={gridStyle}>
@@ -32,8 +34,8 @@ const isVideo = (src: string) => /\.(mp4|webm|mov)$/i.test(src);
     <div class="case-gallery-item">
       <div class="case-gallery-image-wrap" style={fixedHeight ? `height: ${fixedHeight}px; width: fit-content; margin: 0 auto;` : c.crop ? `max-height: ${Math.round(c.crop * 420)}px; overflow: hidden;` : undefined}>
         {isVideo(c.image)
-          ? <video src={c.image} playsinline preload="metadata" muted={c.silent} data-poster-time={c.posterTime ?? 0} />
-          : <img src={c.image} alt={c.alt} loading="lazy" style={fixedHeight ? 'height: 100%; width: auto; display: block;' : undefined} />
+          ? <video data-src={c.image} poster={posterFor(c)} playsinline preload="none" muted={c.silent} />
+          : <img src={c.image} alt={c.alt} loading="lazy" decoding="async" style={fixedHeight ? 'height: 100%; width: auto; display: block;' : undefined} />
         }
         {isVideo(c.image) && (
           <div class="case-video-controls">
@@ -76,17 +78,14 @@ const isVideo = (src: string) => /\.(mp4|webm|mov)$/i.test(src);
     const bar = mediaWrap.querySelector('.case-video-bar') as HTMLElement;
     const fsBtn = controls.querySelector('.case-video-fullscreen')!;
 
-    // Poster frame
-    const posterTime = parseFloat(video.dataset.posterTime ?? '0');
-    let isShowingPoster = posterTime > 0;
-    if (posterTime > 0) {
-      const applyPosterTime = () => { video.currentTime = posterTime; };
-      if (video.readyState >= 1) {
-        applyPosterTime();
-      } else {
-        video.addEventListener('loadedmetadata', applyPosterTime, { once: true });
+    let isShowingPoster = true;
+    const loadVideo = () => {
+      const src = video.dataset.src;
+      if (src && !video.getAttribute('src')) {
+        video.src = src;
+        video.load();
       }
-    }
+    };
 
     // Play / pause
     const setPlaying = (playing: boolean) => {
@@ -103,7 +102,7 @@ const isVideo = (src: string) => /\.(mp4|webm|mov)$/i.test(src);
     };
     const togglePlay = () => {
       if (video.paused) {
-        if (posterTime > 0 && video.currentTime === posterTime) video.currentTime = 0;
+        loadVideo();
         isShowingPoster = false;
         video.play();
       } else {
@@ -124,11 +123,9 @@ const isVideo = (src: string) => /\.(mp4|webm|mov)$/i.test(src);
     video.addEventListener('ended', () => {
       setPlaying(false);
       showControls();
-      if (posterTime > 0) {
-        video.currentTime = posterTime;
-        isShowingPoster = true;
-        bar.style.width = '0%';
-      }
+      video.currentTime = 0;
+      isShowingPoster = true;
+      bar.style.width = '0%';
     });
 
     // Progress

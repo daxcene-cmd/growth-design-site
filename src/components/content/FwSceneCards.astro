@@ -13,7 +13,7 @@ const cards = [
         <span class="fw-state-card-scene">{card.scene}</span>
         <span class="fw-state-card-label">{card.label}</span>
       </div>
-      <img class="fw-state-card-img" src={card.image} alt={card.label} />
+      <img class="fw-state-card-img" src={card.image} alt={card.label} loading="lazy" decoding="async" />
     </div>
   ))}
 </div>

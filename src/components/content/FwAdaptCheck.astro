@@ -10,7 +10,7 @@ const others = [
 <div class="fw-s4-wrap">
   <div class="fw-s4-row">
     <div class="fw-s4-item">
-      <img src={core.image} alt={core.label} />
+      <img src={core.image} alt={core.label} loading="lazy" decoding="async" />
       <span class="fw-s4-img-label">{core.label}</span>
     </div>
     <div class="fw-s4-arrow">
@@ -19,7 +19,7 @@ const others = [
     </div>
     {others.map(s => (
       <div class="fw-s4-item">
-        <img src={s.image} alt={s.label} />
+        <img src={s.image} alt={s.label} loading="lazy" decoding="async" />
         <span class="fw-s4-img-label">{s.label}</span>
       </div>
     ))}

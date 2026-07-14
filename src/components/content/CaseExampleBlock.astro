@@ -32,6 +32,7 @@ const { categories } = Astro.props;
 const pad = (n: number) => String(n);
 const normalizeImages = (images?: string[]) => images ?? [];
 const isVideo = (src: string) => src.endsWith('.mp4') || src.endsWith('.webm');
+const posterFor = (src: string) => src.replace(/\.(mp4|webm)$/i, '.jpg');
 
 const firstTitle = categories[0]?.principles[0]?.title ?? '';
 const firstTotal = categories[0]?.principles.length ?? 0;
@@ -119,7 +120,7 @@ const firstTotal = categories[0]?.principles.length ?? 0;
                                 {beforeImgs.map((src) => (
                                   <div class="case-img-wrap">
                                     <figure class="case-img-figure">
-                                      {isVideo(src) ? <video src={src} autoplay loop muted playsinline /> : <img src={src} alt={c.beforeLabel ?? ''} />}
+                                      {isVideo(src) ? <video data-src={src} poster={posterFor(src)} preload="none" loop muted playsinline /> : <img src={src} alt={c.beforeLabel ?? ''} loading="lazy" decoding="async" />}
                                     </figure>
                                   </div>
                                 ))}
@@ -131,7 +132,7 @@ const firstTotal = categories[0]?.principles.length ?? 0;
                             return (
                               <div class="case-img-wrap">
                                 <figure class="case-img-figure" style={figStyle}>
-                                  {isVideo(src) ? <video src={src} autoplay loop muted playsinline /> : <img src={src} alt={lbl ?? ''} />}
+                                  {isVideo(src) ? <video data-src={src} poster={posterFor(src)} preload="none" loop muted playsinline /> : <img src={src} alt={lbl ?? ''} loading="lazy" decoding="async" />}
                                 </figure>
                                 {lbl && <span class="case-img-label case-img-label--before">{lbl}</span>}
                               </div>
@@ -142,7 +143,7 @@ const firstTotal = categories[0]?.principles.length ?? 0;
                             return (
                               <div class="case-img-wrap">
                                 <figure class="case-img-figure" style={figStyle}>
-                                  {isVideo(src) ? <video src={src} autoplay loop muted playsinline /> : <img src={src} alt={lbl ?? ''} />}
+                                  {isVideo(src) ? <video data-src={src} poster={posterFor(src)} preload="none" loop muted playsinline /> : <img src={src} alt={lbl ?? ''} loading="lazy" decoding="async" />}
                                 </figure>
                                 {lbl && <span class="case-img-label case-img-label--after">{lbl}</span>}
                               </div>
@@ -182,6 +183,36 @@ const firstTotal = categories[0]?.principles.length ?? 0;
     let activeSlide = 0;
 
     function pad(n: number) { return String(n); }
+
+    function loadVideo(video: HTMLVideoElement) {
+      const src = video.dataset.src;
+      if (src && !video.getAttribute('src')) {
+        video.src = src;
+        video.load();
+      }
+    }
+
+    const lazyVideoObserver = 'IntersectionObserver' in window
+      ? new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            const video = entry.target as HTMLVideoElement;
+            if (entry.isIntersecting) {
+              loadVideo(video);
+              video.play().catch(() => {});
+            } else {
+              video.pause();
+            }
+          });
+        }, { rootMargin: '320px 0px', threshold: 0.1 })
+      : null;
+
+    block.querySelectorAll('video[data-src]').forEach(video => {
+      if (lazyVideoObserver) {
+        lazyVideoObserver.observe(video);
+      } else {
+        loadVideo(video as HTMLVideoElement);
+      }
+    });
 
     function getTrack(ci: number) {
       return panels[ci]?.querySelector('.case-example-track') as HTMLElement | null;

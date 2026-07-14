@@ -147,6 +147,8 @@ export default function QuizBlock({ data }: QuizBlockProps) {
             alt=""
             aria-hidden="true"
             className="quiz-result-image"
+            decoding="async"
+            loading="lazy"
             src={resultImage ?? '/growth-design-site/images/01-definition/flower.webp'}
           />
           <div className="quiz-result-summary">
@@ -207,7 +209,7 @@ export default function QuizBlock({ data }: QuizBlockProps) {
               return (
                 <div key={img.src} className="quiz-image-option-col">
                   <figure className="quiz-case-image">
-                    <img src={img.src} alt={img.alt} />
+                    <img src={img.src} alt={img.alt} loading="lazy" decoding="async" />
                   </figure>
                   <button
                     aria-pressed={isSelected}
@@ -224,7 +226,7 @@ export default function QuizBlock({ data }: QuizBlockProps) {
           </div>
         ) : currentQuestion.caseImage ? (
           <figure className="quiz-case-image">
-            <img src={currentQuestion.caseImage.src} alt={currentQuestion.caseImage.alt} />
+            <img src={currentQuestion.caseImage.src} alt={currentQuestion.caseImage.alt} loading="lazy" decoding="async" />
           </figure>
         ) : null}
 
