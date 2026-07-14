@@ -17,7 +17,7 @@ const { image, alt, title, problems, variant = "default" } = Astro.props;
 
 <figure class={`problem-split-block problem-split-block--${variant}`}>
   <div class="problem-split-image">
-    <img src={image} alt={alt} loading="lazy" />
+    <img src={image} alt={alt} loading="eager" decoding="async" fetchpriority="low" />
   </div>
   <figcaption class="problem-split-content">
     {title && <p class="problem-split-title">{title}</p>}

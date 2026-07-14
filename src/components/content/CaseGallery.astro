@@ -35,7 +35,7 @@ const posterFor = (c: Case) => c.poster ?? (isVideo(c.image) ? c.image.replace(/
       <div class="case-gallery-image-wrap" style={fixedHeight ? `height: ${fixedHeight}px; width: fit-content; margin: 0 auto;` : c.crop ? `max-height: ${Math.round(c.crop * 420)}px; overflow: hidden;` : undefined}>
         {isVideo(c.image)
           ? <video data-src={c.image} poster={posterFor(c)} playsinline preload="none" muted={c.silent} />
-          : <img src={c.image} alt={c.alt} loading="lazy" decoding="async" style={fixedHeight ? 'height: 100%; width: auto; display: block;' : undefined} />
+          : <img src={c.image} alt={c.alt} loading="eager" decoding="async" fetchpriority="low" style={fixedHeight ? 'height: 100%; width: auto; display: block;' : undefined} />
         }
         {isVideo(c.image) && (
           <div class="case-video-controls">

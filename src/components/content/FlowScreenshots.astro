@@ -21,7 +21,7 @@ const { steps } = Astro.props;
             <span>{step.title}</span>
           </span>
           <div class="flow-screenshot-image">
-            <img src={step.image} alt={step.alt} loading="lazy" />
+            <img src={step.image} alt={step.alt} loading="eager" decoding="async" fetchpriority="low" />
           </div>
         </div>
         {index < steps.length - 1 && (
