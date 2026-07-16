@@ -1,4 +1,6 @@
 ---
+import OptimizedImage from './OptimizedImage.astro';
+
 interface Problem {
   title: string;
   body?: string;
@@ -17,7 +19,7 @@ const { image, alt, title, problems, variant = "default" } = Astro.props;
 
 <figure class={`problem-split-block problem-split-block--${variant}`}>
   <div class="problem-split-image">
-    <img src={image} alt={alt} loading="eager" decoding="async" fetchpriority="low" />
+    <OptimizedImage src={image} alt={alt} loading="lazy" decoding="async" fetchpriority="low" sizes="(max-width: 900px) 88vw, 360px" />
   </div>
   <figcaption class="problem-split-content">
     {title && <p class="problem-split-title">{title}</p>}

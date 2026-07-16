@@ -1,0 +1,3320 @@
+{
+  "/growth-design-site/images/01-definition/ant-forest.png": {
+    "src": "/growth-design-site/images/_optimized/01-definition/ant-forest-960.webp",
+    "width": 960,
+    "height": 2078,
+    "originalWidth": 1170,
+    "originalHeight": 2532,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/01-definition/ant-forest-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 24514
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/01-definition/ant-forest-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 41380
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/01-definition/ant-forest-720.webp",
+        "width": 720,
+        "height": 1558,
+        "bytes": 67422
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/01-definition/ant-forest-960.webp",
+        "width": 960,
+        "height": 2078,
+        "bytes": 91722
+      }
+    ]
+  },
+  "/growth-design-site/images/01-definition/flower.webp": {
+    "src": "/growth-design-site/images/_optimized/01-definition/flower-480.webp",
+    "width": 480,
+    "height": 480,
+    "originalWidth": 482,
+    "originalHeight": 482,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/01-definition/flower-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 10746
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/01-definition/flower-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 14808
+      }
+    ]
+  },
+  "/growth-design-site/images/01-definition/hero-author-mark.png": {
+    "src": "/growth-design-site/images/_optimized/01-definition/hero-author-mark-72.webp",
+    "width": 72,
+    "height": 72,
+    "originalWidth": 72,
+    "originalHeight": 72,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/01-definition/hero-author-mark-72.webp",
+        "width": 72,
+        "height": 72,
+        "bytes": 1104
+      }
+    ]
+  },
+  "/growth-design-site/images/01-definition/jiwufu.png": {
+    "src": "/growth-design-site/images/_optimized/01-definition/jiwufu-960.webp",
+    "width": 960,
+    "height": 2078,
+    "originalWidth": 1200,
+    "originalHeight": 2597,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/01-definition/jiwufu-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 15028
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/01-definition/jiwufu-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 24332
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/01-definition/jiwufu-720.webp",
+        "width": 720,
+        "height": 1558,
+        "bytes": 37776
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/01-definition/jiwufu-960.webp",
+        "width": 960,
+        "height": 2078,
+        "bytes": 50172
+      }
+    ]
+  },
+  "/growth-design-site/images/01-definition/kan-yidao.png": {
+    "src": "/growth-design-site/images/_optimized/01-definition/kan-yidao-720.webp",
+    "width": 720,
+    "height": 1558,
+    "originalWidth": 828,
+    "originalHeight": 1792,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/01-definition/kan-yidao-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 23526
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/01-definition/kan-yidao-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 39642
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/01-definition/kan-yidao-720.webp",
+        "width": 720,
+        "height": 1558,
+        "bytes": 63350
+      }
+    ]
+  },
+  "/growth-design-site/images/01-definition/taojinbi.png": {
+    "src": "/growth-design-site/images/_optimized/01-definition/taojinbi-960.webp",
+    "width": 960,
+    "height": 2088,
+    "originalWidth": 1500,
+    "originalHeight": 3262,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/01-definition/taojinbi-320.webp",
+        "width": 320,
+        "height": 696,
+        "bytes": 35442
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/01-definition/taojinbi-480.webp",
+        "width": 480,
+        "height": 1044,
+        "bytes": 63014
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/01-definition/taojinbi-720.webp",
+        "width": 720,
+        "height": 1566,
+        "bytes": 102704
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/01-definition/taojinbi-960.webp",
+        "width": 960,
+        "height": 2088,
+        "bytes": 140978
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/01-definition/taojinbi-1280.webp",
+        "width": 1280,
+        "height": 2784,
+        "bytes": 189500
+      }
+    ]
+  },
+  "/growth-design-site/images/01-definition/准确率中.png": {
+    "src": "/growth-design-site/images/_optimized/01-definition/准确率中-480.webp",
+    "width": 480,
+    "height": 480,
+    "originalWidth": 500,
+    "originalHeight": 500,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/01-definition/准确率中-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 43546
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/01-definition/准确率中-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 77570
+      }
+    ]
+  },
+  "/growth-design-site/images/01-definition/准确率低.png": {
+    "src": "/growth-design-site/images/_optimized/01-definition/准确率低-480.webp",
+    "width": 480,
+    "height": 480,
+    "originalWidth": 500,
+    "originalHeight": 500,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/01-definition/准确率低-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 36156
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/01-definition/准确率低-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 64182
+      }
+    ]
+  },
+  "/growth-design-site/images/01-definition/准确率高.png": {
+    "src": "/growth-design-site/images/_optimized/01-definition/准确率高-480.webp",
+    "width": 480,
+    "height": 480,
+    "originalWidth": 500,
+    "originalHeight": 500,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/01-definition/准确率高-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 46376
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/01-definition/准确率高-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 83608
+      }
+    ]
+  },
+  "/growth-design-site/images/02-design-framework/playbook-four-steps.png": {
+    "src": "/growth-design-site/images/_optimized/02-design-framework/playbook-four-steps-960.webp",
+    "width": 960,
+    "height": 960,
+    "originalWidth": 1600,
+    "originalHeight": 1600,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/02-design-framework/playbook-four-steps-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 8438
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/02-design-framework/playbook-four-steps-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 16480
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/02-design-framework/playbook-four-steps-720.webp",
+        "width": 720,
+        "height": 720,
+        "bytes": 30534
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/02-design-framework/playbook-four-steps-960.webp",
+        "width": 960,
+        "height": 960,
+        "bytes": 45096
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/02-design-framework/playbook-four-steps-1280.webp",
+        "width": 1280,
+        "height": 1280,
+        "bytes": 62982
+      }
+    ]
+  },
+  "/growth-design-site/images/04-scope/game-accumulate.png": {
+    "src": "/growth-design-site/images/_optimized/04-scope/game-accumulate-720.webp",
+    "width": 720,
+    "height": 851,
+    "originalWidth": 750,
+    "originalHeight": 886,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-accumulate-320.webp",
+        "width": 320,
+        "height": 378,
+        "bytes": 6608
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-accumulate-480.webp",
+        "width": 480,
+        "height": 567,
+        "bytes": 10560
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-accumulate-720.webp",
+        "width": 720,
+        "height": 851,
+        "bytes": 16156
+      }
+    ]
+  },
+  "/growth-design-site/images/04-scope/game-collect.png": {
+    "src": "/growth-design-site/images/_optimized/04-scope/game-collect-720.webp",
+    "width": 720,
+    "height": 842,
+    "originalWidth": 750,
+    "originalHeight": 877,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-collect-320.webp",
+        "width": 320,
+        "height": 374,
+        "bytes": 7182
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-collect-480.webp",
+        "width": 480,
+        "height": 561,
+        "bytes": 11362
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-collect-720.webp",
+        "width": 720,
+        "height": 842,
+        "bytes": 15712
+      }
+    ]
+  },
+  "/growth-design-site/images/04-scope/game-dress.png": {
+    "src": "/growth-design-site/images/_optimized/04-scope/game-dress-720.webp",
+    "width": 720,
+    "height": 851,
+    "originalWidth": 750,
+    "originalHeight": 886,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-dress-320.webp",
+        "width": 320,
+        "height": 378,
+        "bytes": 6722
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-dress-480.webp",
+        "width": 480,
+        "height": 567,
+        "bytes": 11474
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-dress-720.webp",
+        "width": 720,
+        "height": 851,
+        "bytes": 17870
+      }
+    ]
+  },
+  "/growth-design-site/images/04-scope/game-jump.png": {
+    "src": "/growth-design-site/images/_optimized/04-scope/game-jump-720.webp",
+    "width": 720,
+    "height": 851,
+    "originalWidth": 750,
+    "originalHeight": 886,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-jump-320.webp",
+        "width": 320,
+        "height": 378,
+        "bytes": 5042
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-jump-480.webp",
+        "width": 480,
+        "height": 567,
+        "bytes": 7666
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-jump-720.webp",
+        "width": 720,
+        "height": 851,
+        "bytes": 11102
+      }
+    ]
+  },
+  "/growth-design-site/images/04-scope/game-leaderboard.png": {
+    "src": "/growth-design-site/images/_optimized/04-scope/game-leaderboard-720.webp",
+    "width": 720,
+    "height": 851,
+    "originalWidth": 750,
+    "originalHeight": 886,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-leaderboard-320.webp",
+        "width": 320,
+        "height": 378,
+        "bytes": 12194
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-leaderboard-480.webp",
+        "width": 480,
+        "height": 567,
+        "bytes": 19800
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-leaderboard-720.webp",
+        "width": 720,
+        "height": 851,
+        "bytes": 29388
+      }
+    ]
+  },
+  "/growth-design-site/images/04-scope/game-lottery.png": {
+    "src": "/growth-design-site/images/_optimized/04-scope/game-lottery-720.webp",
+    "width": 720,
+    "height": 851,
+    "originalWidth": 750,
+    "originalHeight": 886,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-lottery-320.webp",
+        "width": 320,
+        "height": 378,
+        "bytes": 9568
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-lottery-480.webp",
+        "width": 480,
+        "height": 567,
+        "bytes": 15562
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-lottery-720.webp",
+        "width": 720,
+        "height": 851,
+        "bytes": 24278
+      }
+    ]
+  },
+  "/growth-design-site/images/04-scope/game-match3.png": {
+    "src": "/growth-design-site/images/_optimized/04-scope/game-match3-720.webp",
+    "width": 720,
+    "height": 851,
+    "originalWidth": 750,
+    "originalHeight": 886,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-match3-320.webp",
+        "width": 320,
+        "height": 378,
+        "bytes": 10658
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-match3-480.webp",
+        "width": 480,
+        "height": 567,
+        "bytes": 16970
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-match3-720.webp",
+        "width": 720,
+        "height": 851,
+        "bytes": 27022
+      }
+    ]
+  },
+  "/growth-design-site/images/04-scope/game-pk.png": {
+    "src": "/growth-design-site/images/_optimized/04-scope/game-pk-720.webp",
+    "width": 720,
+    "height": 851,
+    "originalWidth": 750,
+    "originalHeight": 886,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-pk-320.webp",
+        "width": 320,
+        "height": 378,
+        "bytes": 11576
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-pk-480.webp",
+        "width": 480,
+        "height": 567,
+        "bytes": 19998
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-pk-720.webp",
+        "width": 720,
+        "height": 851,
+        "bytes": 33914
+      }
+    ]
+  },
+  "/growth-design-site/images/04-scope/game-quiz.png": {
+    "src": "/growth-design-site/images/_optimized/04-scope/game-quiz-720.webp",
+    "width": 720,
+    "height": 851,
+    "originalWidth": 750,
+    "originalHeight": 886,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-quiz-320.webp",
+        "width": 320,
+        "height": 378,
+        "bytes": 7852
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-quiz-480.webp",
+        "width": 480,
+        "height": 567,
+        "bytes": 12774
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-quiz-720.webp",
+        "width": 720,
+        "height": 851,
+        "bytes": 19026
+      }
+    ]
+  },
+  "/growth-design-site/images/04-scope/game-spot-diff.png": {
+    "src": "/growth-design-site/images/_optimized/04-scope/game-spot-diff-720.webp",
+    "width": 720,
+    "height": 851,
+    "originalWidth": 750,
+    "originalHeight": 886,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-spot-diff-320.webp",
+        "width": 320,
+        "height": 378,
+        "bytes": 5098
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-spot-diff-480.webp",
+        "width": 480,
+        "height": 567,
+        "bytes": 7500
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-spot-diff-720.webp",
+        "width": 720,
+        "height": 851,
+        "bytes": 11090
+      }
+    ]
+  },
+  "/growth-design-site/images/04-scope/game-tower-defense.png": {
+    "src": "/growth-design-site/images/_optimized/04-scope/game-tower-defense-720.webp",
+    "width": 720,
+    "height": 851,
+    "originalWidth": 750,
+    "originalHeight": 886,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-tower-defense-320.webp",
+        "width": 320,
+        "height": 378,
+        "bytes": 6708
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-tower-defense-480.webp",
+        "width": 480,
+        "height": 567,
+        "bytes": 10436
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-tower-defense-720.webp",
+        "width": 720,
+        "height": 851,
+        "bytes": 16156
+      }
+    ]
+  },
+  "/growth-design-site/images/04-scope/game-watermelon.png": {
+    "src": "/growth-design-site/images/_optimized/04-scope/game-watermelon-720.webp",
+    "width": 720,
+    "height": 851,
+    "originalWidth": 750,
+    "originalHeight": 886,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-watermelon-320.webp",
+        "width": 320,
+        "height": 378,
+        "bytes": 3524
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-watermelon-480.webp",
+        "width": 480,
+        "height": 567,
+        "bytes": 5920
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/game-watermelon-720.webp",
+        "width": 720,
+        "height": 851,
+        "bytes": 9444
+      }
+    ]
+  },
+  "/growth-design-site/images/04-scope/task-checkin.png": {
+    "src": "/growth-design-site/images/_optimized/04-scope/task-checkin-720.webp",
+    "width": 720,
+    "height": 851,
+    "originalWidth": 750,
+    "originalHeight": 886,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/task-checkin-320.webp",
+        "width": 320,
+        "height": 378,
+        "bytes": 12484
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/task-checkin-480.webp",
+        "width": 480,
+        "height": 567,
+        "bytes": 26442
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/task-checkin-720.webp",
+        "width": 720,
+        "height": 851,
+        "bytes": 49182
+      }
+    ]
+  },
+  "/growth-design-site/images/04-scope/task-invite.png": {
+    "src": "/growth-design-site/images/_optimized/04-scope/task-invite-720.webp",
+    "width": 720,
+    "height": 851,
+    "originalWidth": 750,
+    "originalHeight": 886,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/task-invite-320.webp",
+        "width": 320,
+        "height": 378,
+        "bytes": 6406
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/task-invite-480.webp",
+        "width": 480,
+        "height": 567,
+        "bytes": 10472
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/task-invite-720.webp",
+        "width": 720,
+        "height": 851,
+        "bytes": 15930
+      }
+    ]
+  },
+  "/growth-design-site/images/04-scope/task-order.png": {
+    "src": "/growth-design-site/images/_optimized/04-scope/task-order-720.webp",
+    "width": 720,
+    "height": 851,
+    "originalWidth": 750,
+    "originalHeight": 886,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/task-order-320.webp",
+        "width": 320,
+        "height": 378,
+        "bytes": 11276
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/task-order-480.webp",
+        "width": 480,
+        "height": 567,
+        "bytes": 21560
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/task-order-720.webp",
+        "width": 720,
+        "height": 851,
+        "bytes": 37524
+      }
+    ]
+  },
+  "/growth-design-site/images/04-scope/抽签桶.png": {
+    "src": "/growth-design-site/images/_optimized/04-scope/抽签桶-960.webp",
+    "width": 960,
+    "height": 960,
+    "originalWidth": 1000,
+    "originalHeight": 1000,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/抽签桶-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 16720
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/抽签桶-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 27520
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/抽签桶-720.webp",
+        "width": 720,
+        "height": 720,
+        "bytes": 44810
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/抽签桶-960.webp",
+        "width": 960,
+        "height": 960,
+        "bytes": 63952
+      }
+    ]
+  },
+  "/growth-design-site/images/04-scope/摇一摇玩法包装.png": {
+    "src": "/growth-design-site/images/_optimized/04-scope/摇一摇玩法包装-720.webp",
+    "width": 720,
+    "height": 636,
+    "originalWidth": 777,
+    "originalHeight": 686,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/摇一摇玩法包装-320.webp",
+        "width": 320,
+        "height": 283,
+        "bytes": 17278
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/摇一摇玩法包装-480.webp",
+        "width": 480,
+        "height": 424,
+        "bytes": 27754
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/摇一摇玩法包装-720.webp",
+        "width": 720,
+        "height": 636,
+        "bytes": 44332
+      }
+    ]
+  },
+  "/growth-design-site/images/04-scope/摇手机2.png": {
+    "src": "/growth-design-site/images/_optimized/04-scope/摇手机2-960.webp",
+    "width": 960,
+    "height": 960,
+    "originalWidth": 1000,
+    "originalHeight": 1000,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/摇手机2-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 9634
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/摇手机2-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 16282
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/摇手机2-720.webp",
+        "width": 720,
+        "height": 720,
+        "bytes": 25278
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/摇手机2-960.webp",
+        "width": 960,
+        "height": 960,
+        "bytes": 35332
+      }
+    ]
+  },
+  "/growth-design-site/images/04-scope/摇钱树.png": {
+    "src": "/growth-design-site/images/_optimized/04-scope/摇钱树-960.webp",
+    "width": 960,
+    "height": 960,
+    "originalWidth": 1000,
+    "originalHeight": 1000,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/摇钱树-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 19578
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/摇钱树-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 31416
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/摇钱树-720.webp",
+        "width": 720,
+        "height": 720,
+        "bytes": 51834
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/摇钱树-960.webp",
+        "width": 960,
+        "height": 960,
+        "bytes": 75504
+      }
+    ]
+  },
+  "/growth-design-site/images/04-scope/摇骰子.png": {
+    "src": "/growth-design-site/images/_optimized/04-scope/摇骰子-960.webp",
+    "width": 960,
+    "height": 960,
+    "originalWidth": 1000,
+    "originalHeight": 1000,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/摇骰子-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 11364
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/摇骰子-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 17938
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/摇骰子-720.webp",
+        "width": 720,
+        "height": 720,
+        "bytes": 27718
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/摇骰子-960.webp",
+        "width": 960,
+        "height": 960,
+        "bytes": 37644
+      }
+    ]
+  },
+  "/growth-design-site/images/04-scope/直播.png": {
+    "src": "/growth-design-site/images/_optimized/04-scope/直播-960.webp",
+    "width": 960,
+    "height": 960,
+    "originalWidth": 1000,
+    "originalHeight": 1000,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/直播-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 26910
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/直播-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 49396
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/直播-720.webp",
+        "width": 720,
+        "height": 720,
+        "bytes": 88308
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/直播-960.webp",
+        "width": 960,
+        "height": 960,
+        "bytes": 131570
+      }
+    ]
+  },
+  "/growth-design-site/images/04-scope/虚拟社交空间.png": {
+    "src": "/growth-design-site/images/_optimized/04-scope/虚拟社交空间-480.webp",
+    "width": 480,
+    "height": 480,
+    "originalWidth": 500,
+    "originalHeight": 500,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/虚拟社交空间-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 16658
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/04-scope/虚拟社交空间-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 26922
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/ability-concept-after.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/ability-concept-after-960.webp",
+    "width": 960,
+    "height": 2080,
+    "originalWidth": 1500,
+    "originalHeight": 3250,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-concept-after-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 24734
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-concept-after-480.webp",
+        "width": 480,
+        "height": 1040,
+        "bytes": 43824
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-concept-after-720.webp",
+        "width": 720,
+        "height": 1560,
+        "bytes": 73528
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-concept-after-960.webp",
+        "width": 960,
+        "height": 2080,
+        "bytes": 101324
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-concept-after-1280.webp",
+        "width": 1280,
+        "height": 2773,
+        "bytes": 136456
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/ability-concept-before.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/ability-concept-before-720.webp",
+    "width": 720,
+    "height": 1558,
+    "originalWidth": 828,
+    "originalHeight": 1792,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-concept-before-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 23056
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-concept-before-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 39614
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-concept-before-720.webp",
+        "width": 720,
+        "height": 1558,
+        "bytes": 63512
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/ability-loading-after.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/ability-loading-after-960.webp",
+    "width": 960,
+    "height": 2079,
+    "originalWidth": 1016,
+    "originalHeight": 2200,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-loading-after-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 22612
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-loading-after-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 37270
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-loading-after-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 58912
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-loading-after-960.webp",
+        "width": 960,
+        "height": 2079,
+        "bytes": 80462
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/ability-loading-before.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/ability-loading-before-960.webp",
+    "width": 960,
+    "height": 2079,
+    "originalWidth": 1500,
+    "originalHeight": 3248,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-loading-before-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 3578
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-loading-before-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 6072
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-loading-before-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 10220
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-loading-before-960.webp",
+        "width": 960,
+        "height": 2079,
+        "bytes": 15072
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-loading-before-1280.webp",
+        "width": 1280,
+        "height": 2772,
+        "bytes": 22308
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/ability-memory-after.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/ability-memory-after-960.webp",
+    "width": 960,
+    "height": 2079,
+    "originalWidth": 1500,
+    "originalHeight": 3248,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-memory-after-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 17180
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-memory-after-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 29212
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-memory-after-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 46194
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-memory-after-960.webp",
+        "width": 960,
+        "height": 2079,
+        "bytes": 63120
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-memory-after-1280.webp",
+        "width": 1280,
+        "height": 2772,
+        "bytes": 87492
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/ability-memory-before.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/ability-memory-before-960.webp",
+    "width": 960,
+    "height": 2079,
+    "originalWidth": 1500,
+    "originalHeight": 3248,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-memory-before-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 25990
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-memory-before-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 45340
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-memory-before-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 76518
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-memory-before-960.webp",
+        "width": 960,
+        "height": 2079,
+        "bytes": 105498
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-memory-before-1280.webp",
+        "width": 1280,
+        "height": 2772,
+        "bytes": 142876
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/ability-shortcut-before.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/ability-shortcut-before-960.webp",
+    "width": 960,
+    "height": 2079,
+    "originalWidth": 1500,
+    "originalHeight": 3248,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-shortcut-before-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 16280
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-shortcut-before-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 28132
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-shortcut-before-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 44842
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-shortcut-before-960.webp",
+        "width": 960,
+        "height": 2079,
+        "bytes": 60076
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-shortcut-before-1280.webp",
+        "width": 1280,
+        "height": 2772,
+        "bytes": 80366
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/ability-shortcut-d.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/ability-shortcut-d-960.webp",
+    "width": 960,
+    "height": 2079,
+    "originalWidth": 1500,
+    "originalHeight": 3248,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-shortcut-d-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 17052
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-shortcut-d-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 29770
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-shortcut-d-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 47370
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-shortcut-d-960.webp",
+        "width": 960,
+        "height": 2079,
+        "bytes": 64238
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-shortcut-d-1280.webp",
+        "width": 1280,
+        "height": 2772,
+        "bytes": 87764
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/ability-simple-after.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/ability-simple-after-320.webp",
+    "width": 320,
+    "height": 693,
+    "originalWidth": 400,
+    "originalHeight": 866,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-simple-after-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 20848
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/ability-simple-before.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/ability-simple-before-960.webp",
+    "width": 960,
+    "height": 2080,
+    "originalWidth": 1500,
+    "originalHeight": 3250,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-simple-before-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 24734
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-simple-before-480.webp",
+        "width": 480,
+        "height": 1040,
+        "bytes": 43824
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-simple-before-720.webp",
+        "width": 720,
+        "height": 1560,
+        "bytes": 73528
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-simple-before-960.webp",
+        "width": 960,
+        "height": 2080,
+        "bytes": 101324
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-simple-before-1280.webp",
+        "width": 1280,
+        "height": 2773,
+        "bytes": 136456
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/ability-steps-after.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/ability-steps-after-960.webp",
+    "width": 960,
+    "height": 2079,
+    "originalWidth": 1016,
+    "originalHeight": 2200,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-steps-after-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 14052
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-steps-after-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 24792
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-steps-after-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 39420
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-steps-after-960.webp",
+        "width": 960,
+        "height": 2079,
+        "bytes": 52988
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/ability-steps-before1.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/ability-steps-before1-960.webp",
+    "width": 960,
+    "height": 2079,
+    "originalWidth": 1016,
+    "originalHeight": 2200,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-steps-before1-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 16030
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-steps-before1-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 27300
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-steps-before1-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 44124
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-steps-before1-960.webp",
+        "width": 960,
+        "height": 2079,
+        "bytes": 57766
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/ability-steps-before2.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/ability-steps-before2-960.webp",
+    "width": 960,
+    "height": 2079,
+    "originalWidth": 1016,
+    "originalHeight": 2200,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-steps-before2-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 24204
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-steps-before2-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 41244
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-steps-before2-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 66158
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/ability-steps-before2-960.webp",
+        "width": 960,
+        "height": 2079,
+        "bytes": 89296
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/abilityline-coupon-after.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/abilityline-coupon-after-960.webp",
+    "width": 960,
+    "height": 2079,
+    "originalWidth": 1016,
+    "originalHeight": 2200,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/abilityline-coupon-after-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 21784
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/abilityline-coupon-after-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 36146
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/abilityline-coupon-after-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 56980
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/abilityline-coupon-after-960.webp",
+        "width": 960,
+        "height": 2079,
+        "bytes": 77268
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/abilityline-coupon-before.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/abilityline-coupon-before-960.webp",
+    "width": 960,
+    "height": 2079,
+    "originalWidth": 1016,
+    "originalHeight": 2200,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/abilityline-coupon-before-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 25270
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/abilityline-coupon-before-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 43878
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/abilityline-coupon-before-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 71132
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/abilityline-coupon-before-960.webp",
+        "width": 960,
+        "height": 2079,
+        "bytes": 96656
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/abilityline-invite-after.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/abilityline-invite-after-960.webp",
+    "width": 960,
+    "height": 2079,
+    "originalWidth": 1016,
+    "originalHeight": 2200,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/abilityline-invite-after-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 19122
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/abilityline-invite-after-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 31092
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/abilityline-invite-after-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 47740
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/abilityline-invite-after-960.webp",
+        "width": 960,
+        "height": 2079,
+        "bytes": 62750
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/abilityline-invite-before.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/abilityline-invite-before-720.webp",
+    "width": 720,
+    "height": 1559,
+    "originalWidth": 750,
+    "originalHeight": 1624,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/abilityline-invite-before-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 20726
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/abilityline-invite-before-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 34724
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/abilityline-invite-before-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 55848
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/cash-amount-guaranteed.png": {
+    "src": "/growth-design-site/images/_optimized/05-structure/cash-amount-guaranteed-720.webp",
+    "width": 720,
+    "height": 1451,
+    "originalWidth": 806,
+    "originalHeight": 1624,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/cash-amount-guaranteed-320.webp",
+        "width": 320,
+        "height": 645,
+        "bytes": 27288
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/cash-amount-guaranteed-480.webp",
+        "width": 480,
+        "height": 967,
+        "bytes": 48698
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/cash-amount-guaranteed-720.webp",
+        "width": 720,
+        "height": 1451,
+        "bytes": 81316
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/cash-amount-medium.png": {
+    "src": "/growth-design-site/images/_optimized/05-structure/cash-amount-medium-720.webp",
+    "width": 720,
+    "height": 1559,
+    "originalWidth": 750,
+    "originalHeight": 1624,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/cash-amount-medium-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 29480
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/cash-amount-medium-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 52280
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/cash-amount-medium-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 86094
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/cash-amount-small.png": {
+    "src": "/growth-design-site/images/_optimized/05-structure/cash-amount-small-720.webp",
+    "width": 720,
+    "height": 1559,
+    "originalWidth": 750,
+    "originalHeight": 1624,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/cash-amount-small-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 29328
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/cash-amount-small-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 52328
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/cash-amount-small-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 86770
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/credibility-official.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/credibility-official-960.webp",
+    "width": 960,
+    "height": 2079,
+    "originalWidth": 1016,
+    "originalHeight": 2200,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/credibility-official-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 13488
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/credibility-official-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 21854
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/credibility-official-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 34394
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/credibility-official-960.webp",
+        "width": 960,
+        "height": 2079,
+        "bytes": 46336
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/credibility-wechat.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/credibility-wechat-960.webp",
+    "width": 960,
+    "height": 2079,
+    "originalWidth": 1016,
+    "originalHeight": 2200,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/credibility-wechat-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 14504
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/credibility-wechat-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 23490
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/credibility-wechat-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 36176
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/credibility-wechat-960.webp",
+        "width": 960,
+        "height": 2079,
+        "bytes": 49168
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/flow-step1-1.png": {
+    "src": "/growth-design-site/images/_optimized/05-structure/flow-step1-1-720.webp",
+    "width": 720,
+    "height": 1559,
+    "originalWidth": 750,
+    "originalHeight": 1624,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/flow-step1-1-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 28322
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/flow-step1-1-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 50452
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/flow-step1-1-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 83240
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/flow-step1-2.png": {
+    "src": "/growth-design-site/images/_optimized/05-structure/flow-step1-2-720.webp",
+    "width": 720,
+    "height": 1559,
+    "originalWidth": 750,
+    "originalHeight": 1624,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/flow-step1-2-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 28354
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/flow-step1-2-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 50036
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/flow-step1-2-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 82732
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/flow-step1-3.png": {
+    "src": "/growth-design-site/images/_optimized/05-structure/flow-step1-3-720.webp",
+    "width": 720,
+    "height": 1559,
+    "originalWidth": 750,
+    "originalHeight": 1624,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/flow-step1-3-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 28334
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/flow-step1-3-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 50604
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/flow-step1-3-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 83304
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/flow-step1-4.png": {
+    "src": "/growth-design-site/images/_optimized/05-structure/flow-step1-4-720.webp",
+    "width": 720,
+    "height": 1559,
+    "originalWidth": 750,
+    "originalHeight": 1624,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/flow-step1-4-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 18862
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/flow-step1-4-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 32118
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/flow-step1-4-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 52212
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/goal-proximity-card.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/goal-proximity-card-960.webp",
+    "width": 960,
+    "height": 2079,
+    "originalWidth": 1016,
+    "originalHeight": 2200,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/goal-proximity-card-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 28046
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/goal-proximity-card-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 45256
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/goal-proximity-card-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 72840
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/goal-proximity-card-960.webp",
+        "width": 960,
+        "height": 2079,
+        "bytes": 98632
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/onboard-choice-after.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/onboard-choice-after-960.webp",
+    "width": 960,
+    "height": 548,
+    "originalWidth": 2200,
+    "originalHeight": 1255,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboard-choice-after-320.webp",
+        "width": 320,
+        "height": 182,
+        "bytes": 6530
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboard-choice-after-480.webp",
+        "width": 480,
+        "height": 274,
+        "bytes": 12556
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboard-choice-after-720.webp",
+        "width": 720,
+        "height": 410,
+        "bytes": 22958
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboard-choice-after-960.webp",
+        "width": 960,
+        "height": 548,
+        "bytes": 35180
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboard-choice-after-1280.webp",
+        "width": 1280,
+        "height": 730,
+        "bytes": 51774
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/onboard-choice-before.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/onboard-choice-before-960.webp",
+    "width": 960,
+    "height": 424,
+    "originalWidth": 2200,
+    "originalHeight": 972,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboard-choice-before-320.webp",
+        "width": 320,
+        "height": 141,
+        "bytes": 6730
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboard-choice-before-480.webp",
+        "width": 480,
+        "height": 212,
+        "bytes": 12340
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboard-choice-before-720.webp",
+        "width": 720,
+        "height": 318,
+        "bytes": 22496
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboard-choice-before-960.webp",
+        "width": 960,
+        "height": 424,
+        "bytes": 34690
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboard-choice-before-1280.webp",
+        "width": 1280,
+        "height": 566,
+        "bytes": 51720
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/onboard-guide-flow-after.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/onboard-guide-flow-after-960.webp",
+    "width": 960,
+    "height": 332,
+    "originalWidth": 4516,
+    "originalHeight": 1564,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboard-guide-flow-after-320.webp",
+        "width": 320,
+        "height": 111,
+        "bytes": 4118
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboard-guide-flow-after-480.webp",
+        "width": 480,
+        "height": 166,
+        "bytes": 7338
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboard-guide-flow-after-720.webp",
+        "width": 720,
+        "height": 249,
+        "bytes": 12740
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboard-guide-flow-after-960.webp",
+        "width": 960,
+        "height": 332,
+        "bytes": 20020
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboard-guide-flow-after-1280.webp",
+        "width": 1280,
+        "height": 443,
+        "bytes": 28716
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/onboard-guide-text-before.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/onboard-guide-text-before-960.webp",
+    "width": 960,
+    "height": 340,
+    "originalWidth": 4516,
+    "originalHeight": 1600,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboard-guide-text-before-320.webp",
+        "width": 320,
+        "height": 113,
+        "bytes": 4700
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboard-guide-text-before-480.webp",
+        "width": 480,
+        "height": 170,
+        "bytes": 8614
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboard-guide-text-before-720.webp",
+        "width": 720,
+        "height": 255,
+        "bytes": 14958
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboard-guide-text-before-960.webp",
+        "width": 960,
+        "height": 340,
+        "bytes": 23158
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboard-guide-text-before-1280.webp",
+        "width": 1280,
+        "height": 453,
+        "bytes": 34174
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/onboarding-handoff-1-sm.jpg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/onboarding-handoff-1-sm-720.webp",
+    "width": 720,
+    "height": 1565,
+    "originalWidth": 720,
+    "originalHeight": 1565,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboarding-handoff-1-sm-320.webp",
+        "width": 320,
+        "height": 696,
+        "bytes": 41278
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboarding-handoff-1-sm-480.webp",
+        "width": 480,
+        "height": 1043,
+        "bytes": 71902
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboarding-handoff-1-sm-720.webp",
+        "width": 720,
+        "height": 1565,
+        "bytes": 120956
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/onboarding-handoff-2-sm.jpg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/onboarding-handoff-2-sm-720.webp",
+    "width": 720,
+    "height": 1565,
+    "originalWidth": 720,
+    "originalHeight": 1565,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboarding-handoff-2-sm-320.webp",
+        "width": 320,
+        "height": 696,
+        "bytes": 20324
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboarding-handoff-2-sm-480.webp",
+        "width": 480,
+        "height": 1043,
+        "bytes": 34292
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboarding-handoff-2-sm-720.webp",
+        "width": 720,
+        "height": 1565,
+        "bytes": 56728
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/onboarding-repeat-1.jpg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/onboarding-repeat-1-720.webp",
+    "width": 720,
+    "height": 1566,
+    "originalWidth": 720,
+    "originalHeight": 1566,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboarding-repeat-1-320.webp",
+        "width": 320,
+        "height": 696,
+        "bytes": 18938
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboarding-repeat-1-480.webp",
+        "width": 480,
+        "height": 1044,
+        "bytes": 31956
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboarding-repeat-1-720.webp",
+        "width": 720,
+        "height": 1566,
+        "bytes": 50432
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/onboarding-rule-2-sm.jpg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/onboarding-rule-2-sm-720.webp",
+    "width": 720,
+    "height": 855,
+    "originalWidth": 720,
+    "originalHeight": 855,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboarding-rule-2-sm-320.webp",
+        "width": 320,
+        "height": 380,
+        "bytes": 18954
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboarding-rule-2-sm-480.webp",
+        "width": 480,
+        "height": 570,
+        "bytes": 31650
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboarding-rule-2-sm-720.webp",
+        "width": 720,
+        "height": 855,
+        "bytes": 50228
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/onboarding-rule-4-sm.jpg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/onboarding-rule-4-sm-720.webp",
+    "width": 720,
+    "height": 855,
+    "originalWidth": 720,
+    "originalHeight": 855,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboarding-rule-4-sm-320.webp",
+        "width": 320,
+        "height": 380,
+        "bytes": 14144
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboarding-rule-4-sm-480.webp",
+        "width": 480,
+        "height": 570,
+        "bytes": 23916
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboarding-rule-4-sm-720.webp",
+        "width": 720,
+        "height": 855,
+        "bytes": 39214
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/onboarding-rule-5-sm.jpg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/onboarding-rule-5-sm-720.webp",
+    "width": 720,
+    "height": 855,
+    "originalWidth": 720,
+    "originalHeight": 855,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboarding-rule-5-sm-320.webp",
+        "width": 320,
+        "height": 380,
+        "bytes": 11374
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboarding-rule-5-sm-480.webp",
+        "width": 480,
+        "height": 570,
+        "bytes": 18218
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/onboarding-rule-5-sm-720.webp",
+        "width": 720,
+        "height": 855,
+        "bytes": 28192
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/prompt-animation-after.jpg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/prompt-animation-after-720.webp",
+    "width": 720,
+    "height": 1560,
+    "originalWidth": 720,
+    "originalHeight": 1560,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-animation-after-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 33052
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-animation-after-480.webp",
+        "width": 480,
+        "height": 1040,
+        "bytes": 60120
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-animation-after-720.webp",
+        "width": 720,
+        "height": 1560,
+        "bytes": 109208
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/prompt-animation-before.png": {
+    "src": "/growth-design-site/images/_optimized/05-structure/prompt-animation-before-960.webp",
+    "width": 960,
+    "height": 2079,
+    "originalWidth": 1500,
+    "originalHeight": 3248,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-animation-before-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 31738
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-animation-before-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 53350
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-animation-before-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 85690
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-animation-before-960.webp",
+        "width": 960,
+        "height": 2079,
+        "bytes": 117944
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-animation-before-1280.webp",
+        "width": 1280,
+        "height": 2772,
+        "bytes": 164768
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/prompt-expert-new.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/prompt-expert-new-960.webp",
+    "width": 960,
+    "height": 2079,
+    "originalWidth": 1016,
+    "originalHeight": 2200,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-expert-new-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 12242
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-expert-new-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 21966
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-expert-new-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 35686
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-expert-new-960.webp",
+        "width": 960,
+        "height": 2079,
+        "bytes": 49496
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/prompt-expert-old.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/prompt-expert-old-960.webp",
+    "width": 960,
+    "height": 2079,
+    "originalWidth": 1016,
+    "originalHeight": 2200,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-expert-old-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 27932
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-expert-old-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 48502
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-expert-old-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 74912
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-expert-old-960.webp",
+        "width": 960,
+        "height": 2079,
+        "bytes": 99534
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/prompt-forced-1.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/prompt-forced-1-960.webp",
+    "width": 960,
+    "height": 2079,
+    "originalWidth": 1016,
+    "originalHeight": 2200,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-forced-1-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 12242
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-forced-1-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 21966
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-forced-1-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 35686
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-forced-1-960.webp",
+        "width": 960,
+        "height": 2079,
+        "bytes": 49496
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/prompt-forced-2.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/prompt-forced-2-960.webp",
+    "width": 960,
+    "height": 2079,
+    "originalWidth": 1016,
+    "originalHeight": 2200,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-forced-2-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 11930
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-forced-2-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 19984
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-forced-2-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 31686
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-forced-2-960.webp",
+        "width": 960,
+        "height": 2079,
+        "bytes": 42846
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/prompt-forced-3.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/prompt-forced-3-960.webp",
+    "width": 960,
+    "height": 2079,
+    "originalWidth": 1016,
+    "originalHeight": 2200,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-forced-3-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 12880
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-forced-3-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 22278
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-forced-3-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 35432
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-forced-3-960.webp",
+        "width": 960,
+        "height": 2079,
+        "bytes": 48426
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/prompt-forced-4.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/prompt-forced-4-960.webp",
+    "width": 960,
+    "height": 2079,
+    "originalWidth": 1016,
+    "originalHeight": 2200,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-forced-4-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 27412
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-forced-4-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 47546
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-forced-4-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 76066
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-forced-4-960.webp",
+        "width": 960,
+        "height": 2079,
+        "bytes": 103784
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/prompt-scene-after.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/prompt-scene-after-960.webp",
+    "width": 960,
+    "height": 2079,
+    "originalWidth": 1016,
+    "originalHeight": 2200,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-scene-after-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 23796
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-scene-after-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 42244
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-scene-after-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 68050
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-scene-after-960.webp",
+        "width": 960,
+        "height": 2079,
+        "bytes": 91094
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/prompt-scene-before.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/prompt-scene-before-960.webp",
+    "width": 960,
+    "height": 2079,
+    "originalWidth": 1016,
+    "originalHeight": 2200,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-scene-before-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 23450
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-scene-before-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 41460
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-scene-before-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 66730
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-scene-before-960.webp",
+        "width": 960,
+        "height": 2079,
+        "bytes": 89656
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/prompt-timing-after.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/prompt-timing-after-960.webp",
+    "width": 960,
+    "height": 2079,
+    "originalWidth": 1500,
+    "originalHeight": 3248,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-timing-after-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 17856
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-timing-after-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 30322
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-timing-after-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 49004
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-timing-after-960.webp",
+        "width": 960,
+        "height": 2079,
+        "bytes": 68052
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-timing-after-1280.webp",
+        "width": 1280,
+        "height": 2772,
+        "bytes": 92108
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/prompt-timing-before.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/prompt-timing-before-960.webp",
+    "width": 960,
+    "height": 2079,
+    "originalWidth": 1500,
+    "originalHeight": 3248,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-timing-before-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 12510
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-timing-before-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 20980
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-timing-before-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 33574
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-timing-before-960.webp",
+        "width": 960,
+        "height": 2079,
+        "bytes": 45328
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/prompt-timing-before-1280.webp",
+        "width": 1280,
+        "height": 2772,
+        "bytes": 61100
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/quiz-cash.png": {
+    "src": "/growth-design-site/images/_optimized/05-structure/quiz-cash-960.webp",
+    "width": 960,
+    "height": 2078,
+    "originalWidth": 1170,
+    "originalHeight": 2532,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/quiz-cash-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 20150
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/quiz-cash-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 33974
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/quiz-cash-720.webp",
+        "width": 720,
+        "height": 1558,
+        "bytes": 54174
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/quiz-cash-960.webp",
+        "width": 960,
+        "height": 2078,
+        "bytes": 71952
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/quiz-giftbox.png": {
+    "src": "/growth-design-site/images/_optimized/05-structure/quiz-giftbox-720.webp",
+    "width": 720,
+    "height": 1559,
+    "originalWidth": 750,
+    "originalHeight": 1624,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/quiz-giftbox-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 30854
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/quiz-giftbox-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 55004
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/quiz-giftbox-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 88918
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/quiz-goal-proximity-a.webp": {
+    "src": "/growth-design-site/images/_optimized/05-structure/quiz-goal-proximity-a-720.webp",
+    "width": 720,
+    "height": 1558,
+    "originalWidth": 720,
+    "originalHeight": 1558,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/quiz-goal-proximity-a-320.webp",
+        "width": 320,
+        "height": 692,
+        "bytes": 12240
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/quiz-goal-proximity-a-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 20042
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/quiz-goal-proximity-a-720.webp",
+        "width": 720,
+        "height": 1558,
+        "bytes": 34360
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/quiz-goal-proximity-b.webp": {
+    "src": "/growth-design-site/images/_optimized/05-structure/quiz-goal-proximity-b-720.webp",
+    "width": 720,
+    "height": 1558,
+    "originalWidth": 720,
+    "originalHeight": 1558,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/quiz-goal-proximity-b-320.webp",
+        "width": 320,
+        "height": 692,
+        "bytes": 12018
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/quiz-goal-proximity-b-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 19766
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/quiz-goal-proximity-b-720.webp",
+        "width": 720,
+        "height": 1558,
+        "bytes": 33910
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/quiz-invite-gradient.webp": {
+    "src": "/growth-design-site/images/_optimized/05-structure/quiz-invite-gradient-720.webp",
+    "width": 720,
+    "height": 1559,
+    "originalWidth": 720,
+    "originalHeight": 1559,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/quiz-invite-gradient-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 27538
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/quiz-invite-gradient-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 47192
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/quiz-invite-gradient-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 85816
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/quiz-invite-normal.webp": {
+    "src": "/growth-design-site/images/_optimized/05-structure/quiz-invite-normal-720.webp",
+    "width": 720,
+    "height": 1559,
+    "originalWidth": 720,
+    "originalHeight": 1559,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/quiz-invite-normal-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 28858
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/quiz-invite-normal-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 49574
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/quiz-invite-normal-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 89586
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/quiz-iphone.webp": {
+    "src": "/growth-design-site/images/_optimized/05-structure/quiz-iphone-720.webp",
+    "width": 720,
+    "height": 1559,
+    "originalWidth": 720,
+    "originalHeight": 1559,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/quiz-iphone-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 27522
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/quiz-iphone-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 43944
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/quiz-iphone-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 73144
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/quiz-red-packet.webp": {
+    "src": "/growth-design-site/images/_optimized/05-structure/quiz-red-packet-720.webp",
+    "width": 720,
+    "height": 1538,
+    "originalWidth": 729,
+    "originalHeight": 1557,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/quiz-red-packet-320.webp",
+        "width": 320,
+        "height": 683,
+        "bytes": 26500
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/quiz-red-packet-480.webp",
+        "width": 480,
+        "height": 1025,
+        "bytes": 43784
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/quiz-red-packet-720.webp",
+        "width": 720,
+        "height": 1538,
+        "bytes": 66238
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/scarcity-challenge.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/scarcity-challenge-720.webp",
+    "width": 720,
+    "height": 1559,
+    "originalWidth": 750,
+    "originalHeight": 1624,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/scarcity-challenge-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 25990
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/scarcity-challenge-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 46032
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/scarcity-challenge-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 76632
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/scarcity-limited.jpeg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/scarcity-limited-720.webp",
+    "width": 720,
+    "height": 1559,
+    "originalWidth": 750,
+    "originalHeight": 1624,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/scarcity-limited-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 29480
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/scarcity-limited-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 52280
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/scarcity-limited-720.webp",
+        "width": 720,
+        "height": 1559,
+        "bytes": 86094
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/优化后@1x.png": {
+    "src": "/growth-design-site/images/_optimized/05-structure/优化后@1x-720.webp",
+    "width": 720,
+    "height": 780,
+    "originalWidth": 750,
+    "originalHeight": 812,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/优化后@1x-320.webp",
+        "width": 320,
+        "height": 346,
+        "bytes": 9036
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/优化后@1x-480.webp",
+        "width": 480,
+        "height": 520,
+        "bytes": 15692
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/优化后@1x-720.webp",
+        "width": 720,
+        "height": 780,
+        "bytes": 25308
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/内容分层.png": {
+    "src": "/growth-design-site/images/_optimized/05-structure/内容分层-960.webp",
+    "width": 960,
+    "height": 729,
+    "originalWidth": 2299,
+    "originalHeight": 1747,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/内容分层-320.webp",
+        "width": 320,
+        "height": 243,
+        "bytes": 16028
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/内容分层-480.webp",
+        "width": 480,
+        "height": 365,
+        "bytes": 27214
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/内容分层-720.webp",
+        "width": 720,
+        "height": 547,
+        "bytes": 46670
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/内容分层-960.webp",
+        "width": 960,
+        "height": 729,
+        "bytes": 68120
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/内容分层-1280.webp",
+        "width": 1280,
+        "height": 973,
+        "bytes": 99090
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/卡点1@1x.png": {
+    "src": "/growth-design-site/images/_optimized/05-structure/卡点1@1x-720.webp",
+    "width": 720,
+    "height": 780,
+    "originalWidth": 750,
+    "originalHeight": 812,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/卡点1@1x-320.webp",
+        "width": 320,
+        "height": 346,
+        "bytes": 7368
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/卡点1@1x-480.webp",
+        "width": 480,
+        "height": 520,
+        "bytes": 12048
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/卡点1@1x-720.webp",
+        "width": 720,
+        "height": 780,
+        "bytes": 19326
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/步骤一案例2.jpg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/步骤一案例2-720.webp",
+    "width": 720,
+    "height": 1566,
+    "originalWidth": 720,
+    "originalHeight": 1566,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/步骤一案例2-320.webp",
+        "width": 320,
+        "height": 696,
+        "bytes": 13888
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/步骤一案例2-480.webp",
+        "width": 480,
+        "height": 1044,
+        "bytes": 23184
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/步骤一案例2-720.webp",
+        "width": 720,
+        "height": 1566,
+        "bytes": 36548
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/步骤二案例2.jpg": {
+    "src": "/growth-design-site/images/_optimized/05-structure/步骤二案例2-720.webp",
+    "width": 720,
+    "height": 1566,
+    "originalWidth": 720,
+    "originalHeight": 1566,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/步骤二案例2-320.webp",
+        "width": 320,
+        "height": 696,
+        "bytes": 14960
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/步骤二案例2-480.webp",
+        "width": 480,
+        "height": 1044,
+        "bytes": 25212
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/步骤二案例2-720.webp",
+        "width": 720,
+        "height": 1566,
+        "bytes": 40480
+      }
+    ]
+  },
+  "/growth-design-site/images/05-structure/页面布局.png": {
+    "src": "/growth-design-site/images/_optimized/05-structure/页面布局-960.webp",
+    "width": 960,
+    "height": 650,
+    "originalWidth": 2582,
+    "originalHeight": 1747,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/页面布局-320.webp",
+        "width": 320,
+        "height": 217,
+        "bytes": 9662
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/页面布局-480.webp",
+        "width": 480,
+        "height": 325,
+        "bytes": 16774
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/页面布局-720.webp",
+        "width": 720,
+        "height": 487,
+        "bytes": 28890
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/页面布局-960.webp",
+        "width": 960,
+        "height": 650,
+        "bytes": 42302
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/05-structure/页面布局-1280.webp",
+        "width": 1280,
+        "height": 866,
+        "bytes": 62798
+      }
+    ]
+  },
+  "/growth-design-site/images/06-framework/scene-1-sm.jpg": {
+    "src": "/growth-design-site/images/_optimized/06-framework/scene-1-sm-480.webp",
+    "width": 480,
+    "height": 493,
+    "originalWidth": 520,
+    "originalHeight": 534,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/06-framework/scene-1-sm-320.webp",
+        "width": 320,
+        "height": 329,
+        "bytes": 6818
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/06-framework/scene-1-sm-480.webp",
+        "width": 480,
+        "height": 493,
+        "bytes": 11312
+      }
+    ]
+  },
+  "/growth-design-site/images/06-framework/scene-2-sm.jpg": {
+    "src": "/growth-design-site/images/_optimized/06-framework/scene-2-sm-480.webp",
+    "width": 480,
+    "height": 501,
+    "originalWidth": 520,
+    "originalHeight": 543,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/06-framework/scene-2-sm-320.webp",
+        "width": 320,
+        "height": 334,
+        "bytes": 7128
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/06-framework/scene-2-sm-480.webp",
+        "width": 480,
+        "height": 501,
+        "bytes": 11736
+      }
+    ]
+  },
+  "/growth-design-site/images/06-framework/scene-3-sm.jpg": {
+    "src": "/growth-design-site/images/_optimized/06-framework/scene-3-sm-480.webp",
+    "width": 480,
+    "height": 497,
+    "originalWidth": 520,
+    "originalHeight": 538,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/06-framework/scene-3-sm-320.webp",
+        "width": 320,
+        "height": 331,
+        "bytes": 7132
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/06-framework/scene-3-sm-480.webp",
+        "width": 480,
+        "height": 497,
+        "bytes": 11612
+      }
+    ]
+  },
+  "/growth-design-site/images/06-framework/step4-core-sm.jpg": {
+    "src": "/growth-design-site/images/_optimized/06-framework/step4-core-sm-480.webp",
+    "width": 480,
+    "height": 1039,
+    "originalWidth": 520,
+    "originalHeight": 1126,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/06-framework/step4-core-sm-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 24406
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/06-framework/step4-core-sm-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 41184
+      }
+    ]
+  },
+  "/growth-design-site/images/06-framework/step4-other-1-sm.jpg": {
+    "src": "/growth-design-site/images/_optimized/06-framework/step4-other-1-sm-480.webp",
+    "width": 480,
+    "height": 1039,
+    "originalWidth": 520,
+    "originalHeight": 1126,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/06-framework/step4-other-1-sm-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 23492
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/06-framework/step4-other-1-sm-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 39698
+      }
+    ]
+  },
+  "/growth-design-site/images/06-framework/step4-other-2-sm.jpg": {
+    "src": "/growth-design-site/images/_optimized/06-framework/step4-other-2-sm-480.webp",
+    "width": 480,
+    "height": 1039,
+    "originalWidth": 520,
+    "originalHeight": 1126,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/06-framework/step4-other-2-sm-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 25634
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/06-framework/step4-other-2-sm-480.webp",
+        "width": 480,
+        "height": 1039,
+        "bytes": 43384
+      }
+    ]
+  },
+  "/growth-design-site/images/07-presentation/presentation-emotional-2.jpg": {
+    "src": "/growth-design-site/images/_optimized/07-presentation/presentation-emotional-2-720.webp",
+    "width": 720,
+    "height": 960,
+    "originalWidth": 720,
+    "originalHeight": 960,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/07-presentation/presentation-emotional-2-320.webp",
+        "width": 320,
+        "height": 427,
+        "bytes": 19458
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/07-presentation/presentation-emotional-2-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 32272
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/07-presentation/presentation-emotional-2-720.webp",
+        "width": 720,
+        "height": 960,
+        "bytes": 51480
+      }
+    ]
+  },
+  "/growth-design-site/images/07-presentation/presentation-emotional.jpg": {
+    "src": "/growth-design-site/images/_optimized/07-presentation/presentation-emotional-720.webp",
+    "width": 720,
+    "height": 960,
+    "originalWidth": 720,
+    "originalHeight": 960,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/07-presentation/presentation-emotional-320.webp",
+        "width": 320,
+        "height": 427,
+        "bytes": 12204
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/07-presentation/presentation-emotional-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 19816
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/07-presentation/presentation-emotional-720.webp",
+        "width": 720,
+        "height": 960,
+        "bytes": 32260
+      }
+    ]
+  },
+  "/growth-design-site/images/07-presentation/presentation-feedback-1.jpg": {
+    "src": "/growth-design-site/images/_optimized/07-presentation/presentation-feedback-1-720.webp",
+    "width": 720,
+    "height": 914,
+    "originalWidth": 720,
+    "originalHeight": 914,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/07-presentation/presentation-feedback-1-320.webp",
+        "width": 320,
+        "height": 406,
+        "bytes": 7070
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/07-presentation/presentation-feedback-1-480.webp",
+        "width": 480,
+        "height": 609,
+        "bytes": 11964
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/07-presentation/presentation-feedback-1-720.webp",
+        "width": 720,
+        "height": 914,
+        "bytes": 20240
+      }
+    ]
+  },
+  "/growth-design-site/images/07-presentation/presentation-feedback-2.jpg": {
+    "src": "/growth-design-site/images/_optimized/07-presentation/presentation-feedback-2-720.webp",
+    "width": 720,
+    "height": 914,
+    "originalWidth": 720,
+    "originalHeight": 914,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/07-presentation/presentation-feedback-2-320.webp",
+        "width": 320,
+        "height": 406,
+        "bytes": 9584
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/07-presentation/presentation-feedback-2-480.webp",
+        "width": 480,
+        "height": 609,
+        "bytes": 15988
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/07-presentation/presentation-feedback-2-720.webp",
+        "width": 720,
+        "height": 914,
+        "bytes": 25770
+      }
+    ]
+  },
+  "/growth-design-site/images/07-presentation/presentation-guide-1.jpg": {
+    "src": "/growth-design-site/images/_optimized/07-presentation/presentation-guide-1-720.webp",
+    "width": 720,
+    "height": 1556,
+    "originalWidth": 720,
+    "originalHeight": 1556,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/07-presentation/presentation-guide-1-320.webp",
+        "width": 320,
+        "height": 692,
+        "bytes": 25076
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/07-presentation/presentation-guide-1-480.webp",
+        "width": 480,
+        "height": 1037,
+        "bytes": 43360
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/07-presentation/presentation-guide-1-720.webp",
+        "width": 720,
+        "height": 1556,
+        "bytes": 70402
+      }
+    ]
+  },
+  "/growth-design-site/images/07-presentation/presentation-guide-2.jpg": {
+    "src": "/growth-design-site/images/_optimized/07-presentation/presentation-guide-2-720.webp",
+    "width": 720,
+    "height": 1566,
+    "originalWidth": 720,
+    "originalHeight": 1566,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/07-presentation/presentation-guide-2-320.webp",
+        "width": 320,
+        "height": 696,
+        "bytes": 41230
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/07-presentation/presentation-guide-2-480.webp",
+        "width": 480,
+        "height": 1044,
+        "bytes": 71300
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/07-presentation/presentation-guide-2-720.webp",
+        "width": 720,
+        "height": 1566,
+        "bytes": 116424
+      }
+    ]
+  },
+  "/growth-design-site/images/07-presentation/presentation-guide-3.jpg": {
+    "src": "/growth-design-site/images/_optimized/07-presentation/presentation-guide-3-720.webp",
+    "width": 720,
+    "height": 1560,
+    "originalWidth": 720,
+    "originalHeight": 1560,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/07-presentation/presentation-guide-3-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 20030
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/07-presentation/presentation-guide-3-480.webp",
+        "width": 480,
+        "height": 1040,
+        "bytes": 32956
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/07-presentation/presentation-guide-3-720.webp",
+        "width": 720,
+        "height": 1560,
+        "bytes": 51480
+      }
+    ]
+  },
+  "/growth-design-site/images/07-presentation/步骤1案例1.jpg": {
+    "src": "/growth-design-site/images/_optimized/07-presentation/步骤1案例1-720.webp",
+    "width": 720,
+    "height": 1560,
+    "originalWidth": 720,
+    "originalHeight": 1560,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/07-presentation/步骤1案例1-320.webp",
+        "width": 320,
+        "height": 693,
+        "bytes": 18700
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/07-presentation/步骤1案例1-480.webp",
+        "width": 480,
+        "height": 1040,
+        "bytes": 30430
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/07-presentation/步骤1案例1-720.webp",
+        "width": 720,
+        "height": 1560,
+        "bytes": 46960
+      }
+    ]
+  },
+  "/growth-design-site/images/Hero/五层模型封面图.png": {
+    "src": "/growth-design-site/images/_optimized/Hero/五层模型封面图-960.webp",
+    "width": 960,
+    "height": 681,
+    "originalWidth": 1692,
+    "originalHeight": 1200,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/Hero/五层模型封面图-320.webp",
+        "width": 320,
+        "height": 227,
+        "bytes": 3372
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/Hero/五层模型封面图-480.webp",
+        "width": 480,
+        "height": 340,
+        "bytes": 6048
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/Hero/五层模型封面图-720.webp",
+        "width": 720,
+        "height": 511,
+        "bytes": 10588
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/Hero/五层模型封面图-960.webp",
+        "width": 960,
+        "height": 681,
+        "bytes": 15790
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/Hero/五层模型封面图-1280.webp",
+        "width": 1280,
+        "height": 908,
+        "bytes": 22788
+      }
+    ]
+  }
+}

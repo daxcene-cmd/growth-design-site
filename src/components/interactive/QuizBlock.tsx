@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { optimizedDimensions, optimizedSrc, optimizedSrcSet } from '../../lib/optimizedImages';
 
 type QuizCaseImage = {
   src: string;
@@ -52,6 +53,17 @@ function getQuestionText(question: QuizQuestion) {
   }
 
   return `${question.question.replace(/[？?]\s*$/, '')}：${question.caseText}`;
+}
+
+function imageProps(src: string, sizes = '(max-width: 900px) 88vw, 320px') {
+  const dimensions = optimizedDimensions(src);
+  return {
+    src: optimizedSrc(src),
+    srcSet: optimizedSrcSet(src),
+    sizes: optimizedSrcSet(src) ? sizes : undefined,
+    width: dimensions?.width,
+    height: dimensions?.height,
+  };
 }
 
 export default function QuizBlock({ data }: QuizBlockProps) {
@@ -149,7 +161,7 @@ export default function QuizBlock({ data }: QuizBlockProps) {
             className="quiz-result-image"
             decoding="async"
             loading="lazy"
-            src={resultImage ?? '/growth-design-site/images/01-definition/flower.webp'}
+            {...imageProps(resultImage ?? '/growth-design-site/images/01-definition/flower.webp', '180px')}
           />
           <div className="quiz-result-summary">
             <p className="quiz-result-score">
@@ -209,7 +221,7 @@ export default function QuizBlock({ data }: QuizBlockProps) {
               return (
                 <div key={img.src} className="quiz-image-option-col">
                   <figure className="quiz-case-image">
-                    <img src={img.src} alt={img.alt} loading="lazy" decoding="async" />
+                    <img alt={img.alt} loading="lazy" decoding="async" {...imageProps(img.src, '(max-width: 900px) 42vw, 220px')} />
                   </figure>
                   <button
                     aria-pressed={isSelected}
@@ -226,7 +238,7 @@ export default function QuizBlock({ data }: QuizBlockProps) {
           </div>
         ) : currentQuestion.caseImage ? (
           <figure className="quiz-case-image">
-            <img src={currentQuestion.caseImage.src} alt={currentQuestion.caseImage.alt} loading="lazy" decoding="async" />
+            <img alt={currentQuestion.caseImage.alt} loading="lazy" decoding="async" {...imageProps(currentQuestion.caseImage.src)} />
           </figure>
         ) : null}
 

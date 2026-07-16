@@ -1,4 +1,6 @@
 ---
+import OptimizedImage from './OptimizedImage.astro';
+
 const cards = [
   { scene: '场景 1', label: '未开场', highlight: false, image: '/growth-design-site/images/06-framework/scene-1-sm.jpg' },
   { scene: '场景 2', label: '已开场\n但大奖未解锁', highlight: true, image: '/growth-design-site/images/06-framework/scene-2-sm.jpg' },
@@ -13,7 +15,7 @@ const cards = [
         <span class="fw-state-card-scene">{card.scene}</span>
         <span class="fw-state-card-label">{card.label}</span>
       </div>
-      <img class="fw-state-card-img" src={card.image} alt={card.label} loading="eager" decoding="async" fetchpriority="low" />
+      <OptimizedImage class="fw-state-card-img" src={card.image} alt={card.label} loading="lazy" decoding="async" fetchpriority="low" sizes="(max-width: 900px) 32vw, 180px" />
     </div>
   ))}
 </div>

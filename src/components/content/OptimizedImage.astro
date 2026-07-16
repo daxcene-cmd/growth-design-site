@@ -1,0 +1,42 @@
+---
+import { optimizedDimensions, optimizedSrc, optimizedSrcSet } from '../../lib/optimizedImages';
+
+interface Props {
+  src: string;
+  alt?: string;
+  class?: string;
+  loading?: 'eager' | 'lazy';
+  decoding?: 'async' | 'sync' | 'auto';
+  fetchpriority?: 'high' | 'low' | 'auto';
+  sizes?: string;
+  style?: string;
+}
+
+const {
+  src,
+  alt = '',
+  class: className,
+  loading = 'lazy',
+  decoding = 'async',
+  fetchpriority,
+  sizes = '(max-width: 900px) 92vw, 820px',
+  style,
+} = Astro.props;
+const optimized = optimizedSrc(src);
+const srcset = optimizedSrcSet(src);
+const dimensions = optimizedDimensions(src);
+---
+
+<img
+  src={optimized}
+  srcset={srcset}
+  sizes={srcset ? sizes : undefined}
+  width={dimensions?.width}
+  height={dimensions?.height}
+  alt={alt}
+  class={className}
+  loading={loading}
+  decoding={decoding}
+  fetchpriority={fetchpriority}
+  style={style}
+/>

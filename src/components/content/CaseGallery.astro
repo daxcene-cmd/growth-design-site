@@ -1,4 +1,7 @@
 ---
+import OptimizedImage from './OptimizedImage.astro';
+import { optimizedPoster } from '../../lib/optimizedImages';
+
 interface Case {
   image: string;
   label: string;
@@ -26,7 +29,11 @@ const gridParts = [
 ].filter(Boolean).join('; ');
 const gridStyle = gridParts || undefined;
 const isVideo = (src: string) => /\.(mp4|webm|mov)$/i.test(src);
-const posterFor = (c: Case) => c.poster ?? (isVideo(c.image) ? c.image.replace(/\.(mp4|webm|mov)$/i, '.jpg') : undefined);
+const posterFor = (c: Case) => {
+  const poster = c.poster ?? (isVideo(c.image) ? c.image.replace(/\.(mp4|webm|mov)$/i, '.jpg') : undefined);
+  return poster ? optimizedPoster(poster) : undefined;
+};
+const imageSizes = columns ? `(max-width: 900px) 88vw, ${Math.ceil(820 / columns)}px` : '(max-width: 900px) 88vw, 820px';
 ---
 
 <div class={`case-gallery case-gallery--${variant}`} style={gridStyle}>
@@ -35,7 +42,7 @@ const posterFor = (c: Case) => c.poster ?? (isVideo(c.image) ? c.image.replace(/
       <div class="case-gallery-image-wrap" style={fixedHeight ? `height: ${fixedHeight}px; width: fit-content; margin: 0 auto;` : c.crop ? `max-height: ${Math.round(c.crop * 420)}px; overflow: hidden;` : undefined}>
         {isVideo(c.image)
           ? <video data-src={c.image} poster={posterFor(c)} playsinline preload="none" muted={c.silent} />
-          : <img src={c.image} alt={c.alt} loading="eager" decoding="async" fetchpriority="low" style={fixedHeight ? 'height: 100%; width: auto; display: block;' : undefined} />
+          : <OptimizedImage src={c.image} alt={c.alt} loading="lazy" decoding="async" fetchpriority="low" sizes={imageSizes} style={fixedHeight ? 'height: 100%; width: auto; display: block;' : undefined} />
         }
         {isVideo(c.image) && (
           <div class="case-video-controls">

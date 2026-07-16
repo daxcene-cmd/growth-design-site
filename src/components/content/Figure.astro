@@ -1,4 +1,6 @@
 ---
+import OptimizedImage from './OptimizedImage.astro';
+
 interface Props {
   src: string;
   alt?: string;
@@ -7,6 +9,6 @@ interface Props {
 const { src, alt = '', caption } = Astro.props;
 ---
 <figure class="article-figure">
-  <img src={src} alt={alt} loading="lazy" decoding="async" />
+  <OptimizedImage src={src} alt={alt} loading="lazy" decoding="async" />
   {caption && <figcaption>{caption}</figcaption>}
 </figure>

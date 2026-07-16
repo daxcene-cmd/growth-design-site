@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { optimizedDimensions, optimizedSrc, optimizedSrcSet } from '../../lib/optimizedImages';
 
 type CardForm = {
   label: string;
@@ -53,6 +54,18 @@ type TabsBlockProps = {
   layout?: 'horizontal' | 'vertical';
 };
 
+function imageProps(src: string) {
+  const dimensions = optimizedDimensions(src);
+  const srcSet = optimizedSrcSet(src);
+  return {
+    src: optimizedSrc(src),
+    srcSet,
+    sizes: srcSet ? '(max-width: 900px) 44vw, 220px' : undefined,
+    width: dimensions?.width,
+    height: dimensions?.height,
+  };
+}
+
 function CardsPanel({ forms, description }: { forms: CardForm[]; description?: string }) {
   return (
     <>
@@ -61,7 +74,7 @@ function CardsPanel({ forms, description }: { forms: CardForm[]; description?: s
         {forms.map((form) => (
           <li key={form.label} className="tab-card-item">
             <div className="tab-card-image-wrap">
-              <img src={form.image} alt={form.label} loading="lazy" />
+              <img alt={form.label} loading="lazy" decoding="async" {...imageProps(form.image)} />
             </div>
             <span className="tab-card-label">{form.label}</span>
           </li>
