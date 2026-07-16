@@ -2936,66 +2936,66 @@
       }
     ]
   },
-  "/growth-design-site/images/06-framework/scene-1-sm.jpg": {
-    "src": "/growth-design-site/images/_optimized/06-framework/scene-1-sm-480.webp",
+  "/growth-design-site/images/06-framework/scene-1.png": {
+    "src": "/growth-design-site/images/_optimized/06-framework/scene-1-480.webp",
     "width": 480,
     "height": 493,
-    "originalWidth": 520,
-    "originalHeight": 534,
+    "originalWidth": 629,
+    "originalHeight": 646,
     "variants": [
       {
-        "src": "/growth-design-site/images/_optimized/06-framework/scene-1-sm-320.webp",
+        "src": "/growth-design-site/images/_optimized/06-framework/scene-1-320.webp",
         "width": 320,
         "height": 329,
-        "bytes": 6818
+        "bytes": 16874
       },
       {
-        "src": "/growth-design-site/images/_optimized/06-framework/scene-1-sm-480.webp",
+        "src": "/growth-design-site/images/_optimized/06-framework/scene-1-480.webp",
         "width": 480,
         "height": 493,
-        "bytes": 11312
+        "bytes": 28486
       }
     ]
   },
-  "/growth-design-site/images/06-framework/scene-2-sm.jpg": {
-    "src": "/growth-design-site/images/_optimized/06-framework/scene-2-sm-480.webp",
+  "/growth-design-site/images/06-framework/scene-2.png": {
+    "src": "/growth-design-site/images/_optimized/06-framework/scene-2-480.webp",
     "width": 480,
     "height": 501,
-    "originalWidth": 520,
-    "originalHeight": 543,
+    "originalWidth": 619,
+    "originalHeight": 646,
     "variants": [
       {
-        "src": "/growth-design-site/images/_optimized/06-framework/scene-2-sm-320.webp",
+        "src": "/growth-design-site/images/_optimized/06-framework/scene-2-320.webp",
         "width": 320,
         "height": 334,
-        "bytes": 7128
+        "bytes": 17248
       },
       {
-        "src": "/growth-design-site/images/_optimized/06-framework/scene-2-sm-480.webp",
+        "src": "/growth-design-site/images/_optimized/06-framework/scene-2-480.webp",
         "width": 480,
         "height": 501,
-        "bytes": 11736
+        "bytes": 29088
       }
     ]
   },
-  "/growth-design-site/images/06-framework/scene-3-sm.jpg": {
-    "src": "/growth-design-site/images/_optimized/06-framework/scene-3-sm-480.webp",
+  "/growth-design-site/images/06-framework/scene-3.png": {
+    "src": "/growth-design-site/images/_optimized/06-framework/scene-3-480.webp",
     "width": 480,
-    "height": 497,
-    "originalWidth": 520,
-    "originalHeight": 538,
+    "height": 496,
+    "originalWidth": 625,
+    "originalHeight": 646,
     "variants": [
       {
-        "src": "/growth-design-site/images/_optimized/06-framework/scene-3-sm-320.webp",
+        "src": "/growth-design-site/images/_optimized/06-framework/scene-3-320.webp",
         "width": 320,
         "height": 331,
-        "bytes": 7132
+        "bytes": 17110
       },
       {
-        "src": "/growth-design-site/images/_optimized/06-framework/scene-3-sm-480.webp",
+        "src": "/growth-design-site/images/_optimized/06-framework/scene-3-480.webp",
         "width": 480,
-        "height": 497,
-        "bytes": 11612
+        "height": 496,
+        "bytes": 29134
       }
     ]
   },

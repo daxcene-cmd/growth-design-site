@@ -16,7 +16,7 @@ async function listFiles(dir) {
   const entries = await fs.readdir(dir, { withFileTypes: true });
   const files = [];
   for (const entry of entries) {
-    if (entry.name === 'node_modules' || entry.name === 'dist' || entry.name === '.astro') continue;
+    if (entry.name === 'node_modules' || entry.name === 'dist' || entry.name === '.astro' || entry.name === 'generated') continue;
     const fullPath = path.join(dir, entry.name);
     if (entry.isDirectory()) {
       files.push(...await listFiles(fullPath));
