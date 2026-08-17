@@ -20,9 +20,10 @@ interface Props {
   gap?: number;
   fixedHeight?: number;
   variant?: 'grid' | 'stage';
+  framed?: boolean;
 }
 
-const { cases, columns, gap, fixedHeight, variant = 'grid' } = Astro.props;
+const { cases, columns, gap, fixedHeight, variant = 'grid', framed = false } = Astro.props;
 const gridParts = [
   columns ? `grid-template-columns: repeat(${columns}, minmax(0, 1fr))` : '',
   gap != null ? `gap: ${gap}px` : '',
@@ -36,7 +37,7 @@ const posterFor = (c: Case) => {
 const imageSizes = columns ? `(max-width: 900px) 88vw, ${Math.ceil(820 / columns)}px` : '(max-width: 900px) 88vw, 820px';
 ---
 
-<div class={`case-gallery case-gallery--${variant}`} style={gridStyle}>
+<div class={`case-gallery case-gallery--${variant}${framed ? ' case-gallery--framed' : ''}`} style={gridStyle}>
   {cases.map((c) => (
     <div class="case-gallery-item">
       <div class="case-gallery-image-wrap" style={fixedHeight ? `height: ${fixedHeight}px; width: fit-content; margin: 0 auto;` : c.crop ? `max-height: ${Math.round(c.crop * 420)}px; overflow: hidden;` : undefined}>

@@ -32,6 +32,72 @@
       }
     ]
   },
+  "/growth-design-site/images/01-definition/comparison/一键买单.jpeg": {
+    "src": "/growth-design-site/images/_optimized/01-definition/comparison/一键买单-960.webp",
+    "width": 960,
+    "height": 2087,
+    "originalWidth": 1206,
+    "originalHeight": 2622,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/01-definition/comparison/一键买单-320.webp",
+        "width": 320,
+        "height": 696,
+        "bytes": 11508
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/01-definition/comparison/一键买单-480.webp",
+        "width": 480,
+        "height": 1044,
+        "bytes": 20746
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/01-definition/comparison/一键买单-720.webp",
+        "width": 720,
+        "height": 1565,
+        "bytes": 35702
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/01-definition/comparison/一键买单-960.webp",
+        "width": 960,
+        "height": 2087,
+        "bytes": 49838
+      }
+    ]
+  },
+  "/growth-design-site/images/01-definition/comparison/霸王茶姬集冰箱贴.png": {
+    "src": "/growth-design-site/images/_optimized/01-definition/comparison/霸王茶姬集冰箱贴-960.webp",
+    "width": 960,
+    "height": 2081,
+    "originalWidth": 1179,
+    "originalHeight": 2556,
+    "variants": [
+      {
+        "src": "/growth-design-site/images/_optimized/01-definition/comparison/霸王茶姬集冰箱贴-320.webp",
+        "width": 320,
+        "height": 694,
+        "bytes": 31462
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/01-definition/comparison/霸王茶姬集冰箱贴-480.webp",
+        "width": 480,
+        "height": 1041,
+        "bytes": 60796
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/01-definition/comparison/霸王茶姬集冰箱贴-720.webp",
+        "width": 720,
+        "height": 1561,
+        "bytes": 109084
+      },
+      {
+        "src": "/growth-design-site/images/_optimized/01-definition/comparison/霸王茶姬集冰箱贴-960.webp",
+        "width": 960,
+        "height": 2081,
+        "bytes": 157508
+      }
+    ]
+  },
   "/growth-design-site/images/01-definition/flower.webp": {
     "src": "/growth-design-site/images/_optimized/01-definition/flower-480.webp",
     "width": 480,

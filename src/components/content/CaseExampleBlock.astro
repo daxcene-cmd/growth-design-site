@@ -12,6 +12,7 @@ interface CaseItem {
   beforeLabels?: string[];
   afterLabels?: string[];
   layout?: 'vertical';
+  imageSize?: 'wide';
   imgBg?: string;
 }
 
@@ -112,11 +113,13 @@ const firstTotal = categories[0]?.principles.length ?? 0;
                       : totalImgs === 4 ? 'case-images--four'
                       : totalImgs === 3 ? 'case-images--three'
                       : totalImgs === 1 ? 'case-images--one' : '';
+                    const sizeMod = c.imageSize === 'wide' ? ' case-images--wide' : '';
+                    const singleImageSizes = c.imageSize === 'wide' ? '900px' : '(max-width: 900px) 88vw, 320px';
                     const figStyle = c.imgBg ? `background:${c.imgBg}` : undefined;
                     return (
                       <div class={`case-example-case${p.cases.length > 1 && ci > 0 ? '' : ''}${p.cases.length > 1 ? ' case-example-case--sub' : ''}${ci === 0 ? ' is-active' : ''}`} data-sub-panel={ci}>
                         <p class="case-desc">{c.desc}{c.descNote && <><br />{c.descNote}</>}</p>
-                        <div class={`case-images ${gridMod}`}>
+                        <div class={`case-images ${gridMod}${sizeMod}`}>
                           {isGrouped ? (
                             <div class="case-img-before-group">
                               <div class="case-img-before-row">
@@ -135,7 +138,7 @@ const firstTotal = categories[0]?.principles.length ?? 0;
                             return (
                               <div class="case-img-wrap">
                                 <figure class="case-img-figure" style={figStyle}>
-                                  {isVideo(src) ? <video data-src={src} poster={posterFor(src)} preload="none" loop muted playsinline /> : <OptimizedImage src={src} alt={lbl ?? ''} loading="lazy" decoding="async" sizes="(max-width: 900px) 88vw, 320px" />}
+                                  {isVideo(src) ? <video data-src={src} poster={posterFor(src)} preload="none" loop muted playsinline /> : <OptimizedImage src={src} alt={lbl ?? ''} loading="lazy" decoding="async" sizes={singleImageSizes} />}
                                 </figure>
                                 {lbl && <span class="case-img-label case-img-label--before">{lbl}</span>}
                               </div>
@@ -146,7 +149,7 @@ const firstTotal = categories[0]?.principles.length ?? 0;
                             return (
                               <div class="case-img-wrap">
                                 <figure class="case-img-figure" style={figStyle}>
-                                  {isVideo(src) ? <video data-src={src} poster={posterFor(src)} preload="none" loop muted playsinline /> : <OptimizedImage src={src} alt={lbl ?? ''} loading="lazy" decoding="async" sizes="(max-width: 900px) 88vw, 320px" />}
+                                  {isVideo(src) ? <video data-src={src} poster={posterFor(src)} preload="none" loop muted playsinline /> : <OptimizedImage src={src} alt={lbl ?? ''} loading="lazy" decoding="async" sizes={singleImageSizes} />}
                                 </figure>
                                 {lbl && <span class="case-img-label case-img-label--after">{lbl}</span>}
                               </div>
